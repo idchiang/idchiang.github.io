@@ -16,16 +16,17 @@
     <header>
       <div class="container">
         <h1>Unit conversion for astrophysics</h1>
-        <h2>Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions">Halas Nanophotonics Group</a></h2>
         <section id="downloads">
           <a href="https://jiang696.github.io/" class="btn btn-github"><span class="icon"></span>Home</a>
+          <a href="https://jiang696.github.io/conversion" class="btn btn-github"><span class="icon"></span>Unit conversion</a>
         </section>
       </div>
     </header>
 
     <div class="container">
-      <h3>Quick unit conversion for EM spectrum units</h3>
-      To use, input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth 
+      <h3>Unit conversion for EM spectrum units</h3>
+      <h2>Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions">Halas Nanophotonics Group</a></h2>
+      To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth 
       decimal place and showed on the screen.
     </div>
     
@@ -37,17 +38,21 @@
         <tr>
         <td><span style="font-size:10pt"><input name="meV" onkeyup="meVconvert()" value="1000.0"size="15"></input> meV</span></td>
         <td><span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="1.0" size="15"></input> eV</span></td>
-        <td><span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="12398.4" size="15"></input> &#8491;</span></td>          
+        <td><span style="font-size:10pt"><input name="THz" onkeyup="THzconvert()" value="241.8" size="15"></input> THz</span></td>
+        <td><span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="1.0" size="15"></input> K</span></td>
         </tr><tr>
+        <td><span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="12398.4" size="15"></input> &#8491;</span></td>          
         <td><span style="font-size:10pt"><input name="nm" onkeyup="nmconvert()" value="1239.8" size="15"></input> nm</span></td>
         <td><span style="font-size:10pt"><input name="micron" onkeyup="micronconvert()" value="1.240" size="15"></input> &#181;m</span></td>
-        <td><span style="font-size:10pt"><input name="THz" onkeyup="THzconvert()" value="241.8" size="15"></input> THz</span></td>
+        <td><span style="font-size:10pt"><input name="cm" onkeyup="cmconvert()" value="1.0" size="15"></input> cm</span></td>
         </tr></form></table>
 
         <script language="javascript">
 
         c=299792458;
         h=4.135667516e-15;
+        hc = h*c;
+        kB=8.6173305e-5;
 
         function roundfive(num){
         round = (Math.round(num*100000))/100000
@@ -57,59 +62,98 @@
         function eVconvert(){
         with (document.conversion){
         meV.value=roundfive(eV.value*(1e3));
-        A.value=roundfive(h*c/eV.value*(1e10));
-        nm.value=roundfive(h*c/eV.value*(1e9));
-        micron.value=roundfive(h*c/eV.value*(1e6));
+        T.value=roundfive(eV.value/kB);
         THz.value=roundfive(eV.value/h*(1e-12));
+        A.value=roundfive(hc/eV.value*(1e10));
+        nm.value=roundfive(hc/eV.value*(1e9));
+        micron.value=roundfive(hc/eV.value*(1e6));
+        cm.value=roundfive(hc/eV.value*(1e2));
         }}
 
         function meVconvert(){
         with (document.conversion){
         eV.value=roundfive(meV.value*(1e-3));
-        A.value=roundfive(h*c/meV.value*(1e10)*(1e3));
-        nm.value=roundfive(h*c/meV.value*(1e9)*(1e3));
-        micron.value=roundfive(h*c/meV.value*(1e6)*(1e3));
         THz.value=roundfive(meV.value/h*(1e-12)*(1e-3));
-        }}
-
-        function angstromconvert(){
-        with (document.conversion){
-        eV.value=roundfive(h*c/A.value*(1e10));
-        meV.value=roundfive(h*c/A.value*(1e10)*(1e3));
-        nm.value=roundfive(A.value*(1e-1));
-        micron.value=roundfive(A.value*(1e-4));
-        THz.value=roundfive(c/A.value*(1e10)*(1e-12));
-        }}
-
-        function nmconvert(){
-        with (document.conversion){
-        eV.value=roundfive(h*c/nm.value*(1e9));
-        meV.value=roundfive(h*c/nm.value*(1e9)*(1e3));
-        A.value=roundfive(nm.value*(10));
-        micron.value=roundfive(nm.value*(1e-3));
-        THz.value=roundfive(c/nm.value*(1e9)*(1e-12));
-        }}
-
-        function micronconvert(){
-        with (document.conversion){
-        eV.value=roundfive(h*c/micron.value*(1e6));
-        meV.value=roundfive(h*c/micron.value*(1e6)*(1e3));
-        A.value=roundfive(micron.value*(1e4))
-        nm.value=roundfive(micron.value*(1e3));
-        THz.value=roundfive(c/micron.value*(1e6)*(1e-12));
+        T.value=roundfive(meV.value/kB*(1e-3));
+        A.value=roundfive(hc/meV.value*(1e10)*(1e3));
+        nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
+        micron.value=roundfive(hc/meV.value*(1e6)*(1e3));
+        cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
         }}
 
         function THzconvert(){
         with (document.conversion){
         eV.value=roundfive(h*THz.value*(1e12));
         meV.value=roundfive(h*THz.value*(1e12)*(1e3));
+        T.value=roundfive(h/kB*THz.value*(1e12));
         A.value=roundfive(c/THz.value*(1e-12)*(1e10));
         nm.value=roundfive(c/THz.value*(1e-12)*(1e9));
         micron.value=roundfive(c/THz.value*(1e-12)*(1e6));
+        cm.value=roundfive(c/THz.value*(1e-12)*(1e2));
+        }}
+          
+        function Tconvert(){
+        with (document.conversion){
+        eV.value=roundfive(kB*T.value);
+        meV.value=roundfive(kB*T.value*(1e3));
+        THz.value=roundfive(kB/h*T*(1e-12));
+        A.value=roundfive(hc/kB/T.value*(1e10));
+        nm.value=roundfive(hc/kB/T.value*(1e9));
+        micron.value=roundfive(hc/kB/T.value*(1e6));
+        cm.value=roundfive(hc/kB/T.value*(1e2));
+        }}
+                    
+        function angstromconvert(){
+        with (document.conversion){
+        eV.value=roundfive(hc/A.value*(1e10));
+        meV.value=roundfive(hc/A.value*(1e10)*(1e3));
+        THz.value=roundfive(c/A.value*(1e10)*(1e-12));
+        T.value=roundfive(hc/kB/A.value*(1e10));
+        nm.value=roundfive(A.value*(1e-1));
+        micron.value=roundfive(A.value*(1e-4));
+        cm.value=roundfive(A.value*(1e-8));
         }}
 
+        function nmconvert(){
+        with (document.conversion){
+        eV.value=roundfive(hc/nm.value*(1e9));
+        meV.value=roundfive(hc/nm.value*(1e9)*(1e3));
+        THz.value=roundfive(c/nm.value*(1e9)*(1e-12));
+        T.value=roundfive(hc/kB/nm.value*(1e9));
+        A.value=roundfive(nm.value*(10));
+        micron.value=roundfive(nm.value*(1e-3));
+        cm.value=roundfive(nm.value*(1e-7));
+        }}
+
+        function micronconvert(){
+        with (document.conversion){
+        eV.value=roundfive(hc/micron.value*(1e6));
+        meV.value=roundfive(hc/micron.value*(1e6)*(1e3));
+        THz.value=roundfive(c/micron.value*(1e6)*(1e-12));
+        T.value=roundfive(hc/kB/micron.value*(1e6));
+        A.value=roundfive(micron.value*(1e4));
+        nm.value=roundfive(micron.value*(1e3));
+        cm.value=roundfive(micron.value*(1e-4));
+        }}
+          
+        function cmconvert(){
+        with (document.conversion){
+        eV.value=roundfive(hc/cm.value*(1e2));
+        meV.value=roundfive(hc/cm.value*(1e2)*(1e3));
+        THz.value=roundfive(c/cm.value*(1e2)*(1e-12));
+        T.value=roundfive(hc/kB/cm.value*(1e2));
+        A.value=roundfive(cm.value*(1e8));
+        nm.value=roundfive(cm.value*(1e7));
+        micron.value=roundfive(cm.value*(1e4));
+        }}
+          
         </script>
       </section>
+    </div>
+
+    <div class="container">
+      <h3>Estimation for EM spectrum unit conversions</h3>
+      <p>
     </div>
 
   </body>
