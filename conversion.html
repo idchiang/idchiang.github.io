@@ -36,15 +36,15 @@
         <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
         <form name="conversion">
         <tr>
-        <td><span style="font-size:10pt"><input name="meV" onkeyup="meVconvert()" value="1000.0"size="15"></input> meV</span></td>
-        <td><span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="1.0" size="15"></input> eV</span></td>
-        <td><span style="font-size:10pt"><input name="THz" onkeyup="THzconvert()" value="241.8" size="15"></input> THz</span></td>
-        <td><span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="11604" size="15"></input> K</span></td>
+        <td><span style="font-size:10pt"><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15"></input> meV</span></td>
+        <td><span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"></input> eV</span></td>
+        <td><span style="font-size:10pt"><input name="GHz" onkeyup="GHzconvert()" value="115" size="15"></input> GHz</span></td>
+        <td><span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="5.51911" size="15"></input> K</span></td>
         </tr><tr>
-        <td><span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="12398.4" size="15"></input> &#8491;</span></td>          
-        <td><span style="font-size:10pt"><input name="nm" onkeyup="nmconvert()" value="1239.8" size="15"></input> nm</span></td>
-        <td><span style="font-size:10pt"><input name="micron" onkeyup="micronconvert()" value="1.240" size="15"></input> &#181;m</span></td>
-        <td><span style="font-size:10pt"><input name="cm" onkeyup="cmconvert()" value="0.00012" size="15"></input> cm</span></td>
+        <td><span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="26069000" size="15"></input> &#8491;</span></td>          
+        <td><span style="font-size:10pt"><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"></input> nm</span></td>
+        <td><span style="font-size:10pt"><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15"></input> &#181;m</span></td>
+        <td><span style="font-size:10pt"><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"></input> cm</span></td>
         </tr></form></table>
 
         <script language="javascript">
@@ -63,7 +63,7 @@
         with (document.conversion){
         meV.value=roundfive(eV.value*(1e3));
         T.value=roundfive(eV.value/kB);
-        THz.value=roundfive(eV.value/h*(1e-12));
+        GHz.value=roundfive(eV.value/h*(1e-9));
         A.value=roundfive(hc/eV.value*(1e10));
         nm.value=roundfive(hc/eV.value*(1e9));
         micron.value=roundfive(hc/eV.value*(1e6));
@@ -73,7 +73,7 @@
         function meVconvert(){
         with (document.conversion){
         eV.value=roundfive(meV.value*(1e-3));
-        THz.value=roundfive(meV.value/h*(1e-12)*(1e-3));
+        GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
         T.value=roundfive(meV.value/kB*(1e-3));
         A.value=roundfive(hc/meV.value*(1e10)*(1e3));
         nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
@@ -81,22 +81,22 @@
         cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
         }}
 
-        function THzconvert(){
+        function GHzconvert(){
         with (document.conversion){
-        eV.value=roundfive(h*THz.value*(1e12));
-        meV.value=roundfive(h*THz.value*(1e12)*(1e3));
-        T.value=roundfive(h/kB*THz.value*(1e12));
-        A.value=roundfive(c/THz.value*(1e-12)*(1e10));
-        nm.value=roundfive(c/THz.value*(1e-12)*(1e9));
-        micron.value=roundfive(c/THz.value*(1e-12)*(1e6));
-        cm.value=roundfive(c/THz.value*(1e-12)*(1e2));
+        eV.value=roundfive(h*GHz.value*(1e9));
+        meV.value=roundfive(h*GHz.value*(1e9)*(1e3));
+        T.value=roundfive(h/kB*GHz.value*(1e9));
+        A.value=roundfive(c/GHz.value*(1e-9)*(1e10));
+        nm.value=roundfive(c/GHz.value*(1e-9)*(1e9));
+        micron.value=roundfive(c/GHz.value*(1e-9)*(1e6));
+        cm.value=roundfive(c/GHz.value*(1e-9)*(1e2));
         }}
           
         function Tconvert(){
         with (document.conversion){
         eV.value=roundfive(kB*T.value);
         meV.value=roundfive(kB*T.value*(1e3));
-        THz.value=roundfive(kB/h*T*(1e-12));
+        GHz.value=roundfive(kB/h*T.value*(1e-9));
         A.value=roundfive(hc/kB/T.value*(1e10));
         nm.value=roundfive(hc/kB/T.value*(1e9));
         micron.value=roundfive(hc/kB/T.value*(1e6));
@@ -107,7 +107,7 @@
         with (document.conversion){
         eV.value=roundfive(hc/A.value*(1e10));
         meV.value=roundfive(hc/A.value*(1e10)*(1e3));
-        THz.value=roundfive(c/A.value*(1e10)*(1e-12));
+        GHz.value=roundfive(c/A.value*(1e10)*(1e-9));
         T.value=roundfive(hc/kB/A.value*(1e10));
         nm.value=roundfive(A.value*(1e-1));
         micron.value=roundfive(A.value*(1e-4));
@@ -118,7 +118,7 @@
         with (document.conversion){
         eV.value=roundfive(hc/nm.value*(1e9));
         meV.value=roundfive(hc/nm.value*(1e9)*(1e3));
-        THz.value=roundfive(c/nm.value*(1e9)*(1e-12));
+        GHz.value=roundfive(c/nm.value*(1e9)*(1e-9));
         T.value=roundfive(hc/kB/nm.value*(1e9));
         A.value=roundfive(nm.value*(10));
         micron.value=roundfive(nm.value*(1e-3));
@@ -129,7 +129,7 @@
         with (document.conversion){
         eV.value=roundfive(hc/micron.value*(1e6));
         meV.value=roundfive(hc/micron.value*(1e6)*(1e3));
-        THz.value=roundfive(c/micron.value*(1e6)*(1e-12));
+        GHz.value=roundfive(c/micron.value*(1e6)*(1e-9));
         T.value=roundfive(hc/kB/micron.value*(1e6));
         A.value=roundfive(micron.value*(1e4));
         nm.value=roundfive(micron.value*(1e3));
@@ -140,7 +140,7 @@
         with (document.conversion){
         eV.value=roundfive(hc/cm.value*(1e2));
         meV.value=roundfive(hc/cm.value*(1e2)*(1e3));
-        THz.value=roundfive(c/cm.value*(1e2)*(1e-12));
+        GHz.value=roundfive(c/cm.value*(1e2)*(1e-9));
         T.value=roundfive(hc/kB/cm.value*(1e2));
         A.value=roundfive(cm.value*(1e8));
         nm.value=roundfive(cm.value*(1e7));
