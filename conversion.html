@@ -1,23 +1,45 @@
+<!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-<form name="myform" method="POST" action="--WEBBOT-SELF--">
- <p><input type="text" name="T1" size="20" value=5></p>
- <p><input type="button" value="exec" name="B1" onclick ="aa()"></p>
- <p><input type="text" name="T2" size="20"></p>
-</form>
-<script language =javascript >
-function aa()
-{
- var m,n;
- //input
- m=eval(myform.T1.value);
- //process
- n=m*m;
- //output
- myform.T2.value=n;
-}
-</script>
-</body>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Unit conversion by idchiang</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Test</h1>
+        <h2>For publishing something</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/jiang696" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <form name="myform" method="POST" action="--WEBBOT-SELF--">
+          <p><input type="text" name="T1" size="20" value=5></p>
+          <p><input type="button" value="exec" name="B1" onclick ="aa()"></p>
+          <p><input type="text" name="T2" size="20"></p>
+        </form>
+        <script language =javascript >
+          function aa(){
+            var m,n;    // input
+            m=eval(myform.T1.value);    // process
+            n=m*m;    // output
+            myform.T2.value=n;
+            }
+       </script>
+      </section>
+    </div>
+  </body>
 </html>
