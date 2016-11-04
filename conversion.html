@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+<form name="myform" method="POST" action="--WEBBOT-SELF--">
+ <p><input type="text" name="T1" size="20" value=5></p>
+ <p><input type="button" value="exec" name="B1" onclick ="aa()"></p>
+ <p><input type="text" name="T2" size="20"></p>
+</form>
+<script language =javascript >
+function aa()
+{
+ var m,n;
+ //input
+ m=eval(myform.T1.value);
+ //process
+ n=m*m;
+ //output
+ myform.T2.value=n;
+}
+</script>
+</body>
+</html>
