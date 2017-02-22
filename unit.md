@@ -1,14 +1,125 @@
-### Welcome to GitHub Pages.
-This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here [using GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/), select a template crafted by a designer, and publish. After your page is generated, you can check out the new `gh-pages` branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.
+### Unit conversion for astrophysicists
+##### Original code: Lisa V. Brown at [Halas Nanophotonics Group](http://halas.rice.edu/conversions)
+To use this tool, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal place and showed on the screen.
 
-### Designer Templates
-We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.
+<table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
+<form name="conversion">
+<tr>
+<td><span style="font-size:10pt"><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15"></input> meV</span></td>
+<td><span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"></input> eV</span></td>
+<td><span style="font-size:10pt"><input name="GHz" onkeyup="GHzconvert()" value="115" size="15"></input> GHz</span></td>
+<td><span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="5.51911" size="15"></input> K</span></td>
+</tr><tr>
+<td><span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="26069000" size="15"></input> &#8491;</span></td>
+<td><span style="font-size:10pt"><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"></input> nm</span></td>
+<td><span style="font-size:10pt"><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15"></input> &#181;m</span></td>
+<td><span style="font-size:10pt"><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"></input> cm</span></td>
+</tr></form></table>
 
-### Creating pages manually
-If you prefer to not use the automatic generator, push a branch named `gh-pages` to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.
+<script language="javascript">
+c=299792458;
+h=4.135667516e-15;
+hc = h*c;
+kB=8.6173305e-5;
 
-### Authors and Contributors
-You can @mention a GitHub username to generate a link to their profile. The resulting `<a>` element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (@defunkt), PJ Hyett (@pjhyett), and Tom Preston-Werner (@mojombo) founded GitHub.
+function roundfive(num){
+    round = (Math.round(num*100000))/100000
+    return (round.toFixed(5))
+}
 
-### Support or Contact
-Having trouble with Pages? Check out our [documentation](https://help.github.com/pages) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+function eVconvert(){
+    with (document.conversion){
+        meV.value=roundfive(eV.value*(1e3));
+        T.value=roundfive(eV.value/kB);
+        GHz.value=roundfive(eV.value/h*(1e-9));
+        A.value=roundfive(hc/eV.value*(1e10));
+        nm.value=roundfive(hc/eV.value*(1e9));
+        micron.value=roundfive(hc/eV.value*(1e6));
+        cm.value=roundfive(hc/eV.value*(1e2));
+    }
+}
+
+function meVconvert(){
+    with (document.conversion){
+        eV.value=roundfive(meV.value*(1e-3));
+        GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
+        T.value=roundfive(meV.value/kB*(1e-3));
+        A.value=roundfive(hc/meV.value*(1e10)*(1e3));
+        nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
+        micron.value=roundfive(hc/meV.value*(1e6)*(1e3));
+        cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
+    }
+}
+
+function GHzconvert(){
+    with (document.conversion){
+        eV.value=roundfive(h*GHz.value*(1e9));
+        meV.value=roundfive(h*GHz.value*(1e9)*(1e3));
+        T.value=roundfive(h/kB*GHz.value*(1e9));
+        A.value=roundfive(c/GHz.value*(1e-9)*(1e10));
+        nm.value=roundfive(c/GHz.value*(1e-9)*(1e9));
+        micron.value=roundfive(c/GHz.value*(1e-9)*(1e6));
+        cm.value=roundfive(c/GHz.value*(1e-9)*(1e2));
+    }
+}
+          
+function Tconvert(){
+    with (document.conversion){
+        eV.value=roundfive(kB*T.value);
+        meV.value=roundfive(kB*T.value*(1e3));
+        GHz.value=roundfive(kB/h*T.value*(1e-9));
+        A.value=roundfive(hc/kB/T.value*(1e10));
+        nm.value=roundfive(hc/kB/T.value*(1e9));
+        micron.value=roundfive(hc/kB/T.value*(1e6));
+        cm.value=roundfive(hc/kB/T.value*(1e2));
+    }
+}
+                    
+function angstromconvert(){
+    with (document.conversion){
+        eV.value=roundfive(hc/A.value*(1e10));
+        meV.value=roundfive(hc/A.value*(1e10)*(1e3));
+        GHz.value=roundfive(c/A.value*(1e10)*(1e-9));
+        T.value=roundfive(hc/kB/A.value*(1e10));
+        nm.value=roundfive(A.value*(1e-1));
+        micron.value=roundfive(A.value*(1e-4));
+        cm.value=roundfive(A.value*(1e-8));
+    }
+}
+
+function nmconvert(){
+    with (document.conversion){
+        eV.value=roundfive(hc/nm.value*(1e9));
+        meV.value=roundfive(hc/nm.value*(1e9)*(1e3));
+        GHz.value=roundfive(c/nm.value*(1e9)*(1e-9));
+        T.value=roundfive(hc/kB/nm.value*(1e9));
+        A.value=roundfive(nm.value*(10));
+        micron.value=roundfive(nm.value*(1e-3));
+        cm.value=roundfive(nm.value*(1e-7));
+    }
+}
+
+function micronconvert(){
+    with (document.conversion){
+        eV.value=roundfive(hc/micron.value*(1e6));
+        meV.value=roundfive(hc/micron.value*(1e6)*(1e3));
+        GHz.value=roundfive(c/micron.value*(1e6)*(1e-9));
+        T.value=roundfive(hc/kB/micron.value*(1e6));
+        A.value=roundfive(micron.value*(1e4));
+        nm.value=roundfive(micron.value*(1e3));
+        cm.value=roundfive(micron.value*(1e-4));
+    }
+}
+          
+function cmconvert(){
+    with (document.conversion){
+        eV.value=roundfive(hc/cm.value*(1e2));
+        meV.value=roundfive(hc/cm.value*(1e2)*(1e3));
+        GHz.value=roundfive(c/cm.value*(1e2)*(1e-9));
+        T.value=roundfive(hc/kB/cm.value*(1e2));
+        A.value=roundfive(cm.value*(1e8));
+        nm.value=roundfive(cm.value*(1e7));
+        micron.value=roundfive(cm.value*(1e4));
+    }
+}
+</script>
