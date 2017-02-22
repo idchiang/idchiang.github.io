@@ -3,7 +3,7 @@
 To use this tool, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal place and showed on the screen.
 
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
-<form name="conversion2">
+<form name="conversion">
 <tr>
 <td><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15">meV</td>
 <td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15">eV</td>
