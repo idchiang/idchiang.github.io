@@ -6,14 +6,14 @@ To use this tool, simply input the known value to the corresponding cell. The ca
 <form name="conversion">
 <tr>
 <td><span style="font-size:10pt"><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15">meV</span></td>
-<td><span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"></input> eV</span></td>
-<td><span style="font-size:10pt"><input name="GHz" onkeyup="GHzconvert()" value="115" size="15"></input> GHz</span></td>
-<td><span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="5.51911" size="15"></input> K</span></td>
+<td><span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15">eV</span></td>
+<td><span style="font-size:10pt"><input name="GHz" onkeyup="GHzconvert()" value="115" size="15">GHz</span></td>
+<td><span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="5.51911" size="15">K</span></td>
 </tr><tr>
-<td><span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="26069000" size="15"></input> &#8491;</span></td>
-<td><span style="font-size:10pt"><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"></input> nm</span></td>
-<td><span style="font-size:10pt"><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15"></input> &#181;m</span></td>
-<td><span style="font-size:10pt"><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"></input> cm</span></td>
+<td><span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="26069000" size="15">&#8491;</span></td>
+<td><span style="font-size:10pt"><input name="nm" onkeyup="nmconvert()" value="2606900" size="15">nm</span></td>
+<td><span style="font-size:10pt"><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15">&#181;m</span></td>
+<td><span style="font-size:10pt"><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15">cm</span></td>
 </tr></form></table>
 
 <script language="javascript">
