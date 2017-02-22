@@ -4,6 +4,8 @@
 
 [The HI Nearby Galaxy Survey (THINGS)](http://www.mpia.de/THINGS/Overview.html)
 
+[Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGFISH) data products](http://irsa.ipac.caltech.edu/data/Herschel/KINGFISH/galaxies/)
+
 ### Python packages
 
 [Voronoi binning (Michele Cappellari's site)](http://www-astro.physics.ox.ac.uk/~mxc/software/)
