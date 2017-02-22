@@ -3,9 +3,14 @@
 To use this tool, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal place and showed on the screen.
 
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
-<form name="conversion">
-<tr>
-<td><span style="font-size:10pt"><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15"></input> meV</span></td>
+    <form name="conversion">
+        <tr>
+            <td>
+                <span style="font-size:10pt">
+                    <input name="meV" onkeyup="meVconvert()" value="0.4756"size="15">
+                    </input>meV
+                </span>
+            </td>
 <td><span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"></input> eV</span></td>
 <td><span style="font-size:10pt"><input name="GHz" onkeyup="GHzconvert()" value="115" size="15"></input> GHz</span></td>
 <td><span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="5.51911" size="15"></input> K</span></td>
