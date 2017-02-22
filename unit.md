@@ -3,18 +3,15 @@
 To use this tool, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal place and showed on the screen.
 
 <form name="conversion">
-<table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
-<tr>
-<td><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15">meV</td>
-<td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15">eV</td>
-<td><input name="GHz" onkeyup="GHzconvert()" value="115" size="15">GHz</td>
-<td><input name="T" onkeyup="Tconvert()" value="5.51911" size="15">K</td>
-</tr><tr>
-<td><input name="A" onkeyup="angstromconvert()" value="26069000" size="15">&#8491;</td>
-<td><input name="nm" onkeyup="nmconvert()" value="2606900" size="15">nm</td>
-<td><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15">&#181;m</td>
-<td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15">cm</td>
-</tr></table></form>
+<input name="meV" onkeyup="meVconvert()" value="0.4756"size="15">meV
+<input name="eV" onkeyup="eVconvert()" value="0.00048" size="15">eV
+<input name="GHz" onkeyup="GHzconvert()" value="115" size="15">GHz
+<input name="T" onkeyup="Tconvert()" value="5.51911" size="15">K
+<input name="A" onkeyup="angstromconvert()" value="26069000" size="15">&#8491;
+<input name="nm" onkeyup="nmconvert()" value="2606900" size="15">nm
+<input name="micron" onkeyup="micronconvert()" value="2606.90" size="15">&#181;m
+<input name="cm" onkeyup="cmconvert()" value="0.26069" size="15">cm
+</form>
 
 <script language="javascript">
 c=299792458;
