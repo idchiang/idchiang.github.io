@@ -1,0 +1,8 @@
+title: Test
+description: For publishing something
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-midnight
+
+gems:
+  - jekyll-mentions
