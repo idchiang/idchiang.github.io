@@ -2,27 +2,18 @@
 ##### Original code: Lisa V. Brown at [Halas Nanophotonics Group](http://halas.rice.edu/conversions)
 To use this tool, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal place and showed on the screen.
 
-<form name="conversion">
-|aa|bb|cc|dd|
-| ------------- |-------------| -----|  ---|
-| <span style="font-size:10pt"><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15">meV</span> | <span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15">eV</span> | <span style="font-size:10pt"><input name="GHz" onkeyup="GHzconvert()" value="115" size="15">GHz</span> |  <span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="5.51911" size="15">K</span>  |
-| <span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="26069000" size="15">&#8491;</span>  | <span style="font-size:10pt"><input name="nm" onkeyup="nmconvert()" value="2606900" size="15">nm</span>  | <span style="font-size:10pt"><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15">&#181;m</span> |<span style="font-size:10pt"><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15">cm</span>|
-</form>
-
-beta
-
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <form name="conversion2">
 <tr>
-<td><span style="font-size:10pt"><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15">meV</span></td>
-<td><span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15">eV</span></td>
-<td><span style="font-size:10pt"><input name="GHz" onkeyup="GHzconvert()" value="115" size="15">GHz</span></td>
-<td><span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="5.51911" size="15">K</span></td>
+<td><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15">meV</td>
+<td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15">eV</td>
+<td><input name="GHz" onkeyup="GHzconvert()" value="115" size="15">GHz</td>
+<td><input name="T" onkeyup="Tconvert()" value="5.51911" size="15">K</td>
 </tr><tr>
-<td><span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="26069000" size="15">&#8491;</span></td>
-<td><span style="font-size:10pt"><input name="nm" onkeyup="nmconvert()" value="2606900" size="15">nm</span></td>
-<td><span style="font-size:10pt"><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15">&#181;m</span></td>
-<td><span style="font-size:10pt"><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15">cm</span></td>
+<td><input name="A" onkeyup="angstromconvert()" value="26069000" size="15">&#8491;</td>
+<td><input name="nm" onkeyup="nmconvert()" value="2606900" size="15">nm</td>
+<td><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15">&#181;m</td>
+<td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15">cm</td>
 </tr></form></table>
 
 <script language="javascript">
