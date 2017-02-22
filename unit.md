@@ -2,8 +2,8 @@
 ##### Original code: Lisa V. Brown at [Halas Nanophotonics Group](http://halas.rice.edu/conversions)
 To use this tool, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal place and showed on the screen.
 
-<table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <form name="conversion">
+<table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
 <td><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15">meV</td>
 <td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15">eV</td>
@@ -14,7 +14,7 @@ To use this tool, simply input the known value to the corresponding cell. The ca
 <td><input name="nm" onkeyup="nmconvert()" value="2606900" size="15">nm</td>
 <td><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15">&#181;m</td>
 <td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15">cm</td>
-</tr></form></table>
+</tr></table></form>
 
 <script language="javascript">
 c=299792458;
