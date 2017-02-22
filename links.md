@@ -13,3 +13,8 @@
 [emcee: the MCMC Hammer](http://dan.iel.fm/emcee/current/)
 
 [corner: Corner plots with Python](https://pypi.python.org/pypi/corner)
+
+
+### Github
+
+[My Github profile](https://github.com/idchiang)
