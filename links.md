@@ -14,6 +14,12 @@
 
 <a href="https://pypi.python.org/pypi/corner" target="_blank">corner: Corner plots with Python</a>
 
+### Online lectures
+
+<a href="https://lagunita.stanford.edu/courses/OLI/ProbStat/Open/info" target="_blank">Stanford OLI's Probability and Statistics (Open + Free)</a>
+
+<a href="https://mediasite.nmt.edu/Mediasite/Catalog/Full/e8390a14f99647ecabb69bcbcb4c43e621" target="_blank">National Radio Astronomy Observatory (NRAO)'s 2016 radio astronomy workshop</a>
+
 ### Github
 
 <a href="https://github.com/idchiang" target="_blank">My Github profile</a>
