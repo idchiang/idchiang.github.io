@@ -1,20 +1,19 @@
 ### Surveys
 
-[The HERA CO Line Extragalactic Survey (HERACLES)](http://www2.mpia-hd.mpg.de/HERACLES/Overview.html)
+<a href="http://www2.mpia-hd.mpg.de/HERACLES/Overview.html" target="_blank">The HERA CO Line Extragalactic Survey (HERACLES)</a>
 
-[The HI Nearby Galaxy Survey (THINGS)](http://www.mpia.de/THINGS/Overview.html)
+<a href="http://www.mpia.de/THINGS/Overview.html" target="_blank">The HI Nearby Galaxy Survey (THINGS)</a>
 
-[Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGFISH) data products](http://irsa.ipac.caltech.edu/data/Herschel/KINGFISH/galaxies/)
+<a href="http://irsa.ipac.caltech.edu/data/Herschel/KINGFISH/galaxies/" target="_blank">Key Insights on Nearby Galaxies: a Far-Infrared Survey with Herschel (KINGFISH) data products</a>
 
 ### Python packages
 
-[Voronoi binning (Michele Cappellari's site)](http://www-astro.physics.ox.ac.uk/~mxc/software/)
+<a href="http://www-astro.physics.ox.ac.uk/~mxc/software/" target="_blank">Voronoi binning (Michele Cappellari's site)</a>
 
-[emcee: the MCMC Hammer](http://dan.iel.fm/emcee/current/)
+<a href="http://dan.iel.fm/emcee/current/" target="_blank">emcee: the MCMC Hammer</a>
 
-[corner: Corner plots with Python](https://pypi.python.org/pypi/corner)
-
+<a href="https://pypi.python.org/pypi/corner" target="_blank">corner: Corner plots with Python</a>
 
 ### Github
 
-[My Github profile](https://github.com/idchiang)
+<a href="https://github.com/idchiang" target="_blank">My Github profile</a>
