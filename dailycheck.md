@@ -3,6 +3,4 @@
 ## idchiang's daily checking list & test ground
 ### Starbucks mission
 Check app...hope they can offer e-mail notification someday...
-### Slickdeals
-One of the most evil places....
 ## idchiang's test ground
