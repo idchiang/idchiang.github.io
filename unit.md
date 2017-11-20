@@ -2,33 +2,19 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth 
 
-<form name="conversion">
-1<input type="text" id="name" name="name">b
-2<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15"></input> meVb
-3<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15" id="name"></input> meVb
-4<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15"/> meVb
-5<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15" id="name"/> meVb
-</form>
-1<input type="text" id="name" name="name">b
-2<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15"></input> meVb
-3<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15" id="name"></input> meVb
-4<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15"/> meVb
-5<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15" id="name"/> meVb
-
-
-<form name="conversion">
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
-<td><span style="font-size:10pt"><input name="meV" onkeyup="meVconvert()" value="0.4756"size="15"></input> meV</span></td>
-<td><span style="font-size:10pt"><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"></input> eV</span></td>
-<td><span style="font-size:10pt"><input name="GHz" onkeyup="GHzconvert()" value="115" size="15"></input> GHz</span></td>
-<td><span style="font-size:10pt"><input name="T" onkeyup="Tconvert()" value="5.51911" size="15"></input> K</span></td>
+<td><input name="meV" onkeyup="meVconvert()" value="0.4756" size="15"> meV </td>
+<td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"> eV </td>
+<td><input name="GHz" onkeyup="GHzconvert()" value="115" size="15"> GHz </td>
+<td><input name="T" onkeyup="Tconvert()" value="5.51911" size="15"> K </td>
 </tr><tr>
-<td><span style="font-size:10pt"><input name="A" onkeyup="angstromconvert()" value="26069000" size="15"></input> &#8491;</span></td>          
-<td><span style="font-size:10pt"><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"></input> nm</span></td>
-<td><span style="font-size:10pt"><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15"></input> &#181;m</span></td>
-<td><span style="font-size:10pt"><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"></input> cm</span></td>
-</tr></table></form>
+<td><input name="A" onkeyup="angstromconvert()" value="26069000" size="15"> &#8491; </td>          
+<td><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"> nm </td>
+<td><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15"> &#181;m </td>
+<td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"> cm </td>
+</tr></table>
+
 
 <script language="javascript">
 c=299792458;
