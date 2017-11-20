@@ -1,5 +1,5 @@
 ### Unit conversion for EM spectrum units
-#### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions">Halas Nanophotonics Group</a>
+#### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
 <form name="conversion">
