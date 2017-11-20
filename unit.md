@@ -15,8 +15,8 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"> cm </td>
 </tr></table>
 
-
 <script language="javascript">
+
 c=299792458;
 h=4.135667516e-15;
 hc = h*c;
@@ -108,6 +108,8 @@ A.value=roundfive(cm.value*(1e8));
 nm.value=roundfive(cm.value*(1e7));
 micron.value=roundfive(cm.value*(1e4));
 }}
+
+</script>
 
 #### Useful lines
 HI 21 cm line: 1.420405752 GHz
