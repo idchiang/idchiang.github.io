@@ -2,10 +2,19 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth 
 
-<form name="conversion"
-<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756"size="15"></input> meV</td>
-a<input type="text" id="name" name="name">b
+<form name="conversion">
+1<input type="text" id="name" name="name">b
+2<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15"></input> meVb
+3<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15" id="name"></input> meVb
+4<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15"/> meVb
+5<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15" id="name"/> meVb
 </form>
+1<input type="text" id="name" name="name">b
+2<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15"></input> meVb
+3<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15" id="name"></input> meVb
+4<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15"/> meVb
+5<input name="meV" type="text" onkeyup="meVconvert()" value="0.4756" size="15" id="name"/> meVb
+
 
 <form name="conversion">
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
