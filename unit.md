@@ -1,7 +1,8 @@
 ### Unit conversion for EM spectrum units
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions">Halas Nanophotonics Group</a>
-To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth 
+To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
+<form name="conversion">
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
 <td><input name="meV" onkeyup="meVconvert()" value="0.4756" size="15"> meV </td>
@@ -13,7 +14,7 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"> nm </td>
 <td><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15"> &#181;m </td>
 <td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"> cm </td>
-</tr></table>
+</tr></table></form>
 
 <script language="javascript">
 
