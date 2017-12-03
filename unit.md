@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### 03:08
+### 03:13
 
 <form name="conversion">
 Wavelength
@@ -46,7 +46,7 @@ return (num.toFixed(5))
 }
 
 // Wavelength
-function angstrom_to_all(from_E, from_f, from_nm = false, from_um = false, from_cm = false){
+function angstrom_to_all(from_E, from_f, from_W=10){
 with (document.conversion){
 if (! from_E) {
     meV.value=(hc_meVA/A.value).toFixed(5);
@@ -56,30 +56,42 @@ if (! from_E) {
 if (! from_f) {
     GHz.value=(c_AGHz/A.value).toFixed(5);
 }
-if (! from_nm) {
+if (from_W != 9) {
     nm.value=(A.value*(1e-1)).toFixed(5);
 }
-if (! from_um) {
+if (from_W != 6) {
     um.value=(A.value*(1e-4)).toFixed(5);
 }
-if (! from_cm) {
+if (from_W != 2) {
     cm.value=(A.value*(1e-8)).toFixed(5);
 }
 }}
 function nmconvert(){
 with (document.conversion){
 A.value=(nm.value*10).toFixed(5);
-angstrom_to_all(false, false, from_nm=true);
+angstrom_to_all(false, false, from_W=9);
 }}
 function umconvert(){
 with (document.conversion){
 A.value=(um.value*1e4).toFixed(5);
-angstrom_to_all(false, false, from_um=true);
+angstrom_to_all(false, false, from_W=6);
 }}
 function cmconvert(){
 with (document.conversion){
 A.value=(cm.value*1e8).toFixed(5);
-angstrom_to_all(false, false, from_cm=true);
+angstrom_to_all(false, false, from_W=2);
+}}
+
+// Energy
+function meV_to_all(from_W, from_f){
+with (document.conversion){
+eV.value=roundfive(meV.value*(1e-3));
+GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
+T.value=roundfive(meV.value/kB*(1e-3));
+A.value=roundfive(hc/meV.value*(1e10)*(1e3));
+nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
+um.value=roundfive(hc/meV.value*(1e6)*(1e3));
+cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
 }}
 
 function eVconvert(){
@@ -94,17 +106,6 @@ cm.value=roundfive(hc/eV.value*(1e2));
 }}
 
 function meVconvert(){
-with (document.conversion){
-eV.value=roundfive(meV.value*(1e-3));
-GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
-T.value=roundfive(meV.value/kB*(1e-3));
-A.value=roundfive(hc/meV.value*(1e10)*(1e3));
-nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
-um.value=roundfive(hc/meV.value*(1e6)*(1e3));
-cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
-}}
-
-function meV_to_all(from_l, from_f){
 with (document.conversion){
 eV.value=roundfive(meV.value*(1e-3));
 GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
