@@ -46,12 +46,12 @@ return (num.toFixed(5))
 // Wavelength
 function angstrom_to_all(from_E, from_f){
 with (document.conversion){
-if (not from_E) {
+if (! from_E) {
     meV.value=(hc_meVA/A.value).toFixed(5);
 //    eV.value=roundfive(hc/A.value*(1e10));
 //    T.value=roundfive(hc/kB/A.value*(1e10));
 }
-if (not from_f) {
+if (! from_f) {
     GHz.value=(c_AGHz/A.value).toFixed(5);
 }
 nm.value=(A.value*(1e-1)).toFixed(5);
