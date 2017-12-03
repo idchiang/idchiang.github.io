@@ -16,36 +16,24 @@ Wavelength
 Frequency
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
-<td><input name="GHz" onkeyup="GHzconvert()" value="115" size="15"> GHz </td>
+<td><input name="GHz" onkeyup="GHz_to_all(false, false)" value="115" size="15"> GHz </td>
+<td><input name="THz" onkeyup="THzconvert()" value="115" size="15"> THz </td>
 </tr></table>
 Energy
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
 <td><input name="meV" onkeyup="meV_to_all(false, false)" value="0.4756" size="15"> meV </td>
 <td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"> eV </td>
-<td><input name="T" onkeyup="Tconvert()" value="5.51911" size="15"> K </td>
-</tr></table>
-Temperature
-<table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
-<tr>
-
 </tr></table>
 Wave number
 </form>
 
 <script language="javascript">
 // Constants
-c = 299792458;
-h = 4.135667516e-15;
-hc = h*c;
 c_AGHz = 2.99792458e9;
 hc_meVA = 1.23984193e7;
 h_meV_GHz = 4.135667662e-21;
-kB_meV_K = 8.6173303e-2;
-
-function roundfive(num){
-return (num.toFixed(5))
-}
+//kB_meV_K = 8.6173303e-2;
 
 // Wavelength
 function angstrom_to_all(from_E, from_f, from_W=10){
@@ -56,6 +44,7 @@ function angstrom_to_all(from_E, from_f, from_W=10){
         }
         if (! from_f) {
             GHz.value=(c_AGHz/A.value).toFixed(5);
+            GHz_to_all(true, false);
         }
         if (from_W != 9) {
             nm.value=(A.value*(1e-1)).toFixed(5);
@@ -96,12 +85,10 @@ function meV_to_all(from_W, from_f, from_E=3){
         }
         if (! from_f) {
             GHz.value = (meV.value/h_meV_GHz).toFixed(5);
+            GHz_to_all(false, true);
         }
         if (from_E != 0) {
             eV.value = (meV.value*(1e-3)).toFixed(5);
-        }
-        if (from_E != 'T') {
-            T.value = (meV.value/kB_meV_K).toFixed(5);
         }
     }
 }
@@ -111,24 +98,29 @@ function eVconvert(){
         meV_to_all(false, false, from_E=0)
     }
 }
-function Tconvert(){
-    with (document.conversion){
-        meV.value = (kB_meV_K*T.value).toFixed(5);
-        meV_to_all(false, false, from_E='T')
-    }
-}
 
 // Frequency
-function GHzconvert(){
-with (document.conversion){
-eV.value=roundfive(h*GHz.value*(1e9));
-meV.value=roundfive(h*GHz.value*(1e9)*(1e3));
-T.value=roundfive(h/kB*GHz.value*(1e9));
-A.value=roundfive(c/GHz.value*(1e-9)*(1e10));
-nm.value=roundfive(c/GHz.value*(1e-9)*(1e9));
-um.value=roundfive(c/GHz.value*(1e-9)*(1e6));
-cm.value=roundfive(c/GHz.value*(1e-9)*(1e2));
-}}
+function GHz_to_all(from_W, from_E, from_f=9){
+    with (document.conversion){
+        if (! from_W) {
+            A.value = (c_AGHz/GHz.value).toFixed(5);
+            angstrom_to_all(false, true)
+        }
+        if (! from_E) {
+            meV.value = (GHz.value*h_meV_GHz).toFixed(5);
+            meV_to_all(false, true)
+        }
+        if (from_f != 12) {
+            THz.value = (GHz.value*(1e-3)).toFixed(5);
+        }
+    }
+}
+function THzconvert(){
+    with (document.conversion){
+        GHz.value = (THz.value*1e3).toFixed(5);
+        GHz_to_all(false, false, from_f=12)
+    }
+}
 
 </script>
 <br>
