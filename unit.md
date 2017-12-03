@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### 03:13
+### 03:24
 
 <form name="conversion">
 Wavelength
@@ -21,7 +21,7 @@ Frequency
 Energy
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
-<td><input name="meV" onkeyup="meVconvert()" value="0.4756" size="15"> meV </td>
+<td><input name="meV" onkeyup="meV_to_all(false, false)" value="0.4756" size="15"> meV </td>
 <td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"> eV </td>
 </tr></table>
 Temperature
@@ -33,13 +33,14 @@ Wave number
 </form>
 
 <script language="javascript">
-// Defining constants
-c=299792458;
-h=4.135667516e-15;
+// Constants
+c = 299792458;
+h = 4.135667516e-15;
 hc = h*c;
 c_AGHz = 2.99792458e9;
 hc_meVA = 1.23984193e7;
-kB_eV_K=8.6173303e-5;
+h_meV_GHz = 4.135667662e-21;
+kB_eV_K = 8.6173303e-5;
 
 function roundfive(num){
 return (num.toFixed(5))
@@ -47,75 +48,68 @@ return (num.toFixed(5))
 
 // Wavelength
 function angstrom_to_all(from_E, from_f, from_W=10){
-with (document.conversion){
-if (! from_E) {
-    meV.value=(hc_meVA/A.value).toFixed(5);
-//    eV.value=roundfive(hc/A.value*(1e10));
-//    T.value=roundfive(hc/kB/A.value*(1e10));
+    with (document.conversion){
+        if (! from_E) {
+            meV.value=(hc_meVA/A.value).toFixed(5);
+            meV_to_all(true, false)
+        }
+        if (! from_f) {
+            GHz.value=(c_AGHz/A.value).toFixed(5);
+        }
+        if (from_W != 9) {
+            nm.value=(A.value*(1e-1)).toFixed(5);
+        }
+        if (from_W != 6) {
+            um.value=(A.value*(1e-4)).toFixed(5);
+        }
+        if (from_W != 2) {
+            cm.value=(A.value*(1e-8)).toFixed(5);
+        }
+    }
 }
-if (! from_f) {
-    GHz.value=(c_AGHz/A.value).toFixed(5);
-}
-if (from_W != 9) {
-    nm.value=(A.value*(1e-1)).toFixed(5);
-}
-if (from_W != 6) {
-    um.value=(A.value*(1e-4)).toFixed(5);
-}
-if (from_W != 2) {
-    cm.value=(A.value*(1e-8)).toFixed(5);
-}
-}}
 function nmconvert(){
-with (document.conversion){
-A.value=(nm.value*10).toFixed(5);
-angstrom_to_all(false, false, from_W=9);
-}}
+    with (document.conversion){
+        A.value=(nm.value*10).toFixed(5);
+        angstrom_to_all(false, false, from_W=9);
+    }
+}
 function umconvert(){
-with (document.conversion){
-A.value=(um.value*1e4).toFixed(5);
-angstrom_to_all(false, false, from_W=6);
-}}
+    with (document.conversion){
+        A.value=(um.value*1e4).toFixed(5);
+        angstrom_to_all(false, false, from_W=6);
+    }
+}
 function cmconvert(){
-with (document.conversion){
-A.value=(cm.value*1e8).toFixed(5);
-angstrom_to_all(false, false, from_W=2);
-}}
+    with (document.conversion){
+        A.value=(cm.value*1e8).toFixed(5);
+        angstrom_to_all(false, false, from_W=2);
+    }
+}
 
 // Energy
-function meV_to_all(from_W, from_f){
-with (document.conversion){
-eV.value=roundfive(meV.value*(1e-3));
-GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
-T.value=roundfive(meV.value/kB*(1e-3));
-A.value=roundfive(hc/meV.value*(1e10)*(1e3));
-nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
-um.value=roundfive(hc/meV.value*(1e6)*(1e3));
-cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
-}}
-
+function meV_to_all(from_W, from_f, from_E=3){
+    with (document.conversion){
+        if (! from_W) {
+            A.value = (hc_meVA/meV.value).toFixed(5);
+            angstrom_to_all(true, false)
+        }
+        if (! from_f) {
+            GHz.value = (meV.value/h_meV_GHz).toFixed(5);
+        }
+        if (from_E != 0) {
+            eV.value = (meV.value*(1e-3)).toFixed(5);
+        }
+        // T.value=roundfive(meV.value/kB*(1e-3));
+    }
+}
 function eVconvert(){
-with (document.conversion){
-meV.value=roundfive(eV.value*(1e3));
-T.value=roundfive(eV.value/kB);
-GHz.value=roundfive(eV.value/h*(1e-9));
-A.value=roundfive(hc/eV.value*(1e10));
-nm.value=roundfive(hc/eV.value*(1e9));
-um.value=roundfive(hc/eV.value*(1e6));
-cm.value=roundfive(hc/eV.value*(1e2));
-}}
+    with (document.conversion){
+        meV.value = (eV.value*(1e3)).toFixed(5);
+        meV_to_all(false, false, from_E=0)
+    }
+}
 
-function meVconvert(){
-with (document.conversion){
-eV.value=roundfive(meV.value*(1e-3));
-GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
-T.value=roundfive(meV.value/kB*(1e-3));
-A.value=roundfive(hc/meV.value*(1e10)*(1e3));
-nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
-um.value=roundfive(hc/meV.value*(1e6)*(1e3));
-cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
-}}
-
+// Frequency
 function GHzconvert(){
 with (document.conversion){
 eV.value=roundfive(h*GHz.value*(1e9));
