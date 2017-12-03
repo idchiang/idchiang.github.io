@@ -60,34 +60,18 @@ cm.value=(A.value*(1e-8)).toFixed(5);
 }}
 function nmconvert(){
 with (document.conversion){
-eV.value=roundfive(hc/nm.value*(1e9));
-meV.value=roundfive(hc/nm.value*(1e9)*(1e3));
-GHz.value=roundfive(c/nm.value*(1e9)*(1e-9));
-T.value=roundfive(hc/kB/nm.value*(1e9));
-A.value=roundfive(nm.value*(10));
-micron.value=roundfive(nm.value*(1e-3));
-cm.value=roundfive(nm.value*(1e-7));
+A.value=(nm.value*10).toFixed(5);
+angstrom_to_all(false, false);
 }}
 function micronconvert(){
 with (document.conversion){
-eV.value=roundfive(hc/micron.value*(1e6));
-meV.value=roundfive(hc/micron.value*(1e6)*(1e3));
-GHz.value=roundfive(c/micron.value*(1e6)*(1e-9));
-T.value=roundfive(hc/kB/micron.value*(1e6));
-A.value=roundfive(micron.value*(1e4));
-nm.value=roundfive(micron.value*(1e3));
-cm.value=roundfive(micron.value*(1e-4));
+A.value=(nm.value*1e4).toFixed(5);
+angstrom_to_all(false, false);
 }}
-
 function cmconvert(){
 with (document.conversion){
-eV.value=roundfive(hc/cm.value*(1e2));
-meV.value=roundfive(hc/cm.value*(1e2)*(1e3));
-GHz.value=roundfive(c/cm.value*(1e2)*(1e-9));
-T.value=roundfive(hc/kB/cm.value*(1e2));
-A.value=roundfive(cm.value*(1e8));
-nm.value=roundfive(cm.value*(1e7));
-micron.value=roundfive(cm.value*(1e4));
+A.value=(nm.value*1e8).toFixed(5);
+angstrom_to_all(false, false);
 }}
 
 function eVconvert(){
@@ -102,6 +86,17 @@ cm.value=roundfive(hc/eV.value*(1e2));
 }}
 
 function meVconvert(){
+with (document.conversion){
+eV.value=roundfive(meV.value*(1e-3));
+GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
+T.value=roundfive(meV.value/kB*(1e-3));
+A.value=roundfive(hc/meV.value*(1e10)*(1e3));
+nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
+micron.value=roundfive(hc/meV.value*(1e6)*(1e3));
+cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
+}}
+
+function meV_to_all(from_l, from_f){
 with (document.conversion){
 eV.value=roundfive(meV.value*(1e-3));
 GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
