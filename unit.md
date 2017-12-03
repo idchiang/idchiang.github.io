@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### I am working on this... 12/03/2017 15:49
+### I am working on this... 12/03/2017 15:56
 
 <form name="conversion">
 Wavelength
@@ -44,11 +44,11 @@ function angstrom_to_all(from_E, from_f, from_k, from_W=10){
     with (document.conversion){
         if (! from_E) {
             meV.value=(hc_meVA/A.value).toFixed(5);
-            meV_to_all(true, false, false)
+            meV_to_all(true, from_f, from_k)
         }
         if (! from_f) {
             GHz.value=(c_AGHz/A.value).toFixed(5);
-            GHz_to_all(true, false, false);
+            GHz_to_all(true, from_E, from_k);
         }
         if (from_W != 9) {
             nm.value=(A.value*(1e-1)).toFixed(5);
@@ -85,11 +85,11 @@ function meV_to_all(from_W, from_f, from_k, from_E=3){
     with (document.conversion){
         if (! from_W) {
             A.value = (hc_meVA/meV.value).toFixed(5);
-            angstrom_to_all(true, false, false)
+            angstrom_to_all(true, from_f, from_k)
         }
         if (! from_f) {
             GHz.value = (meV.value/h_meV_GHz).toFixed(5);
-            GHz_to_all(false, true, false);
+            GHz_to_all(from_W, true, from_k);
         }
         if (from_E != 0) {
             eV.value = (meV.value*(1e-3)).toFixed(5);
@@ -108,11 +108,11 @@ function GHz_to_all(from_W, from_E, from_k, from_f=9){
     with (document.conversion){
         if (! from_W) {
             A.value = (c_AGHz/GHz.value).toFixed(5);
-            angstrom_to_all(false, true, false)
+            angstrom_to_all(from_E, true, from_k)
         }
         if (! from_E) {
             meV.value = (GHz.value*h_meV_GHz).toFixed(5);
-            meV_to_all(false, true, false)
+            meV_to_all(from_W, true, from_k)
         }
         if (from_f != 12) {
             THz.value = (GHz.value*(1e-3)).toFixed(5);
@@ -122,7 +122,7 @@ function GHz_to_all(from_W, from_E, from_k, from_f=9){
 function THzconvert(){
     with (document.conversion){
         GHz.value = (THz.value*1e3).toFixed(5);
-        GHz_to_all(false, false, false, from_f=12)
+        GHz_to_all(false, false, false, from_f=12);
     }
 }
 
@@ -131,14 +131,15 @@ function wn_to_all(from_W, from_E, from_f, from_wn=2){
     with (document.conversion){
         if (! from_W) {
             A.value = (c_AGHz/GHz.value).toFixed(5);
-            angstrom_to_all(false, true, false)
+            angstrom_to_all(from_E, from_f, true)
         }
         if (! from_E) {
             meV.value = (GHz.value*h_meV_GHz).toFixed(5);
-            meV_to_all(false, true, false)
+            meV_to_all(from_W, from_f, true)
         }
-        if (from_f != 12) {
-            THz.value = (GHz.value*(1e-3)).toFixed(5);
+        if (! from_f) {
+            GHz.value = (THz.value*1e3).toFixed(5);
+            GHz_to_all(from_W, from_E, true, from_f=12);
         }
     }
 }
