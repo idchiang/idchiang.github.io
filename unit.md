@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### I am working on this... 12/03/2017 15:24
+### I am working on this... 12/03/2017 15:36
 
 <form name="conversion">
 Wavelength
@@ -23,11 +23,12 @@ Energy
 <tr>
 <td><input name="meV" onkeyup="meV_to_all(false, false)" value="0.4756" size="15"> meV </td>
 <td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"> eV </td>
+<td><input name="T" onkeyup="Tconvert()" value="5.51911" size="15"> K </td>
 </tr></table>
 Temperature
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
-<td><input name="T" onkeyup="Tconvert()" value="5.51911" size="15"> K </td>
+
 </tr></table>
 Wave number
 </form>
@@ -40,7 +41,7 @@ hc = h*c;
 c_AGHz = 2.99792458e9;
 hc_meVA = 1.23984193e7;
 h_meV_GHz = 4.135667662e-21;
-kB_eV_K = 8.6173303e-5;
+kB_meV_K = 8.6173303e-2;
 
 function roundfive(num){
 return (num.toFixed(5))
@@ -99,13 +100,21 @@ function meV_to_all(from_W, from_f, from_E=3){
         if (from_E != 0) {
             eV.value = (meV.value*(1e-3)).toFixed(5);
         }
-        // T.value=roundfive(meV.value/kB*(1e-3));
+        if (from_E != 'T') {
+            T.value = (meV.value/kB_meV_K).toFixed(5);
+        }
     }
 }
 function eVconvert(){
     with (document.conversion){
         meV.value = (eV.value*(1e3)).toFixed(5);
         meV_to_all(false, false, from_E=0)
+    }
+}
+function Tconvert(){
+    with (document.conversion){
+        meV.value = (kB_meV_K*T.value).toFixed(5);
+        meV_to_all(false, false, from_E='T')
     }
 }
 
@@ -119,17 +128,6 @@ A.value=roundfive(c/GHz.value*(1e-9)*(1e10));
 nm.value=roundfive(c/GHz.value*(1e-9)*(1e9));
 um.value=roundfive(c/GHz.value*(1e-9)*(1e6));
 cm.value=roundfive(c/GHz.value*(1e-9)*(1e2));
-}}
-
-function Tconvert(){
-with (document.conversion){
-eV.value=roundfive(kB*T.value);
-meV.value=roundfive(kB*T.value*(1e3));
-GHz.value=roundfive(kB/h*T.value*(1e-9));
-A.value=roundfive(hc/kB/T.value*(1e10));
-nm.value=roundfive(hc/kB/T.value*(1e9));
-um.value=roundfive(hc/kB/T.value*(1e6));
-cm.value=roundfive(hc/kB/T.value*(1e2));
 }}
 
 </script>
