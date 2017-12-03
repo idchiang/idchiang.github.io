@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### 03:04
+### 03:08
 
 <form name="conversion">
 Wavelength
@@ -46,7 +46,7 @@ return (num.toFixed(5))
 }
 
 // Wavelength
-function angstrom_to_all(from_E, from_f, nm=true, um=true, cm=true){
+function angstrom_to_all(from_E, from_f, from_nm = false, from_um = false, from_cm = false){
 with (document.conversion){
 if (! from_E) {
     meV.value=(hc_meVA/A.value).toFixed(5);
@@ -56,30 +56,30 @@ if (! from_E) {
 if (! from_f) {
     GHz.value=(c_AGHz/A.value).toFixed(5);
 }
-if (nm) {
+if (! from_nm) {
     nm.value=(A.value*(1e-1)).toFixed(5);
 }
-if (um) {
+if (! from_um) {
     um.value=(A.value*(1e-4)).toFixed(5);
 }
-if (cm) {
+if (! from_cm) {
     cm.value=(A.value*(1e-8)).toFixed(5);
 }
 }}
 function nmconvert(){
 with (document.conversion){
 A.value=(nm.value*10).toFixed(5);
-angstrom_to_all(false, false, nm=false);
+angstrom_to_all(false, false, from_nm=true);
 }}
 function umconvert(){
 with (document.conversion){
 A.value=(um.value*1e4).toFixed(5);
-angstrom_to_all(false, false, um=false);
+angstrom_to_all(false, false, from_um=true);
 }}
 function cmconvert(){
 with (document.conversion){
 A.value=(cm.value*1e8).toFixed(5);
-angstrom_to_all(false, false, cm=false);
+angstrom_to_all(false, false, from_cm=true);
 }}
 
 function eVconvert(){
