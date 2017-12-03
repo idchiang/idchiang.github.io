@@ -8,7 +8,7 @@ Wavelength
 <tr>
 <td><input name="A" onkeyup="angstrom_to_all(false, false)" value="26069000" size="15"> &#8491; </td>          
 <td><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"> nm </td>
-<td><input name="micron" onkeyup="micronconvert()" value="2606.90" size="15"> &#181;m </td>
+<td><input name="um" onkeyup="umconvert()" value="2606.90" size="15"> &#181;m </td>
 <td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"> cm </td>
 </tr></table>
 Frequency
@@ -44,7 +44,7 @@ return (num.toFixed(5))
 }
 
 // Wavelength
-function angstrom_to_all(from_E, from_f){
+function angstrom_to_all(from_E, from_f, nm=true, um=true, cm=true){
 with (document.conversion){
 if (! from_E) {
     meV.value=(hc_meVA/A.value).toFixed(5);
@@ -54,24 +54,30 @@ if (! from_E) {
 if (! from_f) {
     GHz.value=(c_AGHz/A.value).toFixed(5);
 }
-nm.value=(A.value*(1e-1)).toFixed(5);
-micron.value=(A.value*(1e-4)).toFixed(5);
-cm.value=(A.value*(1e-8)).toFixed(5);
+if (nm) {
+    nm.value=(A.value*(1e-1)).toFixed(5);
+}
+if (um) {
+    um.value=(A.value*(1e-4)).toFixed(5);
+}
+if (cm) {
+    cm.value=(A.value*(1e-8)).toFixed(5);
+}
 }}
 function nmconvert(){
 with (document.conversion){
 A.value=(nm.value*10).toFixed(5);
-angstrom_to_all(false, false);
+angstrom_to_all(false, false, nm=false);
 }}
-function micronconvert(){
+function umconvert(){
 with (document.conversion){
-A.value=(nm.value*1e4).toFixed(5);
-angstrom_to_all(false, false);
+A.value=(um.value*1e4).toFixed(5);
+angstrom_to_all(false, false, um=false);
 }}
 function cmconvert(){
 with (document.conversion){
-A.value=(nm.value*1e8).toFixed(5);
-angstrom_to_all(false, false);
+A.value=(cm.value*1e8).toFixed(5);
+angstrom_to_all(false, false, cm=false);
 }}
 
 function eVconvert(){
@@ -81,7 +87,7 @@ T.value=roundfive(eV.value/kB);
 GHz.value=roundfive(eV.value/h*(1e-9));
 A.value=roundfive(hc/eV.value*(1e10));
 nm.value=roundfive(hc/eV.value*(1e9));
-micron.value=roundfive(hc/eV.value*(1e6));
+um.value=roundfive(hc/eV.value*(1e6));
 cm.value=roundfive(hc/eV.value*(1e2));
 }}
 
@@ -92,7 +98,7 @@ GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
 T.value=roundfive(meV.value/kB*(1e-3));
 A.value=roundfive(hc/meV.value*(1e10)*(1e3));
 nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
-micron.value=roundfive(hc/meV.value*(1e6)*(1e3));
+um.value=roundfive(hc/meV.value*(1e6)*(1e3));
 cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
 }}
 
@@ -103,7 +109,7 @@ GHz.value=roundfive(meV.value/h*(1e-9)*(1e-3));
 T.value=roundfive(meV.value/kB*(1e-3));
 A.value=roundfive(hc/meV.value*(1e10)*(1e3));
 nm.value=roundfive(hc/meV.value*(1e9)*(1e3));
-micron.value=roundfive(hc/meV.value*(1e6)*(1e3));
+um.value=roundfive(hc/meV.value*(1e6)*(1e3));
 cm.value=roundfive(hc/meV.value*(1e2)*(1e3));
 }}
 
@@ -114,7 +120,7 @@ meV.value=roundfive(h*GHz.value*(1e9)*(1e3));
 T.value=roundfive(h/kB*GHz.value*(1e9));
 A.value=roundfive(c/GHz.value*(1e-9)*(1e10));
 nm.value=roundfive(c/GHz.value*(1e-9)*(1e9));
-micron.value=roundfive(c/GHz.value*(1e-9)*(1e6));
+um.value=roundfive(c/GHz.value*(1e-9)*(1e6));
 cm.value=roundfive(c/GHz.value*(1e-9)*(1e2));
 }}
 
@@ -125,7 +131,7 @@ meV.value=roundfive(kB*T.value*(1e3));
 GHz.value=roundfive(kB/h*T.value*(1e-9));
 A.value=roundfive(hc/kB/T.value*(1e10));
 nm.value=roundfive(hc/kB/T.value*(1e9));
-micron.value=roundfive(hc/kB/T.value*(1e6));
+um.value=roundfive(hc/kB/T.value*(1e6));
 cm.value=roundfive(hc/kB/T.value*(1e2));
 }}
 
