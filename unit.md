@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### I am working on this... 12/03/2017 16:39
+### I am working on this... 12/03/2017 16:50
 <form name="conversion">
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
@@ -44,7 +44,7 @@ c_AGHz = 2.99792458e9;
 c_twopi_cmGHz = 2.99792458 / 2 / Math.PI
 hc_meVA = 1.23984193e7;
 h_meV_GHz = 4.135667662e-3;
-twopi_Acm = Math.PI * 2e-8;
+twopi_A_cm = Math.PI * 2e-8;
 hbarc_meVcm = 1.9732697e-2;
 
 // Wavelength
@@ -55,7 +55,7 @@ function angstrom_to_all(from_other=false, from_W=10){
             meV_to_all(true)
             GHz.value=(c_AGHz/A.value).toFixed(5);
             GHz_to_all(true);
-            k.value=(A.value/twopi_Acm).toFixed(5);
+            k.value=(A.value*twopi_A_cm).toFixed(5);
             k_to_all(true);
         }
         if (from_W != 9) {
@@ -138,7 +138,7 @@ function THzconvert(){
 function k_to_all(from_other=false, from_k=2){
     with (document.conversion){
         if (! from_other) {
-            A.value = (twopi_Acm*k.value).toFixed(5);
+            A.value = (twopi_A_cm/k.value).toFixed(5);
             angstrom_to_all(true);
             meV.value = (hbarc_meVcm*k.value).toFixed(5);
             meV_to_all(true);
