@@ -6,7 +6,7 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <form name="conversion">
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
-<td>Wavelength</td><td></td><td></td><td></td>
+<td>Wavelength</td><td>&lambda;=c/&nu;</td><td></td><td></td>
 </tr>
 <tr>
 <td><input name="A" onkeyup="angstrom_to_all()" value="26069000" size="15"> &#8491; </td>          
@@ -15,14 +15,14 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"> cm </td>
 </tr>
 <tr>
-<td>Frequency</td><td></td><td></td><td></td>
+<td>Frequency</td><td>&nu;</td><td></td><td></td>
 </tr>
 <tr>
 <td><input name="GHz" onkeyup="GHz_to_all()" value="115" size="15"> GHz </td>
 <td><input name="THz" onkeyup="THzconvert()" value="0.115" size="15"> THz </td>
 <td></td><td></td></tr>
 <tr>
-<td>Energy</td><td></td><td></td><td></td>
+<td>Energy</td><td>E=h&nu;</td><td></td><td></td>
 </tr>
 <tr>
 <td><input name="meV" onkeyup="meV_to_all()" value="0.4756" size="15"> meV </td>
@@ -30,7 +30,7 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td></td><td></td>
 </tr>
 <tr>
-<td>Wave number (2&pi;/&lambda;)</td><td></td><td></td><td></td>
+<td>Wave number</td><td>k=2&pi;/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
 <td><input name="k" onkeyup="k_to_all()" value="3.83599" size="15"> cm<sup>-1</sup> </td>
