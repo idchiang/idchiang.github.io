@@ -4,25 +4,30 @@ To use, simply input the known value to the corresponding cell. The calculated v
 
 ### I am working on this... 12/03/2017 16:21
 <form name="conversion">
-Wavelength
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
+<tr>
+<td>Wavelength</td><td></td><td></td><td></td>
+</tr>
 <tr>
 <td><input name="A" onkeyup="angstrom_to_all()" value="26069000" size="15"> &#8491; </td>          
 <td><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"> nm </td>
 <td><input name="um" onkeyup="umconvert()" value="2606.90" size="15"> &#181;m </td>
 <td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"> cm </td>
-</tr></table>
-Frequency
-<table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
+</tr>
+<tr>
+<td>Frequency</td><td></td><td></td><td></td>
+</tr>
 <tr>
 <td><input name="GHz" onkeyup="GHz_to_all()" value="115" size="15"> GHz </td>
 <td><input name="THz" onkeyup="THzconvert()" value="0.115" size="15"> THz </td>
-</tr></table>
-Energy
-<table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
+<td></td><td></td></tr>
+<tr>
+<td>Energy</td><td></td><td></td><td></td>
+</tr>
 <tr>
 <td><input name="meV" onkeyup="meV_to_all()" value="0.4756" size="15"> meV </td>
 <td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"> eV </td>
+<td></td><td></td>
 </tr></table>
 Momentum
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
