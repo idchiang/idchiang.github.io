@@ -32,7 +32,7 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td>Wave number</td><td>k=2&pi;/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="k" onkeyup="k_to_all()" value="3.83599" size="15"> cm<sup>-1</sup> </td>
+<td><input name="k" onkeyup="k_to_all()" value="24.10221" size="15"> cm<sup>-1</sup> </td>
 <td></td><td></td><td></td>
 </tr></table>
 </form>
@@ -118,7 +118,7 @@ function GHz_to_all(from_other=false, from_f=9){
             angstrom_to_all(true);
             meV.value = (GHz.value*h_meV_GHz).toFixed(5);
             meV_to_all(true);
-            k.value = GHz.value / c_twopi_cmGHz;
+            k.value = (GHz.value / c_twopi_cmGHz).toFixed(5);
             k_to_all(true);
         }
         if (from_f != 12) {
@@ -141,7 +141,7 @@ function k_to_all(from_other=false, from_k=2){
             angstrom_to_all(true);
             meV.value = (hbarc_meVcm*k.value).toFixed(5);
             meV_to_all(true);
-            GHz.value = c_twopi_cmGHz * k.value;
+            GHz.value = (c_twopi_cmGHz * k.value).toFixed(5);
             GHz_to_all(true);
         }
     }
