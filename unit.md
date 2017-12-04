@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### I am working on this... 12/03/2017 17:00
+### I am working on this... 12/03/2017 17:06
 <form name="conversion">
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
@@ -41,7 +41,7 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <script language="javascript">
 // Constants
 c_AGHz = 2.99792458e9;
-c_twopi_cmGHz = 2.99792458 / 2 / Math.PI
+c_twopi_cmGHz = 2.99792458e1 / 2 / Math.PI
 hc_meVA = 1.23984193e7;
 h_meV_GHz = 4.135667662e-3;
 twopi_A_cm = Math.PI * 2e8;
