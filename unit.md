@@ -8,32 +8,32 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td>Wavelength</td><td>&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="A" onkeyup="angstrom_to_all()" value="26069000" size="7"> &#8491; </td>          
-<td><input name="nm" onkeyup="nmconvert()" value="2606900" size="7"> nm </td>
-<td><input name="um" onkeyup="umconvert()" value="2606.90" size="7"> &#181;m </td>
-<td><input name="cm" onkeyup="cmconvert()" value="0.2607" size="7"> cm </td>
+<td><input name="A" onkeyup="angstrom_to_all()" value="26069000" size="15"> &#8491; </td>          
+<td><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"> nm </td>
+<td><input name="um" onkeyup="umconvert()" value="2606.90" size="15"> &#181;m </td>
+<td><input name="cm" onkeyup="cmconvert()" value="0.2607" size="15"> cm </td>
 </tr>
 <tr>
 <td>Frequency</td><td>&nu;=c/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="GHz" onkeyup="GHz_to_all()" value="115" size="7"> GHz </td>
-<td><input name="THz" onkeyup="THzconvert()" value="0.115" size="7"> THz </td>
+<td><input name="THz" onkeyup="THzconvert()" value="0.115" size="15"> THz </td>
+<td><input name="GHz" onkeyup="GHz_to_all()" value="115" size="15"> GHz </td>
 <td></td><td></td></tr>
 <tr>
 <td>Energy</td><td>E=hc/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="meV" onkeyup="meV_to_all()" value="0.4756" size="7"> meV </td>
-<td><input name="eV" onkeyup="eVconvert()" value="0.0005" size="7"> eV </td>
-<td><input name="keV" onkeyup="keVconvert()" value="0.0000" size="7"> keV </td>
+<td><input name="keV" onkeyup="keVconvert()" value="0.0000" size="15"> keV </td>
+<td><input name="eV" onkeyup="eVconvert()" value="0.0005" size="15"> eV </td>
+<td><input name="meV" onkeyup="meV_to_all()" value="0.4756" size="15"> meV </td>
 <td></td>
 </tr>
 <tr>
 <td>Wave number</td><td>k=2&pi;/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="k" onkeyup="k_to_all()" value="24.1022" size="7"> cm<sup>-1</sup> </td>
+<td><input name="k" onkeyup="k_to_all()" value="24.1022" size="15"> cm<sup>-1</sup> </td>
 <td></td><td></td><td></td>
 </tr></table>
 </form>
