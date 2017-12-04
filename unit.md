@@ -30,7 +30,7 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td></td><td></td>
 </tr>
 <tr>
-<td>Wave number</td><td></td><td></td><td></td>
+<td>Wave number (2&pi;/&lambda;)</td><td></td><td></td><td></td>
 </tr>
 <tr>
 <td><input name="k" onkeyup="k_to_all()" value="3.83599" size="15"> cm<sup>-1</sup> </td>
