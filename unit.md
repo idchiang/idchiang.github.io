@@ -8,7 +8,7 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td>Wavelength</td><td>&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="A" onkeyup="angstrom_to_all()" value="26069000" size="15"> &#8491; </td>          
+<td><input name="A" onkeyup="angstrom_to_all()" value="26069000" size="10"> &#8491; </td>          
 <td><input name="nm" onkeyup="nmconvert()" value="2606900" size="15"> nm </td>
 <td><input name="um" onkeyup="umconvert()" value="2606.90" size="15"> &#181;m </td>
 <td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="15"> cm </td>
