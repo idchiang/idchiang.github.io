@@ -44,7 +44,7 @@ c_AGHz = 2.99792458e9;
 c_twopi_cmGHz = 2.99792458 / 2 / Math.PI
 hc_meVA = 1.23984193e7;
 h_meV_GHz = 4.135667662e-3;
-twopi_A_cm = Math.PI * 2e-8;
+twopi_A_cm = Math.PI * 2e8;
 hbarc_meVcm = 1.9732697e-2;
 
 // Wavelength
