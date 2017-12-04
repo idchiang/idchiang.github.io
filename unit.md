@@ -8,31 +8,31 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td>Wavelength</td><td>&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="A" onkeyup="angstrom_to_all()" value="26069000" size="11"> &#8491; </td>          
-<td><input name="nm" onkeyup="nmconvert()" value="2606900" size="11"> nm </td>
-<td><input name="um" onkeyup="umconvert()" value="2606.90" size="11"> &#181;m </td>
-<td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="11"> cm </td>
+<td><input name="A" onkeyup="angstrom_to_all()" value="26069000" size="10"> &#8491; </td>          
+<td><input name="nm" onkeyup="nmconvert()" value="2606900" size="9"> nm </td>
+<td><input name="um" onkeyup="umconvert()" value="2606.90" size="8"> &#181;m </td>
+<td><input name="cm" onkeyup="cmconvert()" value="0.26069" size="10"> cm </td>
 </tr>
 <tr>
 <td>Frequency</td><td>&nu;=c/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="GHz" onkeyup="GHz_to_all()" value="115" size="11"> GHz </td>
-<td><input name="THz" onkeyup="THzconvert()" value="0.115" size="11"> THz </td>
+<td><input name="GHz" onkeyup="GHz_to_all()" value="115" size="10"> GHz </td>
+<td><input name="THz" onkeyup="THzconvert()" value="0.115" size="9"> THz </td>
 <td></td><td></td></tr>
 <tr>
 <td>Energy</td><td>E=hc/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="meV" onkeyup="meV_to_all()" value="0.4756" size="11"> meV </td>
-<td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="11"> eV </td>
+<td><input name="meV" onkeyup="meV_to_all()" value="0.4756" size="10"> meV </td>
+<td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="10"> eV </td>
 <td></td><td></td>
 </tr>
 <tr>
 <td>Wave number</td><td>k=2&pi;/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="k" onkeyup="k_to_all()" value="24.10221" size="11"> cm<sup>-1</sup> </td>
+<td><input name="k" onkeyup="k_to_all()" value="24.10221" size="10"> cm<sup>-1</sup> </td>
 <td></td><td></td><td></td>
 </tr></table>
 </form>
