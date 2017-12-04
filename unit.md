@@ -55,7 +55,7 @@ function angstrom_to_all(from_other=false, from_W=10){
             meV_to_all(true)
             GHz.value=(c_AGHz/A.value).toFixed(5);
             GHz_to_all(true);
-            k.value=(twopi_Acm/A.value).toFixed(5);
+            k.value=(A.value/twopi_Acm).toFixed(5);
             k_to_all(true);
         }
         if (from_W != 9) {
@@ -138,7 +138,7 @@ function THzconvert(){
 function k_to_all(from_other=false, from_k=2){
     with (document.conversion){
         if (! from_other) {
-            A.value = (twopi_Acm/k.value).toFixed(5);
+            A.value = (twopi_Acm*k.value).toFixed(5);
             angstrom_to_all(true);
             meV.value = (hbarc_meVcm*k.value).toFixed(5);
             meV_to_all(true);
