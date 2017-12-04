@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### I am working on this... 12/03/2017 16:09
+### I am working on this... 12/03/2017 16:13
 <form name="conversion">
 Wavelength
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
@@ -82,7 +82,7 @@ function meV_to_all(from_other=false, from_E=3){
     with (document.conversion){
         if (! from_other) {
             A.value = (hc_meVA/meV.value).toFixed(5);
-            angstrom_to_all(true)
+            angstrom_to_all(true);
             GHz.value = (meV.value/h_meV_GHz).toFixed(5);
             GHz_to_all(true);
         }
@@ -94,7 +94,7 @@ function meV_to_all(from_other=false, from_E=3){
 function eVconvert(){
     with (document.conversion){
         meV.value = (eV.value*(1e3)).toFixed(5);
-        meV_to_all(false, 0)
+        meV_to_all(false, 0);
     }
 }
 
@@ -103,9 +103,9 @@ function GHz_to_all(from_other=false, from_f=9){
     with (document.conversion){
         if (! from_other) {
             A.value = (c_AGHz/GHz.value).toFixed(5);
-            angstrom_to_all(true)
+            angstrom_to_all(true);
             meV.value = (GHz.value*h_meV_GHz).toFixed(5);
-            meV_to_all(true)
+            meV_to_all(true);
         }
         if (from_f != 12) {
             THz.value = (GHz.value*(1e-3)).toFixed(5);
