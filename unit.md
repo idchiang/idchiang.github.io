@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### I am working on this... 12/03/2017 16:21
+### I am working on this... 12/03/2017 16:39
 <form name="conversion">
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
@@ -28,20 +28,24 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td><input name="meV" onkeyup="meV_to_all()" value="0.4756" size="15"> meV </td>
 <td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"> eV </td>
 <td></td><td></td>
-</tr></table>
-Momentum
-<table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
+</tr>
 <tr>
-// <td><input name="p" onkeyup="p_to_all()" value="3.83599" size="15"> cm<sup>-1</sup> </td>
+<td>Wave number</td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td><input name="k" onkeyup="k_to_all()" value="3.83599" size="15"> cm<sup>-1</sup> </td>
+<td></td><td></td><td></td>
 </tr></table>
 </form>
 
 <script language="javascript">
 // Constants
 c_AGHz = 2.99792458e9;
+c_twopi_cmGHz = 2.99792458 / 2 / Math.PI
 hc_meVA = 1.23984193e7;
 h_meV_GHz = 4.135667662e-3;
-//kB_meV_K = 8.6173303e-2;
+twopi_Acm = Math.PI * 2e-8;
+hbarc_meVcm = 1.9732697e-2;
 
 // Wavelength
 function angstrom_to_all(from_other=false, from_W=10){
@@ -51,6 +55,8 @@ function angstrom_to_all(from_other=false, from_W=10){
             meV_to_all(true)
             GHz.value=(c_AGHz/A.value).toFixed(5);
             GHz_to_all(true);
+            k.value=(twopi_Acm/A.value).toFixed(5);
+            k_to_all(true);
         }
         if (from_W != 9) {
             nm.value=(A.value*(1e-1)).toFixed(5);
@@ -90,6 +96,8 @@ function meV_to_all(from_other=false, from_E=3){
             angstrom_to_all(true);
             GHz.value = (meV.value/h_meV_GHz).toFixed(5);
             GHz_to_all(true);
+            k.value = (meV.value/hbarc_meVcm).toFixed(5);
+            k_to_all(true);
         }
         if (from_E != 0) {
             eV.value = (meV.value*(1e-3)).toFixed(5);
@@ -111,6 +119,8 @@ function GHz_to_all(from_other=false, from_f=9){
             angstrom_to_all(true);
             meV.value = (GHz.value*h_meV_GHz).toFixed(5);
             meV_to_all(true);
+            k.value = GHz.value / c_twopi_cmGHz;
+            k_to_all(true);
         }
         if (from_f != 12) {
             THz.value = (GHz.value*(1e-3)).toFixed(5);
@@ -124,14 +134,16 @@ function THzconvert(){
     }
 }
 
-// Momentum
-function kcm_to_all(from_other=false, from_k=2){
+// Wave number
+function k_to_all(from_other=false, from_k=2){
     with (document.conversion){
         if (! from_other) {
-            A.value = (c_AGHz/GHz.value).toFixed(5);
+            A.value = (twopi_Acm/k.value).toFixed(5);
             angstrom_to_all(true);
-            meV.value = (GHz.value*h_meV_GHz).toFixed(5);
+            meV.value = (hbarc_meVcm*k.value).toFixed(5);
             meV_to_all(true);
+            GHz.value = c_twopi_cmGHz * k.value;
+            GHZ_to_all(true);
         }
     }
 }
