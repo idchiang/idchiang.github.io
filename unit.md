@@ -2,7 +2,7 @@
 #### Original code: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fifth decimal.
 
-### I am working on this... 12/03/2017 16:13
+### I am working on this... 12/03/2017 16:21
 <form name="conversion">
 Wavelength
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
@@ -24,10 +24,10 @@ Energy
 <td><input name="meV" onkeyup="meV_to_all()" value="0.4756" size="15"> meV </td>
 <td><input name="eV" onkeyup="eVconvert()" value="0.00048" size="15"> eV </td>
 </tr></table>
-Wave number
+Momentum
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
 <tr>
-// <td><input name="wncm" onkeyup="wncm_to_all()" value="3.83599" size="15"> cm<sup>-1</sup> </td>
+// <td><input name="p" onkeyup="p_to_all()" value="3.83599" size="15"> cm<sup>-1</sup> </td>
 </tr></table>
 </form>
 
@@ -35,7 +35,7 @@ Wave number
 // Constants
 c_AGHz = 2.99792458e9;
 hc_meVA = 1.23984193e7;
-h_meV_GHz = 4.135667662e-21;
+h_meV_GHz = 4.135667662e-3;
 //kB_meV_K = 8.6173303e-2;
 
 // Wavelength
@@ -119,8 +119,17 @@ function THzconvert(){
     }
 }
 
-// Wave number
-
+// Momentum
+function kcm_to_all(from_other=false, from_k=2){
+    with (document.conversion){
+        if (! from_other) {
+            A.value = (c_AGHz/GHz.value).toFixed(5);
+            angstrom_to_all(true);
+            meV.value = (GHz.value*h_meV_GHz).toFixed(5);
+            meV_to_all(true);
+        }
+    }
+}
 
 </script>
 <br>
