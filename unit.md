@@ -55,7 +55,7 @@ function angstrom_to_all(from_other=false, from_W=10){
             meV_to_all(true)
             GHz.value=(c_AGHz/A.value).toFixed(5);
             GHz_to_all(true);
-            k.value=(A.value*twopi_A_cm).toFixed(5);
+            k.value=(twopi_A_cm/A.value).toFixed(5);
             k_to_all(true);
         }
         if (from_W != 9) {
