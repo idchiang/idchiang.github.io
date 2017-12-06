@@ -33,7 +33,14 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td>Wave number</td><td>k=2&pi;/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
-<td><input name="k" onkeyup="k_to_all()" value="24.1022" size="15"> cm<sup>-1</sup> </td>
+<td><input name="k" onkeyup="k_to_all()" value="24.1022" size="15"> cm<sup>-1</sup> (Physics) </td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td>Linear wave number</td><td>&sim;&nu;=1/&lambda;</td><td></td><td></td>
+</tr>
+<tr>
+<td><input name="lk" onkeyup="lkconvert()" value="3.8360" size="15"> cm<sup>-1</sup> (Chemistry) </td>
 <td></td><td></td><td></td>
 </tr></table>
 </form>
@@ -45,6 +52,7 @@ c_twopi_cmGHz = 2.99792458e1 / 2 / Math.PI;
 hc_meVA = 1.23984193e7;
 h_meV_GHz = 4.135667662e-3;
 twopi_A_cm = Math.PI * 2e8;
+twopi = Math.PI * 2;
 hbarc_meVcm = 1.9732697e-2;
 prec = 4
 
@@ -155,6 +163,16 @@ function k_to_all(from_other=false, from_k=2){
             GHz.value = (c_twopi_cmGHz * k.value).toFixed(prec);
             GHz_to_all(true);
         }
+        if (from_k != 'l') {
+            lk.value = k.value/twopi;
+        }
+    }
+}
+
+function lkconvert(){
+    with (document.conversion){
+        k.value = (lk.value*twopi).toFixed(prec);
+        k_to_all(false, 'l');
     }
 }
 
