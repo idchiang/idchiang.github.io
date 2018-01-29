@@ -2,3 +2,5 @@
 Welcome to my webpage! My name is I-Da Chiang (江宜達), and I am a PhD student at <a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a> in the <a href="http://cass.ucsd.edu/index.php/Main_Page" target="_blank">Center for Astrophysics and Space Sciences (CASS)</a>. I am a member of <a href="http://karinsandstrom.github.io/" target="_blank">Prof. Karin Sandstrom</a>'s <a href="https://nearbygalaxies.github.io/" target="_blank">nearby galaxies group</a>.
 
 My research focuses on the study of *intersteller dust properties* of *nearby galaxies*, and how the dust properties relate to local properties like *gas surface density*, *H<sub>2</sub>-to-CO conversion factor*, *dust-to-gas ratio*, and *metallicity*. I am also interested in techniques of fitting dust surface density from Far-infrared (FIR) emission maps.
+
+<a href="https://orcid.org/0000-0003-2551-7148" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0003-2551-7148</a>
