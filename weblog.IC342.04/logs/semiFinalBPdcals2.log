@@ -1,0 +1,20 @@
+2018-12-01 04:01:33	INFO		Starting EVLA_pipe_semiFinalBPdcals2.py
+2018-12-01 04:01:33	INFO		Finding a reference antenna for semi-final delay and BP calibrations
+2018-12-01 04:01:56	INFO		The pipeline will use antenna ea13 as the reference
+2018-12-01 04:07:56	INFO		Fraction of flagged solutions = 0.0
+2018-12-01 04:07:56	INFO		Median fraction of flagged solutions per antenna = 0.0
+2018-12-01 04:07:56	INFO		Delay calibration complete
+2018-12-01 04:07:56	INFO		Plotting delays
+2018-12-01 04:09:38	INFO		Initial gain calibration on BP calibrator complete
+2018-12-01 04:09:38	INFO		Plotting initial phase gain calibration on BP calibrator
+2018-12-01 04:13:55	INFO		Bandpass calibration complete
+2018-12-01 04:13:55	INFO		Fraction of flagged solutions = 0.099609375
+2018-12-01 04:13:55	INFO		Median fraction of flagged solutions per antenna = 0.099609375
+2018-12-01 04:13:55	INFO		Plotting bandpass solutions
+2018-12-01 04:24:15	INFO		Plotting complete
+2018-12-01 04:24:15	INFO		Applying semi-final delay and BP calibrations to all calibrators
+2018-12-01 04:31:20	INFO		Plot calibrated calibrators to check for further flagging/RFI
+2018-12-01 04:34:10	INFO		QA2_delay: Pass
+2018-12-01 04:34:11	INFO		QA2_BP: Pass
+2018-12-01 04:34:11	INFO		QA2 score: Pass
+2018-12-01 04:34:11	INFO		Finished EVLA_pipe_semiFinalBPdcals2.py

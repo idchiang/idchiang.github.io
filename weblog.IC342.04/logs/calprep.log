@@ -1,0 +1,7 @@
+2018-12-01 02:17:50	INFO		Starting EVLA_pipe_calprep.py
+2018-12-01 02:17:50	INFO		Setting models for standard primary calibrators
+2018-12-01 02:17:50	INFO		Center freq for spw 0 = 1420207966.0, observing band = L
+2018-12-01 02:17:50	INFO		Setting model for field 0 spw 0 using 3C48_L.im
+2018-12-01 02:17:57	INFO		Finished setting models for known calibrators
+2018-12-01 02:17:57	INFO		Finished EVLA_pipe_calprep.py
+2018-12-01 02:17:57	INFO		QA2 score: Pass

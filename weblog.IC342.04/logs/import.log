@@ -1,0 +1,5 @@
+2018-12-01 00:24:27	INFO	::casa	Starting EVLA_pipe_import.py
+2018-12-01 00:24:27	INFO	::casa	Creating measurementset
+2018-12-01 00:47:54	INFO		Measurement set 14B-396.sb29809142.eb30014592.56987.35765355324.ms created
+2018-12-01 00:47:54	INFO		Finished EVLA_pipe_import.py
+2018-12-01 00:47:54	INFO		QA2 score: Pass

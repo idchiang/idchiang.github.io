@@ -1,0 +1,26 @@
+startup: 0.298318147659 sec 
+import: 1407.23845506 sec 
+hanning: 0.00037407875061 sec 
+msinfo: 84.682749033 sec 
+flagall: 4163.82315207 sec 
+msinfo: 9.41485905647 sec 
+calprep: 7.09818100929 sec 
+priorcals: 33.938737154 sec 
+testBPdcals: 2244.54331899 sec 
+flag_baddeformatters: 15.1463470459 sec 
+flag_baddeformattersphase: 15.2250659466 sec 
+checkflag: 438.239849091 sec 
+semiFinalBPdcals1: 1969.298347 sec 
+checkflag_semiFinal: 894.09803915 sec 
+semiFinalBPdcals2: 1957.68598413 sec 
+solint: 26.6468000412 sec 
+testgains: 23.4701502323 sec 
+fluxgains: 19.978675127 sec 
+fluxboot: 74.3557720184 sec 
+finalcals: 2110.39946198 sec 
+applycals: 4259.99838281 sec 
+targetflag: 1787.81262183 sec 
+targetflag: 639.412672043 sec 
+plotsummary: 1514.38534999 sec 
+2018-12-01 08:10:26	INFO		Completed on Sat, 01 Dec 2018 08:10:25 +0000 with pipeline SVN revision 11nnn
+filecollect: 228.854686975 sec 

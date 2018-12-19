@@ -1,0 +1,13 @@
+2018-12-01 04:44:11	INFO		Starting EVLA_pipe_fluxboot.py
+2018-12-01 04:44:11	INFO		Doing flux density bootstrapping
+2018-12-01 04:44:11	INFO		Flux densities will be written to 14B-396.sb29809142.eb30014592.56987.35765355324.reduced.fluxdensities
+2018-12-01 04:44:14	INFO		Fitting data with power law
+2018-12-01 04:44:14	INFO		J0410+7656 L fitted spectral index & SNR = 0.0 0.0
+2018-12-01 04:44:14	INFO		Frequency, data, error, and fitted data:
+2018-12-01 04:44:14	INFO		    1.420207966  5.19004768361  0.00395653589227  5.19004768361
+2018-12-01 04:44:14	INFO		Setting power-law fit in the model column
+2018-12-01 04:44:14	INFO		Running setjy on spw 0
+2018-12-01 04:44:18	INFO		Flux density bootstrapping finished
+2018-12-01 04:44:18	INFO		Plotting model calibrator flux densities
+2018-12-01 04:45:26	INFO		QA2 score: Pass
+2018-12-01 04:45:26	INFO		Finished EVLA_pipe_fluxboot.py
