@@ -1,0 +1,32 @@
+QA feedback from NRAO staff:
+
+
+One of your Scheduling Blocks, , has been processed through the VLA
+CASA Calibration Pipeline, which is designed to handle Stokes I
+continuum data, and has received a QA2 score of . NRAO staff have
+checked the calibrated data and no major issues have been identified.
+Some data may need further flagging before imaging as described below:
+
+
+
+- If your science involves spectral lines, you should be aware of the following:
+
+1) The pipeline applies Hanning-smoothing by default, which may make the
+   calibrated data set not optimal for certain spectral-line science.
+
+2) During the calibration process, several edge channels in each sub
+   band get flagged by default because they are noisier. Therefore,
+   breaks in the frequency span get introduced in the pipeline
+   calibrated data, which in turn may make the output not suitable
+   for certain spectral-line science.
+
+3) The pipeline runs an RFI flagging algorithm which should flag strong
+   lines and may remove spectral lines of interest to your science.
+
+
+- If your observations used a resolved calibrator source (i.e., has UV
+  limits) but does not have standard model images in CASA, the calibrated
+  data through the pipeline would not be accurate. In such instances,
+  re-calibration using UV limits, or imaging the calibrator first and
+  using the resulting image model, will be needed.
+
