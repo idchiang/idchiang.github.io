@@ -7,7 +7,7 @@ spatially resolved *nearby galaxies*, especially how these relations depend on l
 Here are some selected works:
 1. <a href="https://iopscience.iop.org/article/10.3847/1538-4357/aadc5f/meta" target="_blank">The Spatially Resolved Dust-to-metals Ratio in M101</a>: we use the modified blackbody model and archival multi-wavelnght observation to show that the dust-to metals ratio in M101 is not constant. The varying dust-to-metals ratio in M101 is highly correlated to the molecular hydrogen fraction.
 
-2. The Resolved Distributions of Dust Mass and Temperature in Local Group Galaxies: we utilize the far-infrared observation from Herschel observatory to derive the dust properties in the local group galaxies. We show that the unresolved studies could possibly overestimate the dust temperature and underestiamte the overall dust surface density (coming up on arXiv!).
+2. <a href="https://arxiv.org/abs/1902.08629" target="_blank">The Resolved Distributions of Dust Mass and Temperature in Local Group Galaxies</a>: we utilize the far-infrared observation from Herschel observatory to derive the dust properties in the local group galaxies. We show that the unresolved studies could possibly overestimate the dust temperature and underestiamte the overall dust surface density.
 
 [Photo]: IMG_9852.jpg
 ![MyPhoto][Photo]
