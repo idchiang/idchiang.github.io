@@ -2,3 +2,9 @@
 
 ## New
 - Website complete!
+
+<!-- ## Improved -->
+<!-- - None -->
+
+<!-- ## Fixes -->
+<!-- - None -->
