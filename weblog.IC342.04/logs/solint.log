@@ -1,9 +1,0 @@
-2018-12-01 04:43:01	INFO		Starting EVLA_pipe_solint.py
-2018-12-01 04:43:01	INFO		Splitting out calibrators into calibrators.ms
-2018-12-01 04:43:27	INFO		Scan 4 has 152.999998676s on source
-2018-12-01 04:43:27	INFO		Scan 8 has 87.0000002207s on source
-2018-12-01 04:43:27	INFO		Scan 13 has 86.9999995921s on source
-2018-12-01 04:43:27	INFO		Scan 17 has 87.0000008494s on source
-2018-12-01 04:43:27	INFO		Scan 22 has 87.0000002207s on source
-2018-12-01 04:43:27	INFO		QA2 score: Pass
-2018-12-01 04:43:27	INFO		Finished EVLA_pipe_solint.py
