@@ -1,7 +1,8 @@
-### Online tools
+### EM wave unit conversion
+A webpage tool for quick conversion between wavelength units.
+<a href="tools_dir/unit.md">[Link to the tool]</a>
 
-<a href="unit.html">EM wave unit conversion for astrophysicists</a>
-
-### Codes
-
-<a href="https://github.com/idchiang/idc_lib/blob/master/idc_lib/z0mg_RSRF.py" target="blank">Code for RSRF calculation for Herschel and Spitzer</a>
+### Click and examine!
+A python plotting code, which reads the clicking position and reflects on the figure in real time.
+<a href="https://github.com/idchiang/templates/blob/master/clicking/clicking.py" target="_blank">[Link to the template code]</a>
+<a href="tools_dir/click.md" target="_blank">[More description]</a>

@@ -1,6 +1,3 @@
-### Python templates
-I will keep some python templates that might be useful for scientific usage here.
-
 ## Click and examine!
 [clicking]: https://github.com/idchiang/templates/raw/master/clicking/example.png
 
@@ -10,4 +7,4 @@ Here is an example: when the user clicks somewhere in the left panel (makred by 
 
 ![Example for ][clicking]
 
-<a href="https://github.com/idchiang/templates/blob/master/clicking/clicking.py" target="_blank">[Link to the template]</a>
+<a href="https://github.com/idchiang/templates/blob/master/clicking/clicking.py" target="_blank">[Link to the template code]</a>
