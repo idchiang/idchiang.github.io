@@ -1,7 +1,7 @@
 ### EM wave unit conversion
 A webpage tool for quick conversion between wavelength units.
 
-<a href="tools_dir/unit.html">[Link to the tool]</a>
+<a href="tools_dir/unit">[Link to the tool]</a>
 
 ### Click and examine!
 A python plotting code, which reads the clicking position and reflects on the figure in real time.
