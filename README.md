@@ -2,4 +2,4 @@
 I-Da Chiang's personal github page for academic purpose.
 
 Last updated: April 7th, 2019
-v1.1.0
+v1.1.1
