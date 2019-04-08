@@ -8,4 +8,4 @@ A python plotting code, which reads the clicking position and reflects on the fi
 
 <a href="https://github.com/idchiang/templates/blob/master/clicking/clicking.py" target="_blank">[Link to the template code]</a>
 
-<a href="tools_click" target="_blank">[More description]</a>
+<a href="tools_click">[More description]</a>
