@@ -11,5 +11,3 @@ Here are some selected works:
 
 [Photo]: IMG_9852.jpg
 ![MyPhoto][Photo]
-
-<a href="http://adsabs.harvard.edu/abs/2019arXiv190208629U" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0003-2551-7148</a>
