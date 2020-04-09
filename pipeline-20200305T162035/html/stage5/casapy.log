@@ -1,0 +1,255 @@
+2020-03-05 19:39:50	INFO	hifv_priorcals::pipeline.infrastructure.basetask::	Starting execution for stage 5
+2020-03-05 19:39:50	INFO	hifv_priorcals::pipeline.infrastructure.basetask::	Equivalent CASA call: hifv_priorcals(tecmaps=False)
+2020-03-05 19:39:51	INFO	hifv_priorcals::pipeline.infrastructure.jobrequest::	Executing gencal(vis='14B-396.sb29809142.eb30014592.56987.35765355324.ms', caltable='14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_2.gc.tbl', caltype='gc', parameter=[])
+2020-03-05 19:39:51	INFO	gencal::::	
+2020-03-05 19:39:51	INFO	gencal::::+	##########################################
+2020-03-05 19:39:51	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-03-05 19:39:51	INFO	gencal::::	gencal(vis="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms",caltable="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_2.gc.tbl",caltype="gc",infile="",spw="",
+2020-03-05 19:39:51	INFO	gencal::::+	        antenna="",pol="",parameter=[],uniform=True)
+2020-03-05 19:39:51	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-03-05 19:39:51	INFO	calibrater::open	Opening MS: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms for calibration.
+2020-03-05 19:39:51	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-03-05 19:39:51	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-03-05 19:39:51	INFO		Using standard VLA gaincurve table from the data repository: /home/idchiang/bin/casa-release-5.4.1-31.el7/data/nrao/VLA/GainCurves
+2020-03-05 19:39:51	INFO		Using /home/idchiang/bin/casa-release-5.4.1-31.el7/data/nrao/VLA/GainCurves nrow=1442
+2020-03-05 19:39:51	INFO		Writing solutions to table: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_2.gc.tbl
+2020-03-05 19:39:52	INFO	gencal::::	##### End Task: gencal               #####
+2020-03-05 19:39:52	INFO	gencal::::+	##########################################
+2020-03-05 19:39:52	INFO	pipeline.hifv.tasks.opcal.opcal::pipeline.hifv.tasks.opcal.opcal::	Using seasonal_weight of 0.5
+2020-03-05 19:39:52	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing plotweather(vis='14B-396.sb29809142.eb30014592.56987.35765355324.ms', seasonal_weight=0.5, doPlot=True)
+2020-03-05 19:39:53	INFO	plotweather::::	
+2020-03-05 19:39:53	INFO	plotweather::::+	##########################################
+2020-03-05 19:39:53	INFO	plotweather::::+	##### Begin Task: plotweather        #####
+2020-03-05 19:39:53	INFO	plotweather::::	plotweather(vis="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms",seasonal_weight=0.5,doPlot=True,plotName="")
+2020-03-05 19:40:00	INFO	plotweather::::	SPW : Frequency (GHz) : Zenith opacity (nepers)
+2020-03-05 19:40:00	INFO	plotweather::::	  0  :    0.988  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	  1  :    1.116  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	  2  :    1.244  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	  3  :    1.372  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	  4  :    1.500  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	  5  :    1.628  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	  6  :    1.756  :  0.006
+2020-03-05 19:40:00	INFO	plotweather::::	  7  :    1.884  :  0.006
+2020-03-05 19:40:00	INFO	plotweather::::	  8  :    1.416  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	  9  :    1.608  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	 10  :    1.661  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	 11  :    1.663  :  0.005
+2020-03-05 19:40:00	INFO	plotweather::::	 12  :    1.716  :  0.006
+2020-03-05 19:40:02	INFO	plotweather::::	wrote weather figure: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.plotweather.png
+2020-03-05 19:40:02	INFO	plotweather::::	##### End Task: plotweather          #####
+2020-03-05 19:40:02	INFO	plotweather::::+	##########################################
+2020-03-05 19:40:02	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gencal(vis='14B-396.sb29809142.eb30014592.56987.35765355324.ms', caltable='14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_3.opac.tbl', caltype='opac', spw='0,1,2,3,4,5,6,7,8,9,10,11,12', parameter=[0.0051055473227870109, 0.0052367366113529046, 0.0053163693212051394, 0.0053921027940118018, 0.0054413505472415752, 0.0054896253527931859, 0.0055238463913315885, 0.0055574995301977534, 0.0054095278410112189, 0.0054823690931481081, 0.0054984929058722841, 0.005499016842805197, 0.0055132299619186148])
+2020-03-05 19:40:02	INFO	gencal::::	
+2020-03-05 19:40:02	INFO	gencal::::+	##########################################
+2020-03-05 19:40:02	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-03-05 19:40:02	INFO	gencal::::	gencal(vis="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms",caltable="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_3.opac.tbl",caltype="opac",infile="",spw="0,1,2,3,4,5,6,7,8,9,10,11,12",
+2020-03-05 19:40:02	INFO	gencal::::+	        antenna="",pol="",parameter=[0.0051055473227870109, 0.0052367366113529046, 0.0053163693212051394, 0.0053921027940118018, 0.0054413505472415752, 0.0054896253527931859, 0.0055238463913315885, 0.0055574995301977534, 0.0054095278410112189, 0.0054823690931481081, 0.0054984929058722841, 0.005499016842805197, 0.0055132299619186148],uniform=True)
+2020-03-05 19:40:02	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-03-05 19:40:02	INFO	calibrater::open	Opening MS: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms for calibration.
+2020-03-05 19:40:02	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-03-05 19:40:02	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-03-05 19:40:02	INFO		Creating TOpac table from specified parameters.
+2020-03-05 19:40:02	INFO		Generating 'opac' corrections.
+2020-03-05 19:40:02	INFO		Specified parameter(s) (per spw and pol) repeated on all antennas.
+2020-03-05 19:40:02	INFO		Specified parameter(s) (per spw and antenna) repeated on all polarizations.
+2020-03-05 19:40:02	INFO		spwId=0 antId=<all> polId=<all> parameter= 0.00510555   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=1 antId=<all> polId=<all> parameter= 0.00523674   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=2 antId=<all> polId=<all> parameter= 0.00531637   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=3 antId=<all> polId=<all> parameter= 0.0053921   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=4 antId=<all> polId=<all> parameter= 0.00544135   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=5 antId=<all> polId=<all> parameter= 0.00548963   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=6 antId=<all> polId=<all> parameter= 0.00552385   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=7 antId=<all> polId=<all> parameter= 0.0055575   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=8 antId=<all> polId=<all> parameter= 0.00540953   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=9 antId=<all> polId=<all> parameter= 0.00548237   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=10 antId=<all> polId=<all> parameter= 0.00549849   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=11 antId=<all> polId=<all> parameter= 0.00549902   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		spwId=12 antId=<all> polId=<all> parameter= 0.00551323   (ip0,ip1 = [0, 0, 0],[0, 0, 26])
+2020-03-05 19:40:02	INFO		Writing solutions to table: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_3.opac.tbl
+2020-03-05 19:40:03	INFO	gencal::::	##### End Task: gencal               #####
+2020-03-05 19:40:03	INFO	gencal::::+	##########################################
+2020-03-05 19:40:03	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gencal(vis='14B-396.sb29809142.eb30014592.56987.35765355324.ms', caltable='14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_4.rq.tbl', caltype='rq', parameter=[])
+2020-03-05 19:40:03	INFO	gencal::::	
+2020-03-05 19:40:03	INFO	gencal::::+	##########################################
+2020-03-05 19:40:03	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-03-05 19:40:03	INFO	gencal::::	gencal(vis="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms",caltable="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_4.rq.tbl",caltype="rq",infile="",spw="",
+2020-03-05 19:40:03	INFO	gencal::::+	        antenna="",pol="",parameter=[],uniform=True)
+2020-03-05 19:40:03	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-03-05 19:40:03	INFO	calibrater::open	Opening MS: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms for calibration.
+2020-03-05 19:40:03	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-03-05 19:40:03	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-03-05 19:40:04	INFO		Creating G EVLASWPOW table from MS SYSPOWER/CALDEVICE subtables.
+2020-03-05 19:40:04	INFO		Filling Tcals from the CALDEVICE table.
+2020-03-05 19:40:04	INFO		Filling switched-power (rq) data from the SYSPOWER table.
+2020-03-05 19:40:18	INFO		Found 93404 TIME/SPW switched-power samples in SYSPOWER table
+2020-03-05 19:43:52	INFO		GOOD gain counts per spw for antenna Ids 0-26:
+2020-03-05 19:43:52	INFO		  Spw 0: [7178, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7178] (193785)
+2020-03-05 19:43:52	INFO		  Spw 1: [7178, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7178] (193785)
+2020-03-05 19:43:52	INFO		  Spw 2: [7178, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7178] (193785)
+2020-03-05 19:43:52	INFO		  Spw 3: [7178, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7178] (193785)
+2020-03-05 19:43:52	INFO		  Spw 4: [7178, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7178] (193785)
+2020-03-05 19:43:52	INFO		  Spw 5: [7178, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7178] (193785)
+2020-03-05 19:43:52	INFO		  Spw 6: [7178, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7178] (193785)
+2020-03-05 19:43:52	INFO		  Spw 7: [7178, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7178, 7177, 7177, 7177, 7177, 7177, 7177, 7178, 7177, 7177, 7177, 7178] (193785)
+2020-03-05 19:43:52	INFO		  Spw 8: [7173, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7172, 7173, 7172, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7175, 7173, 7173] (193675)
+2020-03-05 19:43:52	INFO		  Spw 9: [7173, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7172, 7173, 7172, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7175, 7173, 7173] (193675)
+2020-03-05 19:43:52	INFO		  Spw 10: [7173, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7172, 7173, 7172, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7175, 7173, 7173] (193675)
+2020-03-05 19:43:52	INFO		  Spw 11: [7173, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7172, 7173, 7172, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7175, 7173, 7173] (193675)
+2020-03-05 19:43:52	INFO		  Spw 12: [7173, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7172, 7173, 7172, 7173, 7175, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7173, 7175, 7173, 7173] (193675)
+2020-03-05 19:43:52	INFO		BAD gain counts per spw for antenna Ids 0-26:
+2020-03-05 19:43:52	INFO		  Spw 0: [0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0] (22)
+2020-03-05 19:43:52	INFO		  Spw 1: [0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0] (21)
+2020-03-05 19:43:52	INFO		  Spw 2: [0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0] (21)
+2020-03-05 19:43:52	INFO		  Spw 3: [0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0] (21)
+2020-03-05 19:43:52	INFO		  Spw 4: [0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0] (21)
+2020-03-05 19:43:52	INFO		  Spw 5: [0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0] (21)
+2020-03-05 19:43:52	INFO		  Spw 6: [0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0] (21)
+2020-03-05 19:43:52	INFO		  Spw 7: [0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0] (21)
+2020-03-05 19:43:52	INFO		BAD gain count FRACTION per spw for antenna Ids 0-26:
+2020-03-05 19:43:52	INFO		  Spw 0: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:43:52	INFO		  Spw 1: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:43:52	INFO		  Spw 2: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:43:52	INFO		  Spw 3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:43:52	INFO		  Spw 4: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:43:52	INFO		  Spw 5: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:43:52	INFO		  Spw 6: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:43:52	INFO		  Spw 7: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:43:53	INFO		Writing solutions to table: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_4.rq.tbl
+2020-03-05 19:44:41	INFO	gencal::::	##### End Task: gencal               #####
+2020-03-05 19:44:41	INFO	gencal::::+	##########################################
+2020-03-05 19:44:42	INFO	ms::summary	================================================================================
+2020-03-05 19:44:42	INFO	ms::summary+	           MeasurementSet Name:  /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms      MS Version 2
+2020-03-05 19:44:42	INFO	ms::summary+	================================================================================
+2020-03-05 19:44:42	INFO	ms::summary+	   Observer: Dr. Karin Sandstrom     Project: uid://evla/pdb/29589269  
+2020-03-05 19:44:42	INFO	ms::summary+	Observation: EVLA(27 antennas)
+2020-03-05 19:44:42	INFO	MSMetaData::_computeScanAndSubScanProperties 	Computing scan and subscan properties...
+2020-03-05 19:44:46	INFO	ms::summary	Data records: 10823436       Total elapsed time = 7179 seconds
+2020-03-05 19:44:46	INFO	ms::summary+	   Observed from   26-Nov-2014/08:35:03.0   to   26-Nov-2014/10:34:42.0 (UTC)
+2020-03-05 19:44:46	INFO	ms::summary	
+2020-03-05 19:44:46	INFO	ms::summary	Fields: 9
+2020-03-05 19:44:46	INFO	ms::summary+	  ID   Code Name                RA               Decl           Epoch   SrcId      nRows
+2020-03-05 19:44:46	INFO	ms::summary+	  0    NONE 0137+331=3C48       01:37:41.299431 +33.09.35.13299 J2000   0        1263951
+2020-03-05 19:44:46	INFO	ms::summary+	  1    NONE J0410+7656          04:10:45.605700 +76.56.45.30099 J2000   1        1250262
+2020-03-05 19:44:46	INFO	ms::summary+	  2    NONE IC342FIELD1         03:45:29.607840 +67.53.05.57161 J2000   2        1327833
+2020-03-05 19:44:46	INFO	ms::summary+	  3    NONE IC342FIELD2         03:48:08.983440 +67.53.05.57161 J2000   3        1140750
+2020-03-05 19:44:46	INFO	ms::summary+	  4    NONE IC342FIELD3         03:44:08.422800 +68.06.04.99319 J2000   4        1140750
+2020-03-05 19:44:46	INFO	ms::summary+	  5    NONE IC342FIELD4         03:46:49.295760 +68.06.04.99319 J2000   5        1268514
+2020-03-05 19:44:46	INFO	ms::summary+	  6    NONE IC342FIELD5         03:49:30.168479 +68.06.04.99319 J2000   6        1140750
+2020-03-05 19:44:46	INFO	ms::summary+	  7    NONE IC342FIELD6         03:45:28.095360 +68.19.04.41481 J2000   7        1145313
+2020-03-05 19:44:46	INFO	ms::summary+	  8    NONE IC342FIELD7         03:48:10.495920 +68.19.04.41481 J2000   8        1145313
+2020-03-05 19:44:46	INFO	ms::summary	Spectral Windows:  (13 unique spectral windows and 1 unique polarization setups)
+2020-03-05 19:44:46	INFO	ms::summary+	  SpwID  Name           #Chans   Frame   Ch0(MHz)  ChanWid(kHz)  TotBW(kHz) CtrFreq(MHz) BBC Num  Corrs  
+2020-03-05 19:44:46	INFO	ms::summary+	  0      EVLA_L#A0C0#0     128   TOPO     988.000      1000.000    128000.0   1051.5000       12  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  1      EVLA_L#A0C0#1     128   TOPO    1116.000      1000.000    128000.0   1179.5000       12  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  2      EVLA_L#A0C0#2     128   TOPO    1244.000      1000.000    128000.0   1307.5000       12  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  3      EVLA_L#A0C0#3     128   TOPO    1372.000      1000.000    128000.0   1435.5000       12  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  4      EVLA_L#A0C0#4     128   TOPO    1500.000      1000.000    128000.0   1563.5000       12  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  5      EVLA_L#A0C0#5     128   TOPO    1628.000      1000.000    128000.0   1691.5000       12  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  6      EVLA_L#A0C0#6     128   TOPO    1756.000      1000.000    128000.0   1819.5000       12  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  7      EVLA_L#A0C0#7     128   TOPO    1884.000      1000.000    128000.0   1947.5000       12  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  8      EVLA_L#B0D0#8    4096   TOPO    1416.208         1.953      8000.0   1420.2070       15  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  9      EVLA_L#B0D0#9     512   TOPO    1608.006        15.625      8000.0   1611.9977       15  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  10     EVLA_L#B0D0#10    512   TOPO    1661.168        15.625      8000.0   1665.1603       15  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  11     EVLA_L#B0D0#11    512   TOPO    1663.128        15.625      8000.0   1667.1200       15  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary+	  12     EVLA_L#B0D0#12    512   TOPO    1716.290        15.625      8000.0   1720.2826       15  RR  LL
+2020-03-05 19:44:46	INFO	ms::summary	Antennas: 27 'name'='station' 
+2020-03-05 19:44:46	INFO	ms::summary+	   ID=   0-3: 'ea01'='N12', 'ea02'='N16', 'ea03'='E16', 'ea04'='E02', 
+2020-03-05 19:44:46	INFO	ms::summary+	   ID=   4-7: 'ea05'='W08', 'ea06'='N06', 'ea07'='N14', 'ea08'='E10', 
+2020-03-05 19:44:46	INFO	ms::summary+	   ID=  8-11: 'ea09'='W16', 'ea10'='E18', 'ea11'='W02', 'ea12'='N18', 
+2020-03-05 19:44:46	INFO	ms::summary+	   ID= 12-15: 'ea13'='W04', 'ea14'='E08', 'ea15'='E06', 'ea16'='W06', 
+2020-03-05 19:44:46	INFO	ms::summary+	   ID= 16-19: 'ea17'='E04', 'ea18'='W18', 'ea19'='W10', 'ea20'='N04', 
+2020-03-05 19:44:46	INFO	ms::summary+	   ID= 20-23: 'ea21'='E14', 'ea22'='N02', 'ea24'='W14', 'ea25'='W12', 
+2020-03-05 19:44:46	INFO	ms::summary+	   ID= 24-26: 'ea26'='E12', 'ea27'='N08', 'ea28'='N01'
+2020-03-05 19:44:46	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gencal(vis='14B-396.sb29809142.eb30014592.56987.35765355324.ms', caltable='14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_5.swpow.tbl', caltype='swpow', parameter=[])
+2020-03-05 19:44:46	INFO	gencal::::	
+2020-03-05 19:44:46	INFO	gencal::::+	##########################################
+2020-03-05 19:44:46	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-03-05 19:44:46	INFO	gencal::::	gencal(vis="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms",caltable="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_5.swpow.tbl",caltype="swpow",infile="",spw="",
+2020-03-05 19:44:46	INFO	gencal::::+	        antenna="",pol="",parameter=[],uniform=True)
+2020-03-05 19:44:46	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-03-05 19:44:46	INFO	calibrater::open	Opening MS: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms for calibration.
+2020-03-05 19:44:46	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-03-05 19:44:46	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-03-05 19:44:46	INFO		Creating G EVLASWPOW table from MS SYSPOWER/CALDEVICE subtables.
+2020-03-05 19:44:46	INFO		Filling Tcals from the CALDEVICE table.
+2020-03-05 19:44:46	INFO		Filling switched-power (swpow) data from the SYSPOWER table.
+2020-03-05 19:44:57	INFO		Found 93404 TIME/SPW switched-power samples in SYSPOWER table
+2020-03-05 19:48:25	INFO		GOOD gain counts per spw for antenna Ids 0-26:
+2020-03-05 19:48:25	INFO		  Spw 0: [5469, 5075, 5817, 5999, 4911, 5917, 4424, 4326, 4762, 3803, 5903, 3953, 4288, 3662, 4946, 6322, 4548, 5550, 5730, 4337, 4099, 4391, 5813, 5258, 5668, 4798, 5382] (135151)
+2020-03-05 19:48:25	INFO		  Spw 1: [7177, 7175, 7174, 7177, 7146, 7086, 7159, 6932, 7132, 7163, 7104, 6728, 7014, 7160, 7049, 7177, 6961, 7112, 7007, 7054, 7097, 7176, 7040, 7174, 7172, 7086, 7156] (191588)
+2020-03-05 19:48:25	INFO		  Spw 2: [7176, 7163, 7041, 7173, 7158, 7139, 7163, 7175, 7174, 6977, 7116, 7135, 7066, 7162, 7163, 7160, 7099, 7174, 7087, 7129, 7105, 7158, 7177, 7154, 7151, 7177, 7176] (192728)
+2020-03-05 19:48:25	INFO		  Spw 3: [7178, 7176, 7176, 7177, 7177, 7176, 7176, 7175, 7175, 7173, 7176, 7176, 7175, 7177, 7176, 7177, 7175, 7176, 7176, 7175, 7177, 7175, 7176, 7176, 7174, 7176, 7177] (193749)
+2020-03-05 19:48:25	INFO		  Spw 4: [7013, 6904, 6875, 6969, 6949, 6787, 6835, 6518, 6661, 6482, 6848, 6848, 6734, 6742, 6719, 6738, 6805, 6383, 6601, 6733, 6722, 6767, 6868, 6755, 6770, 6851, 6894] (182771)
+2020-03-05 19:48:25	INFO		  Spw 5: [7121, 7014, 6993, 7092, 7059, 6949, 7014, 6947, 7012, 6936, 7052, 6845, 6990, 7001, 6941, 6929, 7024, 6844, 6939, 6992, 6974, 7003, 7071, 610, 7035, 7045, 7063] (182495)
+2020-03-05 19:48:25	INFO		  Spw 6: [7178, 7174, 7175, 7177, 7177, 7176, 7174, 7172, 7176, 7172, 7175, 7175, 7173, 7176, 7175, 7176, 7174, 7177, 7175, 7174, 7176, 7173, 7175, 7176, 7174, 7176, 7177] (193728)
+2020-03-05 19:48:25	INFO		  Spw 7: [7178, 7175, 7171, 7177, 7177, 7176, 7170, 7169, 7175, 7168, 7171, 7174, 7170, 7170, 7174, 7173, 7170, 7173, 7173, 7167, 7175, 7173, 7174, 7175, 7173, 7176, 7172] (193669)
+2020-03-05 19:48:25	INFO		  Spw 8: [7173, 7172, 7175, 7170, 7173, 7168, 7170, 7171, 7170, 7166, 7170, 7169, 7169, 7171, 7169, 7171, 7169, 7170, 7170, 7169, 7172, 7172, 7164, 7168, 7172, 7171, 7171] (193595)
+2020-03-05 19:48:25	INFO		  Spw 9: [7172, 7167, 7173, 7172, 7172, 7168, 7170, 7170, 7162, 7169, 7170, 7168, 7170, 7169, 7170, 7171, 7170, 7169, 7169, 7171, 7171, 7170, 7171, 7170, 7172, 7170, 7171] (193587)
+2020-03-05 19:48:25	INFO		  Spw 10: [7173, 7171, 7175, 7173, 7173, 7167, 7172, 7171, 7172, 7168, 7172, 7169, 7172, 7169, 7169, 7171, 7171, 7170, 7172, 7172, 7172, 7171, 7172, 3, 7174, 7172, 7172] (186458)
+2020-03-05 19:48:25	INFO		  Spw 11: [7173, 7170, 7174, 7172, 7173, 7164, 7172, 7171, 7172, 7168, 7172, 7167, 7172, 7170, 7169, 7169, 7171, 7172, 7172, 7172, 7172, 7171, 7172, 2, 7173, 7172, 7172] (186449)
+2020-03-05 19:48:25	INFO		  Spw 12: [7173, 7168, 7175, 7173, 7173, 7172, 7171, 7171, 7172, 7167, 7173, 7170, 7172, 7172, 7172, 7163, 7171, 7171, 7170, 7173, 7172, 7171, 7173, 7172, 7174, 7172, 7172] (193628)
+2020-03-05 19:48:25	INFO		BAD gain counts per spw for antenna Ids 0-26:
+2020-03-05 19:48:25	INFO		  Spw 0: [1709, 2103, 1361, 1179, 2267, 1261, 2754, 2852, 2416, 3375, 1275, 3225, 2890, 3516, 2232, 857, 2630, 1628, 1448, 2841, 3079, 2787, 1365, 1920, 1510, 2380, 1796] (58656)
+2020-03-05 19:48:25	INFO		  Spw 1: [1, 3, 4, 1, 32, 92, 19, 246, 46, 15, 74, 450, 164, 18, 129, 1, 217, 66, 171, 124, 81, 2, 138, 4, 6, 92, 22] (2218)
+2020-03-05 19:48:25	INFO		  Spw 2: [2, 15, 137, 5, 20, 39, 15, 3, 4, 201, 62, 43, 112, 16, 15, 18, 79, 4, 91, 49, 73, 20, 1, 24, 27, 1, 2] (1078)
+2020-03-05 19:48:25	INFO		  Spw 3: [0, 2, 2, 1, 1, 2, 2, 3, 3, 5, 2, 2, 3, 1, 2, 1, 3, 2, 2, 3, 1, 3, 2, 2, 4, 2, 1] (57)
+2020-03-05 19:48:25	INFO		  Spw 4: [165, 274, 303, 209, 229, 391, 343, 660, 517, 696, 330, 330, 444, 436, 459, 440, 373, 795, 577, 445, 456, 411, 310, 423, 408, 327, 284] (11035)
+2020-03-05 19:48:25	INFO		  Spw 5: [57, 164, 185, 86, 119, 229, 164, 231, 166, 242, 126, 333, 188, 177, 237, 249, 154, 334, 239, 186, 204, 175, 107, 6568, 143, 133, 115] (11311)
+2020-03-05 19:48:25	INFO		  Spw 6: [0, 4, 3, 1, 1, 2, 4, 6, 2, 6, 3, 3, 5, 2, 3, 2, 4, 1, 3, 4, 2, 5, 3, 2, 4, 2, 1] (78)
+2020-03-05 19:48:25	INFO		  Spw 7: [0, 3, 7, 1, 1, 2, 8, 9, 3, 10, 7, 4, 8, 8, 4, 5, 8, 5, 5, 11, 3, 5, 4, 3, 5, 2, 6] (137)
+2020-03-05 19:48:25	INFO		  Spw 8: [0, 1, 0, 3, 0, 5, 3, 2, 3, 7, 3, 3, 4, 1, 4, 4, 4, 3, 3, 4, 1, 1, 9, 5, 3, 2, 2] (80)
+2020-03-05 19:48:25	INFO		  Spw 9: [1, 6, 2, 1, 1, 5, 3, 3, 11, 4, 3, 4, 3, 3, 3, 4, 3, 4, 4, 2, 2, 3, 2, 3, 3, 3, 2] (88)
+2020-03-05 19:48:25	INFO		  Spw 10: [0, 2, 0, 0, 0, 6, 1, 2, 1, 5, 1, 3, 1, 3, 4, 4, 2, 3, 1, 1, 1, 2, 1, 7170, 1, 1, 1] (7217)
+2020-03-05 19:48:25	INFO		  Spw 11: [0, 3, 1, 1, 0, 9, 1, 2, 1, 5, 1, 5, 1, 2, 4, 6, 2, 1, 1, 1, 1, 2, 1, 7171, 2, 1, 1] (7226)
+2020-03-05 19:48:25	INFO		  Spw 12: [0, 5, 0, 0, 0, 1, 2, 2, 1, 6, 0, 2, 1, 0, 1, 12, 2, 2, 3, 0, 1, 2, 0, 1, 1, 1, 1] (47)
+2020-03-05 19:48:25	INFO		BAD gain count FRACTION per spw for antenna Ids 0-26:
+2020-03-05 19:48:25	INFO		  Spw 0: [0.238, 0.292, 0.189, 0.164, 0.315, 0.175, 0.383, 0.397, 0.336, 0.47, 0.177, 0.449, 0.402, 0.489, 0.31, 0.119, 0.366, 0.226, 0.201, 0.395, 0.428, 0.388, 0.19, 0.267, 0.21, 0.331, 0.25] (0.302)
+2020-03-05 19:48:25	INFO		  Spw 1: [0, 0, 0, 0, 0.004, 0.012, 0.002, 0.034, 0.006, 0.002, 0.01, 0.062, 0.022, 0.002, 0.017, 0, 0.03, 0.009, 0.023, 0.017, 0.011, 0, 0.019, 0, 0, 0.012, 0.003] (0.011)
+2020-03-05 19:48:25	INFO		  Spw 2: [0, 0.002, 0.019, 0, 0.002, 0.005, 0.002, 0, 0, 0.028, 0.008, 0.005, 0.015, 0.002, 0.002, 0.002, 0.011, 0, 0.012, 0.006, 0.01, 0.002, 0, 0.003, 0.003, 0, 0] (0.005)
+2020-03-05 19:48:25	INFO		  Spw 3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:48:25	INFO		  Spw 4: [0.022, 0.038, 0.042, 0.029, 0.031, 0.054, 0.047, 0.091, 0.072, 0.096, 0.045, 0.045, 0.061, 0.06, 0.063, 0.061, 0.051, 0.11, 0.08, 0.061, 0.063, 0.057, 0.043, 0.058, 0.056, 0.045, 0.039] (0.056)
+2020-03-05 19:48:25	INFO		  Spw 5: [0.007, 0.022, 0.025, 0.011, 0.016, 0.031, 0.022, 0.032, 0.023, 0.033, 0.017, 0.046, 0.026, 0.024, 0.033, 0.034, 0.021, 0.046, 0.033, 0.025, 0.028, 0.024, 0.014, 0.915, 0.019, 0.018, 0.016] (0.058)
+2020-03-05 19:48:25	INFO		  Spw 6: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:48:25	INFO		  Spw 7: [0, 0, 0, 0, 0, 0, 0.001, 0.001, 0, 0.001, 0, 0, 0.001, 0.001, 0, 0, 0.001, 0, 0, 0.001, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:48:25	INFO		  Spw 8: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.001, 0, 0, 0, 0] (0)
+2020-03-05 19:48:25	INFO		  Spw 9: [0, 0, 0, 0, 0, 0, 0, 0, 0.001, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:48:25	INFO		  Spw 10: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.999, 0, 0, 0] (0.037)
+2020-03-05 19:48:25	INFO		  Spw 11: [0, 0, 0, 0, 0, 0.001, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.999, 0, 0, 0] (0.037)
+2020-03-05 19:48:25	INFO		  Spw 12: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.001, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] (0)
+2020-03-05 19:48:25	INFO		Writing solutions to table: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_5.swpow.tbl
+2020-03-05 19:49:19	INFO	gencal::::	##### End Task: gencal               #####
+2020-03-05 19:49:19	INFO	gencal::::+	##########################################
+2020-03-05 19:49:19	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing gencal(vis='14B-396.sb29809142.eb30014592.56987.35765355324.ms', caltable='14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_6.ants.tbl', caltype='antpos', parameter=[])
+2020-03-05 19:49:19	INFO	gencal::::	
+2020-03-05 19:49:19	INFO	gencal::::+	##########################################
+2020-03-05 19:49:19	INFO	gencal::::+	##### Begin Task: gencal             #####
+2020-03-05 19:49:19	INFO	gencal::::	gencal(vis="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms",caltable="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_6.ants.tbl",caltype="antpos",infile="",spw="",
+2020-03-05 19:49:19	INFO	gencal::::+	        antenna="",pol="",parameter=[],uniform=True)
+2020-03-05 19:49:19	INFO	calibrater::open	****Using NEW VI2-driven calibrater tool****
+2020-03-05 19:49:19	INFO	calibrater::open	Opening MS: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms for calibration.
+2020-03-05 19:49:19	INFO	Calibrater::	Initializing nominal selection to the whole MS.
+2020-03-05 19:49:19	INFO	gencal::::	 Determine antenna position offsets from the baseline correction database
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea01 :  0.00070   0.00000  -0.00070
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea02 :  0.00000   0.00060   0.00100
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea08 :  0.00120   0.00270   0.00000
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea10 :  0.00200   0.00160  -0.00130
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea11 :  0.00000   0.00050  -0.00040
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea13 :  0.00000   0.00050  -0.00100
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea14 : -0.00070   0.00000   0.00000
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea15 : -0.00070   0.00000   0.00040
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea17 : -0.00030   0.00000   0.00030
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea18 :  0.00200  -0.00060   0.00050
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea19 :  0.00000   0.00110  -0.00030
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea21 :  0.00240   0.00250  -0.00460
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea24 :  0.00000   0.00100  -0.00030
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea25 :  0.00000   0.00060  -0.00030
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea26 :  0.00050   0.00370   0.00140
+2020-03-05 19:49:21	INFO	gencal::::	offsets for antenna ea27 : -0.00070   0.00070  -0.00060
+2020-03-05 19:49:21	INFO	calibrater::specifycal	Beginning specifycal-----------------------
+2020-03-05 19:49:21	INFO		Creating KAntPos Jones table from specified parameters.
+2020-03-05 19:49:21	INFO		Writing solutions to table: /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_6.ants.tbl
+2020-03-05 19:49:22	INFO	gencal::::	##### End Task: gencal               #####
+2020-03-05 19:49:22	INFO	gencal::::+	##########################################
+2020-03-05 19:49:23	INFO	pipeline.hifv.tasks.priorcals.priorcals::pipeline.hifv.tasks.priorcals.priorcals::	Start antenna position corrections
+2020-03-05 19:49:27	INFO	pipeline.hifv.tasks.priorcals.priorcals::pipeline.hifv.tasks.priorcals.priorcals::	End antenna position corrections
+2020-03-05 19:49:27	WARN	pipeline.hifv.tasks.priorcals.priorcals::pipeline.hifv.tasks.priorcals.priorcals::	59.26 percent of antennas needed position corrections.
