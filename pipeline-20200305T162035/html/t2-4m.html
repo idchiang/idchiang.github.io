@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+            <!-- Add jQuery library -->
+            <script src="resources/js/jquery-3.3.1.js"></script>
+            <script src="resources/js/bootstrap.js"></script>
+
+            <!-- Add lazy image loading library -->
+            <script src="resources/js/lazyload.js"></script>
+
+            <!--  Add purl-JS URL parsing extension -->
+            <script src="resources/js/purl.js"></script>
+
+            <!-- Add fancybox and pipeline fancybox extension -->
+            <link rel="stylesheet" href="resources/css/jquery.fancybox.css" type="text/css"
+                  media="screen"/>
+            <script src="resources/js/jquery.fancybox.js"></script>
+            <script src="resources/js/plotcmd.js"></script>
+
+            <!--  Add image holder library for missing plots -->
+            <script src="resources/js/holder.js"></script>
+
+            <!--  add FontAwesome -->
+            <link rel="stylesheet" href="resources/css/font-awesome.css">
+
+            <script src="resources/js/pipeline.js"></script>
+            <link href="resources/css/pipeline.css" rel="stylesheet" type="text/css">
+
+    
+
+<title>
+Task Details</title>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top hidden-print">
+    <div class="container-fluid">
+	    <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+	    	<a class="navbar-brand" href="#">
+	    		<img alt="EVLA" 
+	    		     src="resources/img/evlalogo.png"/>
+	    	</a>
+	    </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="">
+                	<a href="t1-1.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+                </li>
+                <li class="">
+                	<a href="t1-3.html">By Topic</a>
+                </li>
+                <li class="active">
+                	<a href="t1-4.html">By Task</a>
+                </li>
+            </ul>
+			<p class="navbar-text navbar-right navbar-projectcode">Project Code N/A</p>
+        </div>
+    </div>
+</nav>
+
+
+<div id="app-container" class="container-fluid">
+	
+
+
+<script>
+$(document).ready(function() {
+	pipeline.pages.t2_4m.ready();
+});
+</script>
+ 
+
+ 
+<div class="row">
+	<div class="col-sm-3 col-md-2 sidebar hidden-print">
+		<strong>Tasks in execution order</strong>
+		<ul class="nav nav-sidebar">
+			<li>
+				<a id="sidebar_stage1"
+				   data-stagenum="1"
+				   data-taskname="1. hifv_importdata"
+				   href="stage1/t2-4m_details-container.html">
+					1. hifv_importdata
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage2"
+				   data-stagenum="2"
+				   data-taskname="2. hifv_hanning"
+				   href="stage2/t2-4m_details-container.html">
+					2. hifv_hanning
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage3"
+				   data-stagenum="3"
+				   data-taskname="3. hifv_flagdata"
+				   href="stage3/t2-4m_details-container.html">
+					3. hifv_flagdata
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-question-sign alert-info transparent-bg" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage4"
+				   data-stagenum="4"
+				   data-taskname="4. hifv_vlasetjy"
+				   href="stage4/t2-4m_details-container.html">
+					4. hifv_vlasetjy
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage5"
+				   data-stagenum="5"
+				   data-taskname="5. hifv_priorcals"
+				   href="stage5/t2-4m_details-container.html">
+					5. hifv_priorcals
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-exclamation-sign alert-warning transparent-bg" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage6"
+				   data-stagenum="6"
+				   data-taskname="6. hifv_testBPdcals"
+				   href="stage6/t2-4m_details-container.html">
+					6. hifv_testBPdcals
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-exclamation-sign alert-warning transparent-bg" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage7"
+				   data-stagenum="7"
+				   data-taskname="7. hifv_flagbaddef"
+				   href="stage7/t2-4m_details-container.html">
+					7. hifv_flagbaddef
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-remove-sign alert-danger transparent-bg" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage8"
+				   data-stagenum="8"
+				   data-taskname="8. hifv_checkflag"
+				   href="stage8/t2-4m_details-container.html">
+					8. hifv_checkflag
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage9"
+				   data-stagenum="9"
+				   data-taskname="9. hifv_semiFinalBPdcals"
+				   href="stage9/t2-4m_details-container.html">
+					9. hifv_semiFinalBPdcals
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-exclamation-sign alert-warning transparent-bg" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage10"
+				   data-stagenum="10"
+				   data-taskname="10. hifv_checkflag"
+				   href="stage10/t2-4m_details-container.html">
+					10. hifv_checkflag
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage11"
+				   data-stagenum="11"
+				   data-taskname="11. hifv_semiFinalBPdcals"
+				   href="stage11/t2-4m_details-container.html">
+					11. hifv_semiFinalBPdcals
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage12"
+				   data-stagenum="12"
+				   data-taskname="12. hifv_solint"
+				   href="stage12/t2-4m_details-container.html">
+					12. hifv_solint
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage13"
+				   data-stagenum="13"
+				   data-taskname="13. hifv_fluxboot"
+				   href="stage13/t2-4m_details-container.html">
+					13. hifv_fluxboot
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage14"
+				   data-stagenum="14"
+				   data-taskname="14. hifv_finalcals"
+				   href="stage14/t2-4m_details-container.html">
+					14. hifv_finalcals
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage15"
+				   data-stagenum="15"
+				   data-taskname="15. hifv_applycals"
+				   href="stage15/t2-4m_details-container.html">
+					15. hifv_applycals
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage16"
+				   data-stagenum="16"
+				   data-taskname="16. hifv_targetflag"
+				   href="stage16/t2-4m_details-container.html">
+					16. hifv_targetflag
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage17"
+				   data-stagenum="17"
+				   data-taskname="17. hifv_statwt"
+				   href="stage17/t2-4m_details-container.html">
+					17. hifv_statwt
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage18"
+				   data-stagenum="18"
+				   data-taskname="18. hifv_plotsummary"
+				   href="stage18/t2-4m_details-container.html">
+					18. hifv_plotsummary
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage19"
+				   data-stagenum="19"
+				   data-taskname="19. hif_makeimlist"
+				   href="stage19/t2-4m_details-container.html">
+					19. hif_makeimlist
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage20"
+				   data-stagenum="20"
+				   data-taskname="20. hif_makeimages"
+				   href="stage20/t2-4m_details-container.html">
+					20. hif_makeimages
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-exclamation-sign alert-warning transparent-bg" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+			<li>
+				<a id="sidebar_stage21"
+				   data-stagenum="21"
+				   data-taskname="21. hifv_exportdata"
+				   href="stage21/t2-4m_details-container.html">
+					21. hifv_exportdata
+					<span class="pull-right">
+						<span class="glyphicon glyphicon-none" aria-hidden="true"></span>						
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div><!-- end sidebar -->		
+
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" 
+	     id="fakeframe">
+	</div><!-- end div col-md-9 -->
+</div><!-- end row -->
+
+	
+	<div class="footer">
+		
+	</div>
+</div>
+
+</body>
+</html>

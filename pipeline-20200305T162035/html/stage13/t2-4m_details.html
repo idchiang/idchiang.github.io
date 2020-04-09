@@ -1,0 +1,320 @@
+
+<html>
+<head>
+    <script>
+        lazyload();
+    </script>
+</head>
+
+
+
+<div class="page-header">
+    <h1>13. Flux density bootstrapping and spectral index fitting<button class="btn btn-default pull-right" onClick="javascript:window.history.back();">Back</button></h1>
+</div>
+
+
+
+
+
+
+
+
+<p>Make a gain table that includes gain and opacity corrections for final amp cal and for flux density bootstrapping.</p>
+<p>Fit the spectral index of calibrators with a power-law and put the fit in the model column.</p>
+
+
+        <h3>
+            Fluxboot summary plots
+        </h3>
+
+         
+
+
+        
+
+        
+
+        <h4>
+                14B-396.sb29809142.eb30014592.56987.35765355324.ms
+        </h4>
+
+
+        <div class="row">
+            
+            <div class="col-md-3 col-sm-4">
+                
+
+                <div class="thumbnail">
+                    <a href="stage13/fluxgaincalFluxDensities-14B-396.sb29809142.eb30014592.56987.35765355324.ms-summary.png"
+                           data-fancybox="noop"
+                           data-caption="
+          Caltable: fluxgaincal.g. Plot of amp vs. freq
+        "
+                    >
+                        <img class="lazyload"
+                             data-src="stage13/thumbs/fluxgaincalFluxDensities-14B-396.sb29809142.eb30014592.56987.35765355324.ms-summary.png"
+                             title="Summary window "
+                        >
+                    </a>
+
+
+                    <div class="caption">
+                        <h4>
+                        
+           Caltable: fluxgaincal.g
+        
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-4">
+                
+
+                <div class="thumbnail">
+                    <a href="stage13/bootstrappedFluxDensities-14B-396.sb29809142.eb30014592.56987.35765355324.ms-summary.png"
+                           data-fancybox="noop"
+                           data-caption="
+          Model calibrator. Plot of amp vs. freq
+        "
+                    >
+                        <img class="lazyload"
+                             data-src="stage13/thumbs/bootstrappedFluxDensities-14B-396.sb29809142.eb30014592.56987.35765355324.ms-summary.png"
+                             title="Summary window "
+                        >
+                    </a>
+
+
+                    <div class="caption">
+                        <h4>
+                        
+           Model calibrator
+        
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- end row -->
+
+
+
+    
+
+
+
+    
+<table class="table table-bordered table-striped table-condensed"
+	   summary="Spectral Indices">
+	<caption>Spectral Indices</caption>
+        <thead>
+	    <tr>
+	        <th scope="col" rowspan="2">Source</th>
+	        <th scope="col" rowspan="2">Band</th>
+		    <th scope="col" rowspan="2">Fitted Spectral Index</th>
+		    <th scope="col" rowspan="2">Fitted Curvature</th>
+		    <th scope="col" rowspan="2">Fit Order</th>
+	    </tr>
+
+	</thead>
+	<tbody>    
+    
+    
+
+		<tr>
+		    <td>J0410+7656</td>
+			<td>L</td>
+			<td>-0.4801  +/-  0.0000</td>
+			<td>0.0000  +/-  0.0000</td>
+            <td>1</td>
+		</tr>
+
+	</tbody>
+    </table>
+
+
+       <table class="table table-bordered table-striped table-condensed"
+	   summary="Fitting data with a power law">
+	<caption>Fitting data with a power law</caption>
+        <thead>
+	    <tr>
+	        <th scope="col" rowspan="2">Source</th>
+	        <th scope="col" rowspan="2">Frequency [GHz]</th>
+	        <th scope="col" rowspan="2">Data</th>
+		    <th scope="col" rowspan="2">Error</th>
+		    <th scope="col" rowspan="2">Fitted Data</th>
+		    <th scope="col" rowspan="2">Residual: Data-Fitted Data</th>
+	    </tr>
+
+	</thead>
+	<tbody>   
+  
+        <tr>
+		    <td rowspan="11">J0410+7656</td>
+
+		        <td>1.18</td>
+			    <td>6.0608</td>
+			    <td>0.001809</td>
+			    <td>6.0659</td>
+			    <td>-0.005116</td>
+		</tr>
+
+		        <td>1.308</td>
+			    <td>5.7588</td>
+			    <td>0.001950</td>
+			    <td>5.7733</td>
+			    <td>-0.014524</td>
+		</tr>
+
+		        <td>1.420207966</td>
+			    <td>5.5537</td>
+			    <td>0.002288</td>
+			    <td>5.5496</td>
+			    <td>0.004076</td>
+		</tr>
+
+		        <td>1.436</td>
+			    <td>5.5324</td>
+			    <td>0.002035</td>
+			    <td>5.5202</td>
+			    <td>0.012163</td>
+		</tr>
+
+		        <td>1.612005503</td>
+			    <td>5.2390</td>
+			    <td>0.001939</td>
+			    <td>5.2221</td>
+			    <td>0.016876</td>
+		</tr>
+
+		        <td>1.665168099</td>
+			    <td>5.1523</td>
+			    <td>0.002615</td>
+			    <td>5.1414</td>
+			    <td>0.010844</td>
+		</tr>
+
+		        <td>1.667127827</td>
+			    <td>5.1433</td>
+			    <td>0.002556</td>
+			    <td>5.1385</td>
+			    <td>0.004782</td>
+		</tr>
+
+		        <td>1.692</td>
+			    <td>5.1018</td>
+			    <td>0.001609</td>
+			    <td>5.1021</td>
+			    <td>-0.000328</td>
+		</tr>
+
+		        <td>1.720290423</td>
+			    <td>5.0704</td>
+			    <td>0.001850</td>
+			    <td>5.0616</td>
+			    <td>0.008803</td>
+		</tr>
+
+		        <td>1.82</td>
+			    <td>4.9215</td>
+			    <td>0.001563</td>
+			    <td>4.9266</td>
+			    <td>-0.005063</td>
+		</tr>
+
+		        <td>1.948</td>
+			    <td>4.7521</td>
+			    <td>0.001695</td>
+			    <td>4.7684</td>
+			    <td>-0.016273</td>
+		</tr>
+	</tbody>
+    </table>
+    
+
+
+
+<div class="clearfix"></div>
+<div class="panel-group" id="details-accordion" role="tablist" aria-multiselectable="true">
+
+    
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#details-accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Pipeline QA
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+                    No pipeline QA for this task.
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFour">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#details-accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Input Parameters
+                </a>
+            </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>caltable</dt>
+                    <dd>None</dd>
+                    <dt>vis</dt>
+                    <dd>/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms</dd>
+                    <dt>refantignore</dt>
+                    <dd>&nbsp;</dd>
+                    <dt>output_dir</dt>
+                    <dd>/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFive">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#details-accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Tasks Execution Statistics
+                </a>
+            </h4>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Start time</dt>
+                    <dd>2020-03-06 03:38:02.509</dd>
+                    <dt>End</dt>
+                    <dd>2020-03-06 04:52:05.789</dd>
+                    <dt>Duration</dt>
+                    <dd>1:14:03.280</dd>
+                </dl>
+            Note, WebLog generation is not included in the time.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">CASA logs for stage 13</h3>
+    </div>
+    <div class="panel-body">
+        <ul>
+    
+        <li><a href="stage13/casapy.log" class="replace-pre" data-title="CASA log for stage 13">View</a> or <a href="stage13/casapy.log" download="stage13/casapy.log">download</a> stage13/casapy.log (82.0 KB)</li>
+</ul>
+    </div>
+</div>
+
+</html>
