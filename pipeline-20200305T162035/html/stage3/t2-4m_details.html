@@ -1,0 +1,419 @@
+
+<html>
+<head>
+    <script>
+        lazyload();
+    </script>
+</head>
+
+
+
+<div class="page-header">
+    <h1>3. VLA Deterministic Flagging<button class="btn btn-default pull-right" onClick="javascript:window.history.back();">Back</button></h1>
+</div>
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+    $("th.rotate").each(function(){ $(this).height($(this).find('span').width() + 8) });
+});
+</script>
+
+
+
+
+
+<div class="row-fluid">
+	<h2>Flagging agents</h2>
+	<table class="table table-bordered table-striped">
+		<caption>Flagging agent status per measurement set.</caption>	   
+		<thead>
+			<tr>
+				<th>Measurement Set</th>
+				<th>ANOS</th>
+				<th>Shadowed Antennas</th>
+				<th>Unwanted Intents</th>
+				<th>Other Online Flags</th>
+				<th>Flagging Template</th>
+				<th>Autocorr</th>
+				<th>Edge Channels</th>
+				<th>Clipping</th>
+				<th>Quack</th>
+				<th>Baseband</th>
+				<th>Agent Commands</th>
+			</tr>				
+		</thead>
+		<tbody>
+			<tr>
+				<td>14B-396.sb29809142.eb30014592.56987.35765355324.ms</td>
+				<td><span class="glyphicon glyphicon-ok"></span></td>
+				<td><span class="glyphicon glyphicon-ok"></span></td>
+				<td><span class="glyphicon glyphicon-ok"></span></td>
+				<td><span class="glyphicon glyphicon-ok"></span></td>
+				<td><span class="glyphicon glyphicon-ok"></span></td>
+				<td><span class="glyphicon glyphicon-ok"></span></td>
+				<td><span class="glyphicon glyphicon-ok"></span></td>
+				<td><span class="glyphicon glyphicon-ok"></span></td>
+				<td><span class="glyphicon glyphicon-ok"></span></td>
+				<td><span class="glyphicon glyphicon-remove"></span></td>
+				<td><a class="replace-pre" href="stage3/14B-396.sb29809142.eb30014592.56987.35765355324.ms-agent_flagcmds.txt">View</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div class="row-fluid">
+	<h2>Template Files</h2>
+	<table class="table table-bordered table-striped">
+		<caption>Files used for template flagging steps.</caption>	   
+		<thead>
+			<tr>
+				<th rowspan="2">Measurement Set</th>
+				<th colspan=2>Other Online Flags</th>
+				<th colspan=2>Flagging Template</th>
+			</tr>	
+			<tr>
+				<th>File</th><th>Number of Statements</th>
+				<th>File</th><th>Number of Statements</th>
+			</tr>			
+		</thead>
+		<tbody>
+			<tr>
+				<td>14B-396.sb29809142.eb30014592.56987.35765355324.ms</td>
+				<td><a class="replace-pre" href="stage3/14B-396.sb29809142.eb30014592.56987.35765355324.flagonline.txt">14B-396.sb29809142.eb30014592.56987.35765355324.flagonline.txt</a></td><td>594</td>
+				<td><a class="replace-pre" href="stage3/14B-396.sb29809142.eb30014592.56987.35765355324.flagtemplate.txt">14B-396.sb29809142.eb30014592.56987.35765355324.flagtemplate.txt</a></td><td>3</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h2>Flagged data summary</h2>
+<table class="table table-bordered table-striped "
+	   summary="Flagged Data">
+	<caption>Summary of flagged data. Each cell states the amount of data 
+	flagged as a fraction of the specified data selection, with the 
+	<em>Flagging Agent</em> columns giving this information per flagging agent.
+	</caption>
+	<thead>
+		<tr>
+			<th rowspan="2">Data Selection (by intent)</th>
+			<!-- flags before task is always first agent -->
+			<th rowspan="2">Before Task</th>
+			<th colspan="3">Flagging Agent (Total Vis)</th>
+			<th colspan="7">Flagging Agent (Science Vis)</th>
+			<th rowspan="2">Total Science</th>
+			<th colspan="1">Measurement Set</th>
+		</tr>
+		<tr>
+			<th>ANOS</th>
+			<th>Shadowed Antennas</th>
+			<th>Unwanted Intents</th>
+			<th>Other Online Flags</th>
+			<th>Flagging Template</th>
+			<th>Autocorr</th>
+			<th>Edge Channels</th>
+			<th>Clipping</th>
+			<th>Quack</th>
+			<th>Baseband</th>
+			<th>14B-396.sb29809142.eb30014592.56987.35765355324.ms</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>All Data</th>		
+			<td>0.36%</td>
+			<td>9.04%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>0.77%</td>
+			<td>0.77%</td>
+			<td>0.00%</td>
+			<td>9.42%</td>
+			<td>0.01%</td>
+			<td>0.05%</td>
+			<td>0.00%</td>
+			<td>11.02%</td>
+			<td>11.02%</td>
+		</tr>
+		<tr>
+			<th>Science Spectral Windows</th>		
+			<td>0.36%</td>
+			<td>9.04%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>0.77%</td>
+			<td>0.77%</td>
+			<td>0.00%</td>
+			<td>9.42%</td>
+			<td>0.01%</td>
+			<td>0.05%</td>
+			<td>0.00%</td>
+			<td>11.02%</td>
+			<td>11.02%</td>
+		</tr>
+		<tr>
+			<th>Bandpass</th>		
+			<td>0.36%</td>
+			<td>27.03%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>2.81%</td>
+			<td>0.00%</td>
+			<td>9.49%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>12.31%</td>
+			<td>12.31%</td>
+		</tr>
+		<tr>
+			<th>Flux</th>		
+			<td>0.36%</td>
+			<td>27.03%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>2.81%</td>
+			<td>0.00%</td>
+			<td>9.49%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>12.31%</td>
+			<td>12.31%</td>
+		</tr>
+		<tr>
+			<th>Phase</th>		
+			<td>0.36%</td>
+			<td>23.61%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>3.60%</td>
+			<td>5.41%</td>
+			<td>0.00%</td>
+			<td>9.15%</td>
+			<td>0.04%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>18.20%</td>
+			<td>18.20%</td>
+		</tr>
+		<tr>
+			<th>Target</th>		
+			<td>0.36%</td>
+			<td>3.35%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>0.52%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>9.44%</td>
+			<td>0.01%</td>
+			<td>0.06%</td>
+			<td>0.00%</td>
+			<td>10.03%</td>
+			<td>10.03%</td>
+		</tr>
+		<tr>
+			<th>14B-396.sb29809142.eb30014592.56987.35765355324.ms</th>
+			<td>0.36%</td>
+			<td>9.04%</td>
+			<td>0.00%</td>
+			<td>0.00%</td>
+			<td>0.77%</td>
+			<td>0.77%</td>
+			<td>0.00%</td>
+			<td>9.42%</td>
+			<td>0.01%</td>
+			<td>0.05%</td>
+			<td>0.00%</td>
+			<td>11.02%</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+        <h3>
+		Flagging reason vs time
+	</h3>
+
+         
+		Plots of flagging reason vs time. The reasons for flagging the data are defined in the plot legend.
+	
+
+        
+
+        <h4>
+                14B-396.sb29809142.eb30014592.56987.35765355324.ms
+        </h4>
+
+
+        <div class="row">
+            
+            <div class="col-md-3 col-sm-4">
+                
+
+                <div class="thumbnail">
+                    <a href="stage3/14B-396.sb29809142.eb30014592.56987.35765355324.ms-flags.png"
+                           data-fancybox="junk"
+                           data-caption="
+        MS: 14B-396.sb29809142.eb30014592.56987.35765355324.ms
+	"
+                    >
+                        <img class="lazyload"
+                             data-src="stage3/thumbs/14B-396.sb29809142.eb30014592.56987.35765355324.ms-flags.png"
+                             title="Click to show flagging reason vs time for 14B-396.sb29809142.eb30014592.56987.35765355324.ms"
+                        >
+                    </a>
+
+
+                    <div class="caption">
+                        <h4>
+                        
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- end row -->
+
+
+
+
+
+<div class="clearfix"></div>
+<div class="panel-group" id="details-accordion" role="tablist" aria-multiselectable="true">
+
+    
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#details-accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Pipeline QA
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+                <table class="table table-bordered" summary="Pipeline QA summary">
+                    <caption>Pipeline QA summary for this task.</caption>
+                    <thead>
+                        <tr>
+                            <th>Score</th>
+                            <th>Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="info alert-info">
+                        <td>0.89</td>
+                        <td>11.02% data in 14B-396.sb29809142.eb30014592.56987.35765355324.ms flagged by online, template, autocorr, edgespw, clip, quack and baseband flagging agents</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFour">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#details-accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Input Parameters
+                </a>
+            </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>quack</dt>
+                    <dd>True</dd>
+                    <dt>intents</dt>
+                    <dd>*POINTING*,*FOCUS*,*ATMOSPHERE*,*SIDEBAND_RATIO*,*UNKNOWN*,*SYSTEM_CONFIGURATION*,*UNSPECIFIED#UNSPECIFIED*</dd>
+                    <dt>autocorr</dt>
+                    <dd>True</dd>
+                    <dt>filetemplate</dt>
+                    <dd>/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.flagtemplate.txt</dd>
+                    <dt>clip</dt>
+                    <dd>True</dd>
+                    <dt>edgespw</dt>
+                    <dd>True</dd>
+                    <dt>scan</dt>
+                    <dd>True</dd>
+                    <dt>flagbackup</dt>
+                    <dd>False</dd>
+                    <dt>fracspw</dt>
+                    <dd>0.05</dd>
+                    <dt>tbuff</dt>
+                    <dd>[4.5]</dd>
+                    <dt>scannumber</dt>
+                    <dd>&nbsp;</dd>
+                    <dt>hm_tbuff</dt>
+                    <dd>1.5int</dd>
+                    <dt>vis</dt>
+                    <dd>/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms</dd>
+                    <dt>output_dir</dt>
+                    <dd>/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01</dd>
+                    <dt>template</dt>
+                    <dd>True</dd>
+                    <dt>online</dt>
+                    <dd>True</dd>
+                    <dt>baseband</dt>
+                    <dd>True</dd>
+                    <dt>shadow</dt>
+                    <dd>True</dd>
+                    <dt>inpfile</dt>
+                    <dd>/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.flagcmds.txt</dd>
+                    <dt>fileonline</dt>
+                    <dd>/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.flagonline.txt</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFive">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#details-accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Tasks Execution Statistics
+                </a>
+            </h4>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Start time</dt>
+                    <dd>2020-03-05 17:23:25.457</dd>
+                    <dt>End</dt>
+                    <dd>2020-03-05 18:42:17.615</dd>
+                    <dt>Duration</dt>
+                    <dd>1:18:52.158</dd>
+                </dl>
+            Note, WebLog generation is not included in the time.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">CASA logs for stage 3</h3>
+    </div>
+    <div class="panel-body">
+        <ul>
+    
+        <li><a href="stage3/casapy.log" class="replace-pre" data-title="CASA log for stage 3">View</a> or <a href="stage3/casapy.log" download="stage3/casapy.log">download</a> stage3/casapy.log (974.2 KB)</li>
+</ul>
+    </div>
+</div>
+
+</html>

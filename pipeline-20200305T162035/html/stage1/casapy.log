@@ -1,0 +1,57 @@
+2020-03-05 16:20:36	INFO	hifv_importdata::pipeline.infrastructure.basetask::	Starting execution for stage 1
+2020-03-05 16:20:36	INFO	hifv_importdata::pipeline.infrastructure.basetask::	Equivalent CASA call: hifv_importdata(ocorr_mode='co', nocopy=False, vis=['14B-396.sb29809142.eb30014592.56987.35765355324'], createmms='automatic', asis='Receiver CalAtmosphere', overwrite=False)
+2020-03-05 16:20:36	INFO	hifv_importdata::pipeline.infrastructure.jobrequest::	Executing importasdm(asdm='14B-396.sb29809142.eb30014592.56987.35765355324', vis='14B-396.sb29809142.eb30014592.56987.35765355324.ms', createmms=False, ocorr_mode='co', lazy=False, asis='Receiver CalAtmosphere', process_caldevice=True, process_pointing=True, savecmds=True, outfile='14B-396.sb29809142.eb30014592.56987.35765355324.flagonline.txt', overwrite=False, bdfflags=False, with_pointing_correction=True)
+2020-03-05 16:20:36	INFO	importasdm::::	
+2020-03-05 16:20:36	INFO	importasdm::::+	##########################################
+2020-03-05 16:20:36	INFO	importasdm::::+	##### Begin Task: importasdm         #####
+2020-03-05 16:20:36	INFO	importasdm::::	importasdm(asdm="14B-396.sb29809142.eb30014592.56987.35765355324",vis="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms",createmms=False,separationaxis="auto",numsubms="auto",
+2020-03-05 16:20:36	INFO	importasdm::::+	        corr_mode="all",srt="all",time_sampling="all",ocorr_mode="co",compression=False,
+2020-03-05 16:20:36	INFO	importasdm::::+	        lazy=False,asis="Receiver CalAtmosphere",wvr_corrected_data="no",scans="",ignore_time=False,
+2020-03-05 16:20:36	INFO	importasdm::::+	        process_syspower=True,process_caldevice=True,process_pointing=True,process_flags=True,tbuff=0.0,
+2020-03-05 16:20:36	INFO	importasdm::::+	        applyflags=False,savecmds=True,outfile="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.flagonline.txt",flagbackup=True,verbose=False,
+2020-03-05 16:20:36	INFO	importasdm::::+	        overwrite=False,showversion=False,useversion="v3",bdfflags=False,with_pointing_correction=True,
+2020-03-05 16:20:36	INFO	importasdm::::+	        remove_ref_undef=False,convert_ephem2geo=True,polyephem_tabtimestep=0.0)
+2020-03-05 16:20:36	INFO	importasdm::::	Running asdm2MS standalone invoked as:
+2020-03-05 16:20:36	INFO	importasdm::::	asdm2MS --icm "all" --isrt "all" --its "all" --ocm "co" --wvr-corrected-data "no" --asis "Receiver CalAtmosphere" --logfile "/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/casa-20200305-161956.log" 14B-396.sb29809142.eb30014592.56987.35765355324 /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms --with-pointing-correction
+2020-03-05 16:40:46	INFO	importasdm::::	CASA Version 5.4.1-31  
+2020-03-05 16:40:46	INFO	importasdm::::	
+2020-03-05 16:40:48	INFO	importasdm::::	No ephemerides attached.
+2020-03-05 16:40:48	INFO	AgentFlagger::open	Table type is Measurement Set
+2020-03-05 16:40:48	INFO	FlagVersion::saveFlagVersion	Creating new backup flag file called Original
+2020-03-05 16:42:37	INFO	importasdm::::	Found Flag.xml in SDM
+2020-03-05 16:42:37	INFO	importasdm::::	Found Antenna.xml in SDM
+2020-03-05 16:42:37	INFO	importasdm::::	Found SpectralWindow.xml in SDM
+2020-03-05 16:42:37	INFO	importasdm::::	Found 27 rows in Antenna.xml
+2020-03-05 16:42:37	INFO	importasdm::::	Found 13 rows in SpectralWindow.xml
+2020-03-05 16:42:37	INFO	importasdm::::	Will construct spw flags using names
+2020-03-05 16:42:37	INFO	importasdm::::	Will construct polarization flags using polarizationType
+2020-03-05 16:42:38	INFO	importasdm::::	Found numAntenna=1 must be a new style SDM
+2020-03-05 16:42:38	INFO	importasdm::::	Found 594 flags in Flag.xml
+2020-03-05 16:42:38	INFO	importasdm::::	Will not apply flags to /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms (apply_flags=False), use flagcmd to apply
+2020-03-05 16:42:38	INFO	importasdm::::	There are 0 rows already in FLAG_CMD
+2020-03-05 16:42:38	INFO	importasdm::::	Saved 594 rows to FLAG_CMD of /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms
+2020-03-05 16:42:38	INFO	importasdm::::	Saved 594 flag commands to /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.flagonline.txt
+2020-03-05 16:42:38	INFO	importasdm::::	##### End Task: importasdm           #####
+2020-03-05 16:42:38	INFO	importasdm::::+	##########################################
+2020-03-05 16:42:38	INFO	pipeline.hifv.tasks.importdata.importdata::pipeline.hifv.tasks.importdata.importdata::	Copying Source.xml from ASDM to measurement set
+2020-03-05 16:42:38	INFO	pipeline.hifv.tasks.importdata.importdata::pipeline.hifv.tasks.importdata.importdata::	Copying SpectralWindow.xml from ASDM to measurement set
+2020-03-05 16:42:38	INFO	pipeline.hifv.tasks.importdata.importdata::pipeline.hifv.tasks.importdata.importdata::	Copying DataDescription.xml from ASDM to measurement set
+2020-03-05 16:42:38	INFO	pipeline.h.tasks.importdata.importdata::pipeline.h.tasks.importdata.importdata::	Creating pipeline objects for measurement set(s) /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms
+2020-03-05 16:42:38	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Analysing /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms
+2020-03-05 16:42:38	INFO	pipeline.infrastructure.tablereader::msmetadata_cmpt.cc::open	Performing internal consistency checks on /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms...
+2020-03-05 16:42:39	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Populating ms.antenna_array...
+2020-03-05 16:42:39	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Populating ms.spectral_windows...
+2020-03-05 16:42:48	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Populating ms.states...
+2020-03-05 16:42:48	INFO	pipeline.infrastructure.tablereader::MSMetaData::_computeScanAndSubScanProperties 	Computing scan and subscan properties...
+2020-03-05 16:42:52	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Populating ms.fields...
+2020-03-05 16:42:53	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Populating ms.sources...
+2020-03-05 16:42:53	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Populating ms.data_descriptions...
+2020-03-05 16:42:53	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Populating ms.polarizations...
+2020-03-05 16:42:53	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Populating ms.array_name ...
+2020-03-05 16:43:00	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Linking fields to states...
+2020-03-05 16:43:00	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Linking fields to sources...
+2020-03-05 16:43:00	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Linking intents to spws...
+2020-03-05 16:43:00	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Linking spectral windows to fields...
+2020-03-05 16:43:00	INFO	pipeline.infrastructure.tablereader::pipeline.infrastructure.tablereader::	Populating ms.scans...
+2020-03-05 16:43:28	INFO	pipeline.h.tasks.importdata.fluxes::pipeline.h.tasks.importdata.fluxes::	Exported 0 flux measurements to /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/flux.csv
+2020-03-05 16:43:28	INFO	pipeline.h.tasks.importdata.fluxes::pipeline.h.tasks.importdata.fluxes::	Imported 0 flux measurements from /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/flux.csv

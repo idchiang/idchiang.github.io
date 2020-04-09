@@ -1,0 +1,105 @@
+2020-03-06 13:29:58	INFO	hifv_exportdata::pipeline.infrastructure.basetask::	Starting execution for stage 21
+2020-03-06 13:29:58	INFO	hifv_exportdata::pipeline.infrastructure.basetask::	Equivalent CASA call: hifv_exportdata(gainmap=False, products_dir='products/', exportmses=False)
+2020-03-06 13:29:58	INFO	hifv_exportdata::pipeline.h.tasks.exportdata.exportdata::	Visibility list for session session_1 is ['/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms']
+2020-03-06 13:29:58	INFO	hifv_exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving final weblog in weblog.tgz
+2020-03-06 13:30:25	INFO	hifv_exportdata::pipeline.h.tasks.exportdata.exportdata::	Copying casa commands log /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/pipeline-20200305T162035/html/casa_commands.log to products/casa_commands.log
+2020-03-06 13:30:25	INFO	hifv_exportdata::pipeline.h.tasks.exportdata.exportdata::	Copying casa script file /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/pipeline-20200305T162035/html/casa_pipescript.py to products/casa_pipescript.py
+2020-03-06 13:30:25	INFO	hifv_exportdata::pipeline.hifv.tasks.exportdata.vlaexportdata::	Creating casa restore script /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/pipeline-20200305T162035/html/casa_piperestorescript.py
+2020-03-06 13:30:25	INFO	hifv_exportdata::pipeline.hifv.tasks.exportdata.vlaexportdata::	Copying casa restore script /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/pipeline-20200305T162035/html/casa_piperestorescript.py to products/casa_piperestorescript.py
+2020-03-06 13:30:25	INFO	hifv_exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving final flags for 14B-396.sb29809142.eb30014592.56987.35765355324.ms in flag version Pipeline_Final
+2020-03-06 13:30:25	INFO	hifv_exportdata::pipeline.infrastructure.jobrequest::	Executing flagmanager(vis='14B-396.sb29809142.eb30014592.56987.35765355324.ms', mode='save', versionname='Pipeline_Final')
+2020-03-06 13:30:25	INFO	flagmanager::::	
+2020-03-06 13:30:25	INFO	flagmanager::::+	##########################################
+2020-03-06 13:30:25	INFO	flagmanager::::+	##### Begin Task: flagmanager        #####
+2020-03-06 13:30:25	INFO	flagmanager::::	flagmanager(vis="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms",mode="save",versionname="Pipeline_Final",oldname="",comment="",
+2020-03-06 13:30:25	INFO	flagmanager::::+	        merge="replace")
+2020-03-06 13:30:25	INFO	flagmanager::AgentFlagger::open	Table type is Measurement Set
+2020-03-06 13:30:25	INFO	flagmanager::::	Save current flagversions to Pipeline_Final
+2020-03-06 13:30:25	INFO	FlagVersion::saveFlagVersion	Creating new backup flag file called Pipeline_Final
+2020-03-06 13:33:51	INFO	flagmanager::::	##### End Task: flagmanager          #####
+2020-03-06 13:33:51	INFO	flagmanager::::+	##########################################
+2020-03-06 13:33:51	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Storing final flags for 14B-396.sb29809142.eb30014592.56987.35765355324.ms in 14B-396.sb29809142.eb30014592.56987.35765355324.ms.flagversions.tgz
+2020-03-06 13:33:51	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving flag version Pipeline_Final
+2020-03-06 13:33:51	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving flag version list
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Storing calibration apply list for 14B-396.sb29809142.eb30014592.56987.35765355324.ms in  14B-396.sb29809142.eb30014592.56987.35765355324.ms.calapply.txt
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Apply to:  Field: J0410+7656,"0137+331=3C48",IC342FIELD2,IC342FIELD3,IC342FIELD1,IC342FIELD6,IC342FIELD7,IC342FIELD4,IC342FIELD5  Spw: 0~12  Antenna: 0~26
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	    Gaintable: 14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_2.gc.tbl  Caltype: gc  Gainfield:   Spwmap: ()  Interp: 
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	    Gaintable: 14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_3.opac.tbl  Caltype: opac  Gainfield:   Spwmap: ()  Interp: 
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	    Gaintable: 14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_4.rq.tbl  Caltype: rq  Gainfield:   Spwmap: ()  Interp: 
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	    Gaintable: 14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_priorcals.s5_6.ants.tbl  Caltype: antpos  Gainfield:   Spwmap: ()  Interp: 
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	    Gaintable: 14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_finalcals.s14_2.finaldelay.tbl  Caltype: finalcal  Gainfield:   Spwmap: ()  Interp: 
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	    Gaintable: 14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_finalcals.s14_4.finalBPcal.tbl  Caltype: finalcal  Gainfield:   Spwmap: ()  Interp: linear,linearflag
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	    Gaintable: 14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_finalcals.s14_5.averagephasegain.tbl  Caltype: finalcal  Gainfield:   Spwmap: ()  Interp: 
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	    Gaintable: 14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_finalcals.s14_7.finalampgaincal.tbl  Caltype: finalcal  Gainfield:   Spwmap: ()  Interp: 
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	    Gaintable: 14B-396.sb29809142.eb30014592.56987.35765355324.ms.hifv_finalcals.s14_8.finalphasegaincal.tbl  Caltype: finalcal  Gainfield:   Spwmap: ()  Interp: 
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving final caltables for session_1 in unknown.session_1.caltables.tgz
+2020-03-06 13:37:40	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Collecting final caltables for 14B-396.sb29809142.eb30014592.56987.35765355324.ms in unknown.session_1.caltables.tgz
+2020-03-06 13:38:55	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Exporting calibrator source images
+2020-03-06 13:38:55	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving final image %s to FITS file oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.image.pbcor
+2020-03-06 13:38:55	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing exportfits(imagename='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.image.pbcor', fitsimage='oussid._0137+331_3C48__bp.L_band.cont.I.pbcor.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True)
+2020-03-06 13:38:55	INFO	exportfits::::	
+2020-03-06 13:38:55	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:55	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2020-03-06 13:38:55	INFO	exportfits::::	exportfits(imagename="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.image.pbcor",fitsimage="products/oussid._0137+331_3C48__bp.L_band.cont.I.pbcor.fits",velocity=False,optical=False,bitpix=-32,
+2020-03-06 13:38:55	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2020-03-06 13:38:55	INFO	exportfits::::+	        history=True,dropdeg=False)
+2020-03-06 13:38:55	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2020-03-06 13:38:55	INFO	exportfits::::	##### End Task: exportfits           #####
+2020-03-06 13:38:55	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:56	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving final image %s to FITS file oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.pb
+2020-03-06 13:38:56	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing exportfits(imagename='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.pb', fitsimage='oussid._0137+331_3C48__bp.L_band.cont.I.pb.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True)
+2020-03-06 13:38:56	INFO	exportfits::::	
+2020-03-06 13:38:56	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:56	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2020-03-06 13:38:56	INFO	exportfits::::	exportfits(imagename="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.pb",fitsimage="products/oussid._0137+331_3C48__bp.L_band.cont.I.pb.fits",velocity=False,optical=False,bitpix=-32,
+2020-03-06 13:38:56	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2020-03-06 13:38:56	INFO	exportfits::::+	        history=True,dropdeg=False)
+2020-03-06 13:38:56	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2020-03-06 13:38:56	INFO	exportfits::::	##### End Task: exportfits           #####
+2020-03-06 13:38:56	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:56	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving final image %s to FITS file oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.mask
+2020-03-06 13:38:56	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing exportfits(imagename='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.mask', fitsimage='oussid._0137+331_3C48__bp.L_band.cont.I.mask.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True)
+2020-03-06 13:38:56	INFO	exportfits::::	
+2020-03-06 13:38:56	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:56	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2020-03-06 13:38:56	INFO	exportfits::::	exportfits(imagename="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.mask",fitsimage="products/oussid._0137+331_3C48__bp.L_band.cont.I.mask.fits",velocity=False,optical=False,bitpix=-32,
+2020-03-06 13:38:56	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2020-03-06 13:38:56	INFO	exportfits::::+	        history=True,dropdeg=False)
+2020-03-06 13:38:56	INFO	exportfits::::	##### End Task: exportfits           #####
+2020-03-06 13:38:56	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:56	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving final image %s to FITS file oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.image.pbcor
+2020-03-06 13:38:56	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing exportfits(imagename='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.image.pbcor', fitsimage='oussid.J0410+7656_ph.L_band.cont.I.pbcor.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True)
+2020-03-06 13:38:56	INFO	exportfits::::	
+2020-03-06 13:38:56	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:56	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2020-03-06 13:38:56	INFO	exportfits::::	exportfits(imagename="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.image.pbcor",fitsimage="products/oussid.J0410+7656_ph.L_band.cont.I.pbcor.fits",velocity=False,optical=False,bitpix=-32,
+2020-03-06 13:38:56	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2020-03-06 13:38:56	INFO	exportfits::::+	        history=True,dropdeg=False)
+2020-03-06 13:38:56	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2020-03-06 13:38:57	INFO	exportfits::::	##### End Task: exportfits           #####
+2020-03-06 13:38:57	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:57	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving final image %s to FITS file oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.pb
+2020-03-06 13:38:57	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing exportfits(imagename='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.pb', fitsimage='oussid.J0410+7656_ph.L_band.cont.I.pb.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True)
+2020-03-06 13:38:57	INFO	exportfits::::	
+2020-03-06 13:38:57	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:57	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2020-03-06 13:38:57	INFO	exportfits::::	exportfits(imagename="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.pb",fitsimage="products/oussid.J0410+7656_ph.L_band.cont.I.pb.fits",velocity=False,optical=False,bitpix=-32,
+2020-03-06 13:38:57	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2020-03-06 13:38:57	INFO	exportfits::::+	        history=True,dropdeg=False)
+2020-03-06 13:38:57	INFO	exportfits::ImageFactory::toFITS	Applying mask of name 'mask0'
+2020-03-06 13:38:57	INFO	exportfits::::	##### End Task: exportfits           #####
+2020-03-06 13:38:57	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:57	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Saving final image %s to FITS file oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.mask
+2020-03-06 13:38:57	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing exportfits(imagename='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.mask', fitsimage='oussid.J0410+7656_ph.L_band.cont.I.mask.fits', velocity=False, optical=False, bitpix=-32, minpix=0, maxpix=-1, overwrite=True, dropstokes=False, stokeslast=True)
+2020-03-06 13:38:57	INFO	exportfits::::	
+2020-03-06 13:38:57	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:57	INFO	exportfits::::+	##### Begin Task: exportfits         #####
+2020-03-06 13:38:57	INFO	exportfits::::	exportfits(imagename="/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.mask",fitsimage="products/oussid.J0410+7656_ph.L_band.cont.I.mask.fits",velocity=False,optical=False,bitpix=-32,
+2020-03-06 13:38:57	INFO	exportfits::::+	        minpix=0,maxpix=-1,overwrite=True,dropstokes=False,stokeslast=True,
+2020-03-06 13:38:57	INFO	exportfits::::+	        history=True,dropdeg=False)
+2020-03-06 13:38:57	INFO	exportfits::::	##### End Task: exportfits           #####
+2020-03-06 13:38:57	INFO	exportfits::::+	##########################################
+2020-03-06 13:38:57	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Exporting target source images
+2020-03-06 13:38:57	INFO	pipeline.h.tasks.exportdata.exportdata::pipeline.h.tasks.exportdata.exportdata::	Creating manifest file products/unknown.pipeline_manifest.xml
+2020-03-06 13:38:58	INFO	pipeline.hifv.tasks.exportdata.vlaexportdata::pipeline.hifv.tasks.exportdata.vlaexportdata::	Generating pipeline AQUA report
+2020-03-06 13:38:58	INFO	pipeline.hifv.tasks.exportdata.vlaexportdata::pipeline.hifv.tasks.exportdata.vlaexportdata::	Copying AQUA report /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/pipeline_aquareport.xml to products/pipeline_aquareport.xml

@@ -1,0 +1,309 @@
+2020-03-06 12:37:09	INFO	hif_makeimages::pipeline.infrastructure.basetask::	Starting execution for stage 20
+2020-03-06 12:37:09	INFO	hif_makeimages::pipeline.infrastructure.basetask::	Equivalent CASA call: hif_makeimages(masklimit=4, tlimit=2.0, hm_minbeamfrac=-999.0, hm_dogrowprune=True, hm_negativethreshold=-999.0, cleancontranges=False, calcsb=False, maxncleans=1, target_list={}, hm_noisethreshold=-999.0, hm_growiterations=-999, hm_lownoisethreshold=-999.0, hm_masking='none', hm_minpercentchange=-999.0, parallel='automatic', hm_sidelobethreshold=-999.0)
+2020-03-06 12:37:10	INFO	hif_makeimages::pipeline.hif.tasks.tclean.tclean::	
+2020-03-06 12:37:10	INFO	hif_makeimages::pipeline.hif.tasks.tclean.tclean::+	Cleaning for intent "BANDPASS", field "0137+331=3C48", spw 8
+2020-03-06 12:37:10	INFO	hif_makeimages::pipeline.hif.tasks.tclean.tclean::	deleting /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0._0137+331_3C48__bp.L_band.cont*.iter*
+2020-03-06 12:37:10	INFO	hif_makeimages::pipeline.infrastructure.jobrequest::	Executing rmtree(path='/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0._0137+331_3C48__bp.L_band.cont*.iter*', ignore_errors=True)
+2020-03-06 12:37:10	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Performing selection on MeasurementSet : /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms
+2020-03-06 12:37:10	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selecting on fields : 0
+2020-03-06 12:37:10	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selecting on spectral windows expression :8:0~4095
+2020-03-06 12:37:10	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selecting via TaQL : ANTENNA1==0||ANTENNA1==1||ANTENNA1==2||ANTENNA1==3||ANTENNA1==4||ANTENNA1==5||ANTENNA1==6||ANTENNA1==7||ANTENNA1==8||ANTENNA1==9||ANTENNA1==10||ANTENNA1==11||ANTENNA1==12||ANTENNA1==13||ANTENNA1==14||ANTENNA1==15||ANTENNA1==16||ANTENNA1==17||ANTENNA1==18||ANTENNA1==19||ANTENNA1==20||ANTENNA1==21||ANTENNA1==22||ANTENNA1==23||ANTENNA1==24||ANTENNA1==25||ANTENNA1==26
+2020-03-06 12:37:10	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selected 97227 out of  10823436 rows.
+2020-03-06 12:37:10	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selected : [4096 chans in spw 8]
+2020-03-06 12:37:11	INFO	pipeline.infrastructure.jobrequest::imager::defineimage()	Defining image properties:nx=300 ny=300 cellx='2.5arcsec' celly='2.5arcsec' stokes=I' mode=MFS nchan=-1 start=0 step=0 spwids=[8] fieldid=0 facets=1 frame=1 distance='0'
+2020-03-06 12:37:11	INFO	pipeline.infrastructure.jobrequest::imager::defineimage()	 phaseCenter='field-0 ' mStart='Radialvelocity: 0' qStep='0 '' mFreqStart='Frequency: 0
+2020-03-06 12:37:11	INFO	pipeline.infrastructure.jobrequest::imager::weight()	Weighting MS: Imaging weights will be changed
+2020-03-06 12:37:11	INFO	pipeline.infrastructure.jobrequest::imager::weight()	Briggs weighting: sidelobes will be suppressed over full image
+2020-03-06 12:37:44	INFO	pipeline.infrastructure.jobrequest::VisSetUtil::VisImagingWeight() 	Normal robustness, robust = 0.5
+2020-03-06 12:37:44	INFO	pipeline.infrastructure.jobrequest::imager::apparentSensitivity() 	Calculating apparent sensitivity from MS weights, as modified by gridding weight function
+2020-03-06 12:37:44	INFO	pipeline.infrastructure.jobrequest::imager::apparentSensitivity() 	(assuming that MS weights have correct scale and units)
+2020-03-06 12:38:13	INFO	pipeline.infrastructure.jobrequest::imager::apparentSensitivity() 	RMS Point source sensitivity  : 2.91094e-05
+2020-03-06 12:38:13	INFO	pipeline.infrastructure.jobrequest::imager::apparentSensitivity() 	Relative to natural weighting : 1.11951
+2020-03-06 12:38:13	INFO	hif_makeimages::pipeline.hif.heuristics.imageparams_base::	apparentsens result for EB 14B-396.sb29809142.eb30014592.56987.35765355324 Field 0 SPW 8 ChanRange 0~4095: 2.91093522242e-05 Jy/beam
+2020-03-06 12:38:38	INFO	hif_makeimages::pipeline.hif.heuristics.imageparams_base::	Channel selection bandwidth heuristic (nbin or findcont; (spw BW / nchan_sel BW) ** 0.5): Correcting sensitivity for EB 14B-396.sb29809142.eb30014592.56987.35765355324 Field "0137+331=3C48" SPW 8 by 0.923 from 2.91e-05 Jy/beam to 2.69e-05 Jy/beam
+2020-03-06 12:38:38	INFO	hif_makeimages::pipeline.hif.heuristics.imageparams_base::	Final sensitivity estimate for Field "0137+331=3C48", SPW 8 specmode cont: 2.69e-05 Jy/beam
+2020-03-06 12:38:38	INFO	hif_makeimages::pipeline.hif.tasks.tclean.tclean::	Compute the dirty image
+2020-03-06 12:38:39	INFO	hif_makeimages::pipeline.infrastructure.jobrequest::	Executing tclean(vis=['14B-396.sb29809142.eb30014592.56987.35765355324.ms'], field='"0137+331=3C48"', spw=['8'], antenna=['0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26'], scan=['2,3'], intent='CALIBRATE_BANDPASS#UNSPECIFIED', datacolumn='corrected', imagename='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0', imsize=[300, 300], cell=['2.5arcsec'], phasecenter='ICRS 01:37:41.2985 +033.09.35.151', stokes='I', specmode='mfs', nchan=-1, outframe='LSRK', gridder='standard', chanchunks=-1, usepointing=False, mosweight=False, pblimit=0.2, deconvolver='hogbom', restoration=False, restoringbeam='common', pbcor=False, weighting='briggs', robust=0.5, niter=0, threshold='0.0mJy', interactive=0, savemodel='none', parallel=False)
+2020-03-06 12:38:39	INFO	tclean::::	
+2020-03-06 12:38:39	INFO	tclean::::	##########################################
+2020-03-06 12:38:39	INFO	tclean::::	##### Begin Task: tclean           #####
+2020-03-06 12:38:39	INFO	tclean::::	
+2020-03-06 12:38:39	INFO	tclean::::	Verifying Input Parameters
+2020-03-06 12:38:39	INFO	SynthesisImagerVi2::selectData 	MS : /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms | Selecting on fields : "0137+331=3C48" | Selecting on spw :8 | Selecting on antenna names : 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 | Selecting on scan : 2,3 | Selecting on Scan Intent/State : CALIBRATE_BANDPASS#UNSPECIFIED | [Opened in readonly mode]
+2020-03-06 12:38:40	INFO	SynthesisImagerVi2::selectData 	  NRows selected : 90558
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::defineImage 	Define image coordinates for [oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0] : 
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::defineImage 	Impars : start 
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::defineImage 	Shape : [300, 300, 1, 1]Spectral : [1.42028e+09] at [0] with increment [8.00044e+06]
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::defineImage 	Set Gridding options for [oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0] with ftmachine : gridft
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::appendToMapperList(ftm)	Automatically calculate chanchunks using imshape : [300, 300, 1, 1]
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::appendToMapperList(ftm)	Required memory 0.00434518
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	Available memory 64.6893 (rc: memory fraction 80% rc memory -0.000976562)
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	1 other processes on node
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	Setting chanchunks to 1
+2020-03-06 12:38:41	INFO	SynthesisImagerVi2::weight() 	Set imaging weights : Briggs weighting: sidelobes will be suppressed over full image
+2020-03-06 12:39:32	INFO	VisSetUtil::VisImagingWeight() 	Normal robustness, robust = 0.5
+2020-03-06 12:39:32	INFO	task_tclean::SynthesisImager::makePSF 	----------------------------------------------------------- Make PSF ---------------------------------------------
+2020-03-06 12:42:28	INFO	task_tclean::SIImageStore::calcSensitivity 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0] Theoretical sensitivity (Jy/bm):1.8241e-05 
+2020-03-06 12:42:28	INFO	task_tclean::SIImageStore::printBeamSet 	Beam : 21.2314 arcsec, 14.3576 arcsec, 77.1719 deg
+2020-03-06 12:42:28	INFO	task_tclean::SynthesisImagerVi2::makePrimaryBeam 	vi2 : Evaluating Primary Beam model onto image grid(s)
+2020-03-06 12:42:29	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run (Last) Major Cycle 1 -------------------------------------
+2020-03-06 12:44:57	INFO	tclean::::	
+2020-03-06 12:44:57	INFO	tclean::::	##### End Task: tclean           #####
+2020-03-06 12:44:57	INFO	tclean::::	##########################################
+2020-03-06 12:44:59	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Residual rms in the annulus: 0.175415936024
+2020-03-06 12:44:59	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Residual max: 3.89661288261 min: -0.410557299852
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual peak: 3.89661288261
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual scaled MAD: 0.0960664194921
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual peak / scaled MAD: 40.5616541474
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Dirty image stats
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual rms: 0.175415936024
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual max: 3.89661288261
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual min: -0.410557299852
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual scaled MAD: 0.0960664194921
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Copying oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0.pb to oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.pb
+2020-03-06 12:44:59	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing copytree(src='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0.pb', dst='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.pb')
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Copying oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0.psf to oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.psf
+2020-03-06 12:44:59	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing copytree(src='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0.psf', dst='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.psf')
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Copying oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0.residual to oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.residual
+2020-03-06 12:44:59	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing copytree(src='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0.residual', dst='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.residual')
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Copying oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0.sumwt to oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.sumwt
+2020-03-06 12:44:59	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing copytree(src='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter0.sumwt', dst='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.sumwt')
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Iteration 1: Clean control parameters
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Mask /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.cleanmask
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Threshold 5.37e-05Jy
+2020-03-06 12:44:59	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Niter 5000
+2020-03-06 12:44:59	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing tclean(vis=['14B-396.sb29809142.eb30014592.56987.35765355324.ms'], field='"0137+331=3C48"', spw=['8'], antenna=['0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26'], scan=['2,3'], intent='CALIBRATE_BANDPASS#UNSPECIFIED', datacolumn='corrected', imagename='oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1', imsize=[300, 300], cell=['2.5arcsec'], phasecenter='ICRS 01:37:41.2985 +033.09.35.151', stokes='I', specmode='mfs', nchan=-1, outframe='LSRK', gridder='standard', chanchunks=-1, usepointing=False, mosweight=False, pblimit=0.2, deconvolver='hogbom', restoration=True, restoringbeam='common', pbcor=True, weighting='briggs', robust=0.5, niter=5000, threshold='5.37e-05Jy', interactive=0, restart=True, savemodel='none', calcres=False, calcpsf=False, parallel=False)
+2020-03-06 12:45:00	INFO	tclean::::	
+2020-03-06 12:45:00	INFO	tclean::::	##########################################
+2020-03-06 12:45:00	INFO	tclean::::	##### Begin Task: tclean           #####
+2020-03-06 12:45:00	INFO	tclean::::	
+2020-03-06 12:45:00	INFO	tclean::::	Verifying Input Parameters
+2020-03-06 12:45:00	INFO	SynthesisImagerVi2::selectData 	MS : /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms | Selecting on fields : "0137+331=3C48" | Selecting on spw :8 | Selecting on antenna names : 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 | Selecting on scan : 2,3 | Selecting on Scan Intent/State : CALIBRATE_BANDPASS#UNSPECIFIED | [Opened in readonly mode]
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::selectData 	  NRows selected : 90558
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::defineImage 	Define image coordinates for [oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] : 
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::defineImage 	Impars : start 
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::defineImage 	Shape : [300, 300, 1, 1]Spectral : [1.42028e+09] at [0] with increment [8.00044e+06]
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::defineImage 	Set Gridding options for [oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] with ftmachine : gridft
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::appendToMapperList(ftm)	Automatically calculate chanchunks using imshape : [300, 300, 1, 1]
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::appendToMapperList(ftm)	Required memory 0.00434518
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	Available memory 65.7739 (rc: memory fraction 80% rc memory -0.000976562)
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	1 other processes on node
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	Setting chanchunks to 1
+2020-03-06 12:45:01	INFO	SynthesisImagerVi2::weight() 	Set imaging weights : Briggs weighting: sidelobes will be suppressed over full image
+2020-03-06 12:45:36	INFO	VisSetUtil::VisImagingWeight() 	Normal robustness, robust = 0.5
+2020-03-06 12:45:36	INFO	task_tclean::SynthesisDeconvolver::setupDeconvolution 	Set Deconvolution Options for [oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] : hogbom
+2020-03-06 12:45:36	INFO	task_tclean::SynthesisIterBot::setupIteration 	Set Iteration Control Options
+2020-03-06 12:45:37	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Peak residual (max,min) over full image : (3.89661,-0.410557)
+2020-03-06 12:45:37	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Total Model Flux : 0
+2020-03-06 12:45:37	INFO	task_tclean::SynthesisDeconvolver::setupMask 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Initializing new mask to 1.0 for the full image
+2020-03-06 12:45:37	INFO	task_tclean::SynthesisDeconvolver::setupMask 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Number of pixels in the clean mask : 90000 out of a total of 90000 pixels. [ 100 % ]
+2020-03-06 12:45:37	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Peak residual (max,min) within mask : (3.89661,-0.410557) over full image : (3.89661,-0.410557)
+2020-03-06 12:45:37	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Total Model Flux : 0
+2020-03-06 12:45:37	INFO	task_tclean::SynthesisDeconvolver::executeMinorCycle 	---------------------------------------------------- Run Minor Cycle Iterations  ---------------------------------------------
+2020-03-06 12:45:37	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Run Hogbom minor-cycle | CycleThreshold=1.36458, CycleNiter=5000, Gain=0.1
+2020-03-06 12:45:37	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] iters=0->10 [10], model=0->2.53795, peakres=3.89661->1.35866, Reached cyclethreshold.
+2020-03-06 12:45:37	INFO	task_tclean::SIIterBot_state::mergeCycleExecutionRecord 	Completed 10 iterations.
+2020-03-06 12:45:37	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run Major Cycle 1 -------------------------------------
+2020-03-06 12:50:15	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Peak residual (max,min) within mask : (1.35866,-0.178274) over full image : (1.35866,-0.178274)
+2020-03-06 12:50:15	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Total Model Flux : 2.53795
+2020-03-06 12:50:15	INFO	task_tclean::SynthesisDeconvolver::executeMinorCycle 	---------------------------------------------------- Run Minor Cycle Iterations  ---------------------------------------------
+2020-03-06 12:50:15	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Run Hogbom minor-cycle | CycleThreshold=0.475799, CycleNiter=4990, Gain=0.1
+2020-03-06 12:50:15	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] iters=0->10 [10], model=2.53795->3.42287, peakres=1.35866->0.473736, Reached cyclethreshold.
+2020-03-06 12:50:15	INFO	task_tclean::SIIterBot_state::mergeCycleExecutionRecord 	Completed 20 iterations.
+2020-03-06 12:50:15	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run Major Cycle 2 -------------------------------------
+2020-03-06 12:55:04	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Peak residual (max,min) within mask : (0.473735,-0.231285) over full image : (0.473735,-0.231285)
+2020-03-06 12:55:04	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Total Model Flux : 3.42287
+2020-03-06 12:55:04	INFO	task_tclean::SynthesisDeconvolver::executeMinorCycle 	---------------------------------------------------- Run Minor Cycle Iterations  ---------------------------------------------
+2020-03-06 12:55:04	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Run Hogbom minor-cycle | CycleThreshold=0.1659, CycleNiter=4980, Gain=0.1
+2020-03-06 12:55:05	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] iters=0->47 [47], model=3.42287->3.45214, peakres=0.473735->0.16504, Reached cyclethreshold.
+2020-03-06 12:55:05	INFO	task_tclean::SIIterBot_state::mergeCycleExecutionRecord 	Completed 67 iterations.
+2020-03-06 12:55:05	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run Major Cycle 3 -------------------------------------
+2020-03-06 12:59:33	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Peak residual (max,min) within mask : (0.162998,-0.163862) over full image : (0.162998,-0.163862)
+2020-03-06 12:59:34	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Total Model Flux : 3.45214
+2020-03-06 12:59:34	INFO	task_tclean::SynthesisDeconvolver::executeMinorCycle 	---------------------------------------------------- Run Minor Cycle Iterations  ---------------------------------------------
+2020-03-06 12:59:34	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Run Hogbom minor-cycle | CycleThreshold=0.0573841, CycleNiter=4933, Gain=0.1
+2020-03-06 12:59:34	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] iters=0->515 [515], model=3.45214->3.39173, peakres=0.163862->0.0698135, Exited Hogbom minor cycle without reaching any stopping criterion.
+2020-03-06 12:59:34	INFO	task_tclean::SIIterBot_state::mergeCycleExecutionRecord 	Completed 582 iterations.
+2020-03-06 12:59:34	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run Major Cycle 4 -------------------------------------
+2020-03-06 13:03:27	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Peak residual (max,min) within mask : (0.0540808,-0.0542052) over full image : (0.0540808,-0.0542052)
+2020-03-06 13:03:27	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Total Model Flux : 3.39173
+2020-03-06 13:03:27	INFO	task_tclean::SynthesisDeconvolver::executeMinorCycle 	---------------------------------------------------- Run Minor Cycle Iterations  ---------------------------------------------
+2020-03-06 13:03:27	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Run Hogbom minor-cycle | CycleThreshold=0.0189825, CycleNiter=4418, Gain=0.1
+2020-03-06 13:03:29	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] iters=0->4418 [4418], model=3.39173->1.19094, peakres=0.0542052->0.114254, Possible divergence. Peak residual increased by 10% from minimum.
+2020-03-06 13:03:29	INFO	task_tclean::SIIterBot_state::mergeCycleExecutionRecord 	Completed 5000 iterations.
+2020-03-06 13:03:29	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run (Last) Major Cycle 5 -------------------------------------
+2020-03-06 13:07:23	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Peak residual (max,min) within mask : (0.281507,-0.127181) over full image : (0.281507,-0.127181)
+2020-03-06 13:07:23	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] Total Model Flux : 1.19094
+2020-03-06 13:07:23	INFO	task_tclean::SIIterBot_state::cleanComplete 	[WARN] Peak residual (within the mask) increased from 0.0542052 to 0.281507
+2020-03-06 13:07:23	INFO	tclean::::	Reached global stopping criterion : iteration limit
+2020-03-06 13:07:24	INFO	SDAlgorithmBase::restore 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] : Restoring model image.
+2020-03-06 13:07:24	INFO	SIImageStore::restore 	Getting common beam
+2020-03-06 13:07:24	INFO	SIImageStore::restore 	Common Beam : 21.2314 arcsec, 14.3576 arcsec, 77.1719 deg
+2020-03-06 13:07:25	INFO	task_tclean::SDAlgorithmBase::pbcor 	[oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1] : Applying PB correction
+2020-03-06 13:07:25	INFO	tclean::::	
+2020-03-06 13:07:25	INFO	tclean::::	##### End Task: tclean           #####
+2020-03-06 13:07:25	INFO	tclean::::	##########################################
+2020-03-06 13:07:26	INFO	pipeline.hif.tasks.tclean.cleanbase::pipeline.hif.tasks.tclean.cleanbase::	tclean used 5000 iterations
+2020-03-06 13:07:26	WARN	pipeline.hif.tasks.tclean.cleanbase::pipeline.hif.tasks.tclean.cleanbase::	tclean reached niter limit of 5000 for 0137+331=3C48 / spw8 !
+2020-03-06 13:07:27	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Residual rms in the annulus: 0.0377341225421
+2020-03-06 13:07:27	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Residual max: 0.281507402658 min: -0.12718077004
+2020-03-06 13:07:27	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Clean image statistics (annulus) for oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.image: rmsmedian: 0.0342147089832 Jy/bm rmsmean: 0.0342147089832 Jy/bm rmsmin: 0.0342147089832 Jy/bm rmsmax: 0.0342147089832 Jy/bm
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual peak: 0.281507402658
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual scaled MAD: 0.0277862150135
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual peak / scaled MAD: 10.1311892434
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Clean image iter 1 stats
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Clean image annulus area rms: 0.0342147089832
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Clean image min: -0.388170331717
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Clean image max: 5.61671733856
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual annulus area rms: 0.0377341225421
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual cleanmask area rms: None
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual max: 0.281507402658
+2020-03-06 13:07:27	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual min: -0.12718077004
+2020-03-06 13:07:27	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing move(src='summaryplot_1.png', dst='/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0._0137+331_3C48__bp.L_band.cont.I.iter1.summaryplot.png')
+2020-03-06 13:07:27	INFO	pipeline.hif.heuristics.imageparams_base::pipeline.hif.heuristics.imageparams_base::	Image Heuristics: No representative target found. Choosing IC342FIELD1 SPW 0.
+2020-03-06 13:07:28	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	
+2020-03-06 13:07:28	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::+	Cleaning for intent "PHASE", field J0410+7656, spw 8
+2020-03-06 13:07:28	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	deleting /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0.J0410+7656_ph.L_band.cont*.iter*
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing rmtree(path='/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0.J0410+7656_ph.L_band.cont*.iter*', ignore_errors=True)
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Performing selection on MeasurementSet : /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selecting on fields : 1
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selecting on spectral windows expression :8:0~4095
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selecting via TaQL : ANTENNA1==0||ANTENNA1==1||ANTENNA1==2||ANTENNA1==3||ANTENNA1==4||ANTENNA1==5||ANTENNA1==6||ANTENNA1==7||ANTENNA1==8||ANTENNA1==9||ANTENNA1==10||ANTENNA1==11||ANTENNA1==12||ANTENNA1==13||ANTENNA1==14||ANTENNA1==15||ANTENNA1==16||ANTENNA1==17||ANTENNA1==18||ANTENNA1==19||ANTENNA1==20||ANTENNA1==21||ANTENNA1==22||ANTENNA1==23||ANTENNA1==24||ANTENNA1==25||ANTENNA1==26
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selected 96174 out of  10823436 rows.
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::setDataOnThisMS()	Selected : [4096 chans in spw 8]
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::defineimage()	Defining image properties:nx=300 ny=300 cellx='2.5arcsec' celly='2.5arcsec' stokes=I' mode=MFS nchan=-1 start=0 step=0 spwids=[8] fieldid=0 facets=1 frame=1 distance='0'
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::defineimage()	 phaseCenter='field-0 ' mStart='Radialvelocity: 0' qStep='0 '' mFreqStart='Frequency: 0
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::weight()	Weighting MS: Imaging weights will be changed
+2020-03-06 13:07:28	INFO	pipeline.infrastructure.jobrequest::imager::weight()	Briggs weighting: sidelobes will be suppressed over full image
+2020-03-06 13:07:55	INFO	pipeline.infrastructure.jobrequest::VisSetUtil::VisImagingWeight() 	Normal robustness, robust = 0.5
+2020-03-06 13:07:55	INFO	pipeline.infrastructure.jobrequest::imager::apparentSensitivity() 	Calculating apparent sensitivity from MS weights, as modified by gridding weight function
+2020-03-06 13:07:55	INFO	pipeline.infrastructure.jobrequest::imager::apparentSensitivity() 	(assuming that MS weights have correct scale and units)
+2020-03-06 13:08:18	INFO	pipeline.infrastructure.jobrequest::imager::apparentSensitivity() 	RMS Point source sensitivity  : 2.75066e-05
+2020-03-06 13:08:18	INFO	pipeline.infrastructure.jobrequest::imager::apparentSensitivity() 	Relative to natural weighting : 1.11032
+2020-03-06 13:08:18	INFO	pipeline.hif.heuristics.imageparams_base::pipeline.hif.heuristics.imageparams_base::	apparentsens result for EB 14B-396.sb29809142.eb30014592.56987.35765355324 Field 1 SPW 8 ChanRange 0~4095: 2.75066306162e-05 Jy/beam
+2020-03-06 13:08:35	INFO	pipeline.hif.heuristics.imageparams_base::pipeline.hif.heuristics.imageparams_base::	Channel selection bandwidth heuristic (nbin or findcont; (spw BW / nchan_sel BW) ** 0.5): Correcting sensitivity for EB 14B-396.sb29809142.eb30014592.56987.35765355324 Field J0410+7656 SPW 8 by 0.896 from 2.75e-05 Jy/beam to 2.46e-05 Jy/beam
+2020-03-06 13:08:35	INFO	pipeline.hif.heuristics.imageparams_base::pipeline.hif.heuristics.imageparams_base::	Final sensitivity estimate for Field J0410+7656, SPW 8 specmode cont: 2.46e-05 Jy/beam
+2020-03-06 13:08:35	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Compute the dirty image
+2020-03-06 13:08:36	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing tclean(vis=['14B-396.sb29809142.eb30014592.56987.35765355324.ms'], field='J0410+7656', spw=['8'], antenna=['0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26'], scan=['4,8,13,17,22'], intent='CALIBRATE_AMPLI#UNSPECIFIED,CALIBRATE_PHASE#UNSPECIFIED', datacolumn='corrected', imagename='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0', imsize=[300, 300], cell=['2.5arcsec'], phasecenter='ICRS 04:10:45.6081 +076.56.45.315', stokes='I', specmode='mfs', nchan=-1, outframe='LSRK', gridder='standard', chanchunks=-1, usepointing=False, mosweight=False, pblimit=0.2, deconvolver='hogbom', restoration=False, restoringbeam='common', pbcor=False, weighting='briggs', robust=0.5, niter=0, threshold='0.0mJy', interactive=0, savemodel='none', parallel=False)
+2020-03-06 13:08:36	INFO	tclean::::	
+2020-03-06 13:08:36	INFO	tclean::::	##########################################
+2020-03-06 13:08:36	INFO	tclean::::	##### Begin Task: tclean           #####
+2020-03-06 13:08:36	INFO	tclean::::	
+2020-03-06 13:08:36	INFO	tclean::::	Verifying Input Parameters
+2020-03-06 13:08:36	INFO	SynthesisImagerVi2::selectData 	MS : /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms | Selecting on fields : J0410+7656 | Selecting on spw :8 | Selecting on antenna names : 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 | Selecting on scan : 4,8,13,17,22 | Selecting on Scan Intent/State : CALIBRATE_AMPLI#UNSPECIFIED,CALIBRATE_PHASE#UNSPECIFIED | [Opened in readonly mode]
+2020-03-06 13:08:37	INFO	SynthesisImagerVi2::selectData 	  NRows selected : 96174
+2020-03-06 13:08:37	INFO	SynthesisImagerVi2::defineImage 	Define image coordinates for [oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0] : 
+2020-03-06 13:08:38	INFO	SynthesisImagerVi2::defineImage 	Impars : start 
+2020-03-06 13:08:38	INFO	SynthesisImagerVi2::defineImage 	Shape : [300, 300, 1, 1]Spectral : [1.42016e+09] at [0] with increment [7.99996e+06]
+2020-03-06 13:08:38	INFO	SynthesisImagerVi2::defineImage 	Set Gridding options for [oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0] with ftmachine : gridft
+2020-03-06 13:08:38	INFO	SynthesisImagerVi2::appendToMapperList(ftm)	Automatically calculate chanchunks using imshape : [300, 300, 1, 1]
+2020-03-06 13:08:38	INFO	SynthesisImagerVi2::appendToMapperList(ftm)	Required memory 0.00434518
+2020-03-06 13:08:38	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	Available memory 66.9683 (rc: memory fraction 80% rc memory -0.000976562)
+2020-03-06 13:08:38	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	1 other processes on node
+2020-03-06 13:08:38	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	Setting chanchunks to 1
+2020-03-06 13:08:38	INFO	SynthesisImagerVi2::weight() 	Set imaging weights : Briggs weighting: sidelobes will be suppressed over full image
+2020-03-06 13:09:20	INFO	VisSetUtil::VisImagingWeight() 	Normal robustness, robust = 0.5
+2020-03-06 13:09:20	INFO	task_tclean::SynthesisImager::makePSF 	----------------------------------------------------------- Make PSF ---------------------------------------------
+2020-03-06 13:11:59	INFO	task_tclean::SIImageStore::calcSensitivity 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0] Theoretical sensitivity (Jy/bm):1.68981e-05 
+2020-03-06 13:11:59	INFO	task_tclean::SIImageStore::printBeamSet 	Beam : 19.9209 arcsec, 12.7644 arcsec, -43.5112 deg
+2020-03-06 13:11:59	INFO	task_tclean::SynthesisImagerVi2::makePrimaryBeam 	vi2 : Evaluating Primary Beam model onto image grid(s)
+2020-03-06 13:12:00	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run (Last) Major Cycle 1 -------------------------------------
+2020-03-06 13:15:14	INFO	tclean::::	
+2020-03-06 13:15:14	INFO	tclean::::	##### End Task: tclean           #####
+2020-03-06 13:15:14	INFO	tclean::::	##########################################
+2020-03-06 13:15:15	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Residual rms in the annulus: 0.0219075772811
+2020-03-06 13:15:15	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Residual max: 1.31776475906 min: -0.0795522332191
+2020-03-06 13:15:15	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual peak: 1.31776475906
+2020-03-06 13:15:15	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual scaled MAD: 0.0213539299261
+2020-03-06 13:15:15	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual peak / scaled MAD: 61.710643597
+2020-03-06 13:15:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Dirty image stats
+2020-03-06 13:15:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual rms: 0.0219075772811
+2020-03-06 13:15:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual max: 1.31776475906
+2020-03-06 13:15:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual min: -0.0795522332191
+2020-03-06 13:15:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual scaled MAD: 0.0213539299261
+2020-03-06 13:15:16	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Copying oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0.pb to oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.pb
+2020-03-06 13:15:16	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing copytree(src='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0.pb', dst='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.pb')
+2020-03-06 13:15:16	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Copying oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0.psf to oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.psf
+2020-03-06 13:15:16	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing copytree(src='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0.psf', dst='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.psf')
+2020-03-06 13:15:16	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Copying oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0.residual to oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.residual
+2020-03-06 13:15:16	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing copytree(src='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0.residual', dst='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.residual')
+2020-03-06 13:15:16	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Copying oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0.sumwt to oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.sumwt
+2020-03-06 13:15:16	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing copytree(src='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter0.sumwt', dst='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.sumwt')
+2020-03-06 13:15:16	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Iteration 1: Clean control parameters
+2020-03-06 13:15:16	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Mask /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.cleanmask
+2020-03-06 13:15:16	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Threshold 4.93e-05Jy
+2020-03-06 13:15:16	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Niter 5000
+2020-03-06 13:15:17	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing tclean(vis=['14B-396.sb29809142.eb30014592.56987.35765355324.ms'], field='J0410+7656', spw=['8'], antenna=['0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26'], scan=['4,8,13,17,22'], intent='CALIBRATE_AMPLI#UNSPECIFIED,CALIBRATE_PHASE#UNSPECIFIED', datacolumn='corrected', imagename='oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1', imsize=[300, 300], cell=['2.5arcsec'], phasecenter='ICRS 04:10:45.6081 +076.56.45.315', stokes='I', specmode='mfs', nchan=-1, outframe='LSRK', gridder='standard', chanchunks=-1, usepointing=False, mosweight=False, pblimit=0.2, deconvolver='hogbom', restoration=True, restoringbeam='common', pbcor=True, weighting='briggs', robust=0.5, niter=5000, threshold='4.93e-05Jy', interactive=0, restart=True, savemodel='none', calcres=False, calcpsf=False, parallel=False)
+2020-03-06 13:15:17	INFO	tclean::::	
+2020-03-06 13:15:17	INFO	tclean::::	##########################################
+2020-03-06 13:15:17	INFO	tclean::::	##### Begin Task: tclean           #####
+2020-03-06 13:15:17	INFO	tclean::::	
+2020-03-06 13:15:17	INFO	tclean::::	Verifying Input Parameters
+2020-03-06 13:15:17	INFO	SynthesisImagerVi2::selectData 	MS : /data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/14B-396.sb29809142.eb30014592.56987.35765355324.ms | Selecting on fields : J0410+7656 | Selecting on spw :8 | Selecting on antenna names : 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 | Selecting on scan : 4,8,13,17,22 | Selecting on Scan Intent/State : CALIBRATE_AMPLI#UNSPECIFIED,CALIBRATE_PHASE#UNSPECIFIED | [Opened in readonly mode]
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::selectData 	  NRows selected : 96174
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::defineImage 	Define image coordinates for [oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] : 
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::defineImage 	Impars : start 
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::defineImage 	Shape : [300, 300, 1, 1]Spectral : [1.42016e+09] at [0] with increment [7.99996e+06]
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::defineImage 	Set Gridding options for [oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] with ftmachine : gridft
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::appendToMapperList(ftm)	Automatically calculate chanchunks using imshape : [300, 300, 1, 1]
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::appendToMapperList(ftm)	Required memory 0.00434518
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	Available memory 67.3249 (rc: memory fraction 80% rc memory -0.000976562)
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	1 other processes on node
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::appendToMapperList(ftm)+	Setting chanchunks to 1
+2020-03-06 13:15:18	INFO	SynthesisImagerVi2::weight() 	Set imaging weights : Briggs weighting: sidelobes will be suppressed over full image
+2020-03-06 13:15:59	INFO	VisSetUtil::VisImagingWeight() 	Normal robustness, robust = 0.5
+2020-03-06 13:15:59	INFO	task_tclean::SynthesisDeconvolver::setupDeconvolution 	Set Deconvolution Options for [oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] : hogbom
+2020-03-06 13:15:59	INFO	task_tclean::SynthesisIterBot::setupIteration 	Set Iteration Control Options
+2020-03-06 13:15:59	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Peak residual (max,min) over full image : (1.31776,-0.0795522)
+2020-03-06 13:15:59	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Total Model Flux : 0
+2020-03-06 13:15:59	INFO	task_tclean::SynthesisDeconvolver::setupMask 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Initializing new mask to 1.0 for the full image
+2020-03-06 13:15:59	INFO	task_tclean::SynthesisDeconvolver::setupMask 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Number of pixels in the clean mask : 90000 out of a total of 90000 pixels. [ 100 % ]
+2020-03-06 13:16:00	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Peak residual (max,min) within mask : (1.31776,-0.0795522) over full image : (1.31776,-0.0795522)
+2020-03-06 13:16:00	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Total Model Flux : 0
+2020-03-06 13:16:00	INFO	task_tclean::SynthesisDeconvolver::executeMinorCycle 	---------------------------------------------------- Run Minor Cycle Iterations  ---------------------------------------------
+2020-03-06 13:16:00	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Run Hogbom minor-cycle | CycleThreshold=0.185659, CycleNiter=5000, Gain=0.1
+2020-03-06 13:16:00	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] iters=0->19 [19], model=0->1.13975, peakres=1.31776->0.17801, Reached cyclethreshold.
+2020-03-06 13:16:00	INFO	task_tclean::SIIterBot_state::mergeCycleExecutionRecord 	Completed 19 iterations.
+2020-03-06 13:16:00	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run Major Cycle 1 -------------------------------------
+2020-03-06 13:20:29	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Peak residual (max,min) within mask : (0.178009,-0.067054) over full image : (0.178009,-0.067054)
+2020-03-06 13:20:29	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Total Model Flux : 1.13975
+2020-03-06 13:20:29	INFO	task_tclean::SynthesisDeconvolver::executeMinorCycle 	---------------------------------------------------- Run Minor Cycle Iterations  ---------------------------------------------
+2020-03-06 13:20:29	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Run Hogbom minor-cycle | CycleThreshold=0.0250795, CycleNiter=4981, Gain=0.1
+2020-03-06 13:20:29	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] iters=0->114 [114], model=1.13975->1.21283, peakres=0.178009->0.025071, Reached cyclethreshold.
+2020-03-06 13:20:29	INFO	task_tclean::SIIterBot_state::mergeCycleExecutionRecord 	Completed 133 iterations.
+2020-03-06 13:20:29	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run Major Cycle 2 -------------------------------------
+2020-03-06 13:24:47	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Peak residual (max,min) within mask : (0.0250317,-0.025071) over full image : (0.0250317,-0.025071)
+2020-03-06 13:24:47	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Total Model Flux : 1.21283
+2020-03-06 13:24:47	INFO	task_tclean::SynthesisDeconvolver::executeMinorCycle 	---------------------------------------------------- Run Minor Cycle Iterations  ---------------------------------------------
+2020-03-06 13:24:47	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Run Hogbom minor-cycle | CycleThreshold=0.00353224, CycleNiter=4867, Gain=0.1
+2020-03-06 13:24:49	INFO	task_tclean::SDAlgorithmBase::deconvolve 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] iters=0->4867 [4867], model=1.21283->0.959863, peakres=0.025071->0.0108093, Reached cycleniter.
+2020-03-06 13:24:49	INFO	task_tclean::SIIterBot_state::mergeCycleExecutionRecord 	Completed 5000 iterations.
+2020-03-06 13:24:50	INFO	task_tclean::SynthesisImager::executeMajorCycle 	----------------------------------------------------------- Run (Last) Major Cycle 3 -------------------------------------
+2020-03-06 13:29:11	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Peak residual (max,min) within mask : (0.0150453,-0.0096339) over full image : (0.0150453,-0.0096339)
+2020-03-06 13:29:11	INFO	task_tclean::SIImageStore::printImageStats 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] Total Model Flux : 0.959864
+2020-03-06 13:29:11	INFO	tclean::::	Reached global stopping criterion : iteration limit
+2020-03-06 13:29:11	INFO	SDAlgorithmBase::restore 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] : Restoring model image.
+2020-03-06 13:29:11	INFO	SIImageStore::restore 	Getting common beam
+2020-03-06 13:29:11	INFO	SIImageStore::restore 	Common Beam : 19.9209 arcsec, 12.7644 arcsec, -43.5112 deg
+2020-03-06 13:29:12	INFO	task_tclean::SDAlgorithmBase::pbcor 	[oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1] : Applying PB correction
+2020-03-06 13:29:12	INFO	tclean::::	
+2020-03-06 13:29:12	INFO	tclean::::	##### End Task: tclean           #####
+2020-03-06 13:29:12	INFO	tclean::::	##########################################
+2020-03-06 13:29:13	INFO	pipeline.hif.tasks.tclean.cleanbase::pipeline.hif.tasks.tclean.cleanbase::	tclean used 5000 iterations
+2020-03-06 13:29:13	WARN	pipeline.hif.tasks.tclean.cleanbase::pipeline.hif.tasks.tclean.cleanbase::	tclean reached niter limit of 5000 for J0410+7656 / spw8 !
+2020-03-06 13:29:15	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Residual rms in the annulus: 0.00267960134933
+2020-03-06 13:29:15	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Residual max: 0.0111178327352 min: -0.00963390339166
+2020-03-06 13:29:15	INFO	pipeline.hif.heuristics.cleanbox::pipeline.hif.heuristics.cleanbox::	Clean image statistics (annulus) for oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.image: rmsmedian: 0.00392582005349 Jy/bm rmsmean: 0.00392582005349 Jy/bm rmsmin: 0.00392582005349 Jy/bm rmsmax: 0.00392582005349 Jy/bm
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual peak: 0.0111178327352
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual scaled MAD: 0.00288167562007
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.basecleansequence::pipeline.hif.tasks.tclean.basecleansequence::	Residual peak / scaled MAD: 3.85811388962
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	Clean image iter 1 stats
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Clean image annulus area rms: 0.00392582005349
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Clean image min: -0.0683149248362
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Clean image max: 1.44892346859
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual annulus area rms: 0.00267960134933
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual cleanmask area rms: None
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual max: 0.0111178327352
+2020-03-06 13:29:15	INFO	pipeline.hif.tasks.tclean.tclean::pipeline.hif.tasks.tclean.tclean::	    Residual min: -0.00963390339166
+2020-03-06 13:29:15	INFO	pipeline.infrastructure.jobrequest::pipeline.infrastructure.jobrequest::	Executing move(src='summaryplot_1.png', dst='/data/scratch/idchiang/EveryTHINGS/blocks/IC342.01/oussid.s20_0.J0410+7656_ph.L_band.cont.I.iter1.summaryplot.png')
+2020-03-06 13:29:15	INFO	pipeline.hif.heuristics.imageparams_base::pipeline.hif.heuristics.imageparams_base::	Image Heuristics: No representative target found. Choosing IC342FIELD1 SPW 0.
