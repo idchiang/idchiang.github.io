@@ -2,9 +2,9 @@
 I am interested in the relations between *dust, metal, and neutral gas* in the interstellar medium (ISNM) of
 *nearby galaxies*, especially how these relations depend on local physical environments. I am also intertested in *SED fitting techniques* and *radio astronomy* in general.
 
-#### The dust maps of my favorite galaxies!
 ![DustMaps](fig_dustmaps_r.png)
-(Chiang et al. in prep.)
+
+(The dust maps of my favorite galaxies! Chiang et al. in prep.)
 
 ### Projects
 + Dust-to-Metals Ratio in Nearby galaxies
