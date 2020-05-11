@@ -2,7 +2,7 @@
 I am interested in the relations between *dust, metal, and neutral gas* in the interstellar medium (ISNM) of
 *nearby galaxies*, especially how these relations depend on local physical environments. I am also intertested in *SED fitting techniques* and *radio astronomy* in general.
 
-### The dust maps of my favorite galaxies!
+#### The dust maps of my favorite galaxies!
 ![DustMaps](fig_dustmaps_r.png)
 (Chiang et al. in prep.)
 
@@ -19,6 +19,9 @@ I am interested in the relations between *dust, metal, and neutral gas* in the i
 
 #### References
 Chiang, I-D., Sandstrom, K. M., Chastenet, J., et al. 2018, ApJ, 865, 117.
+
 Koch E. W., Chiang I-D., Utomo, D., et al. 2020, MNRAS, 492, 2663.
+
 Sun J., Leroy A. K., Ostriker E. C., et al. 2020, ApJ, 892, 148.
+
 Utomo, D., Chiang, I-D., Leroy, A. K., et al. 2019, ApJ, 874, 141.
