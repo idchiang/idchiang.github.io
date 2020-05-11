@@ -1,13 +1,9 @@
 ### About me
-Welcome to my github page! My name is I-Da Chiang (江宜達). I am a PhD student at <a href="https://ucsd.edu/" target="_blank">University of California, San Diego</a> in the <a href="http://cass.ucsd.edu/index.php/Main_Page" target="_blank">Center for Astrophysics and Space Sciences (CASS)</a>. I am a member of <a href="http://karinsandstrom.github.io/" target="_blank">Prof. Karin Sandstrom</a>'s nearby galaxies group.
+Welcome to my github page! My name is I-Da Chiang (江宜達). I am a PhD candidate in astrophysics at the <a href="http://cass.ucsd.edu/index.php/Main_Page" target="_blank">Center for Astrophysics and Space Sciences (CASS)</a>, University of California, San Diego (UCSD). I am a member of <a href="http://karinsandstrom.github.io/" target="_blank">Prof. Karin Sandstrom</a>'s nearby galaxy research group.
 
-My research focuses on the study of the relations between *dust, metal, and neutral gas* in the interstellar medium of
-spatially resolved *nearby galaxies*, especially how these relations depend on local physical environments. I am also intertested in *SED fitting techniques* and *radio astronomy* in general.
+### The dust maps of my favorite galaxies!
+![DustMaps](fig_dustmaps_r.png)
+(Chiang et al. in prep.)
 
-Here are some selected works:
-1. <a href="http://adsabs.harvard.edu/abs/2018ApJ...865..117C" target="_blank">The Spatially Resolved Dust-to-metals Ratio in M101</a>: we use the modified blackbody model and archival multi-wavelnght observation to show that the dust-to metals ratio in M101 is not constant. The varying dust-to-metals ratio in M101 is highly correlated to the molecular hydrogen fraction.
-
-2. <a href="http://adsabs.harvard.edu/abs/2019arXiv190208629" target="_blank">The Resolved Distributions of Dust Mass and Temperature in Local Group Galaxies</a>: we utilize the far-infrared observation from Herschel observatory to derive the dust properties in the local group galaxies. We show that the unresolved studies could possibly overestimate the dust temperature and underestimate the overall dust surface density.
-
-[Photo]: IMG_9852.jpg
-![MyPhoto][Photo]
+### A photo of me
+![MyPhoto](IMG_9852.jpg)
