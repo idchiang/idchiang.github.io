@@ -37,7 +37,7 @@ To use, simply input the known value to the corresponding cell. The calculated v
 <td></td><td></td><td></td>
 </tr>
 <tr>
-<td>Linear wave number</td><td>&sim;&nu;=1/&lambda;</td><td></td><td></td>
+<td>Linear wave number</td><td>&nu;=1/&lambda;</td><td></td><td></td>
 </tr>
 <tr>
 <td><input name="lk" onkeyup="lkconvert()" value="3.8360" size="15"> cm<sup>-1</sup> (Chemistry) </td>
