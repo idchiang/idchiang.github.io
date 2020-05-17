@@ -1,5 +1,7 @@
 ## Research
 
+<hr>
+
 ### Research interest
 I am interested in the relations between *dust, metal, and neutral gas* in the interstellar medium (ISM) of
 *nearby galaxies*, especially how these relations depend on local physical environments. I am also intertested in *SED fitting techniques* and *radio astronomy* in general.
@@ -7,6 +9,8 @@ I am interested in the relations between *dust, metal, and neutral gas* in the i
 ![DustMaps](fig_dustmaps_r.png)
 
 (The dust maps of my favorite galaxies! Chiang et al. in prep.)
+
+<hr>
 
 ### Projects
 + Dust-to-Metals Ratio in Nearby galaxies
@@ -20,6 +24,8 @@ I am interested in the relations between *dust, metal, and neutral gas* in the i
 + Dust Properties in the Local Group
 
     As you might already notice, I love nearby galaxies, and so do my colleagues. We fit the dust properties in four Local Group galaxies and study how dust mass and temperature varies within and across galaxies. We found that when we degrade the reoslution to mimic distant galaxies, we tend to get a warmer mass-weighted temperature (Utomo & Chiang et al. 2019). We also study the spatial power spectra of these maps, and find a single power-law and point source component fits well to our data. This suggests that the spatial power spectrum does not constrain the disc scale height (Koch & Chiang et al. 2020).
+
+<hr>
 
 #### References
 Chiang, I-D., Sandstrom, K. M., Chastenet, J., et al. 2018, ApJ, 865, 117.
