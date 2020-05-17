@@ -1,4 +1,4 @@
-### Unit conversion for EM spectrum units
+### Wavelength unit conversion webtool
 ##### Reference code credit: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 
 ![Conversion](convert_tool.png)
