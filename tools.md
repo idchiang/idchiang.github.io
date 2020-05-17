@@ -1,6 +1,6 @@
 ## Codes
 
-### Wavelenght unit conversion webtool
+### Wavelength unit conversion webtool
 ![Conversion](convert_tool.png)
 
 A webtool for quick conversion between wavelength units.
