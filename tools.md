@@ -1,13 +1,15 @@
 ## Codes
 
-### EM wave unit conversion
-A webpage tool for quick conversion between wavelength units.
+### Wavelenght unit conversion webtool
+![Conversion](convert_tool.png)
 
-<a href="tools_unit">[Link to the tool]</a>
+A webtool for quick conversion between wavelength units.
+
+<a href="tools_unit">[Link to webtool]</a>
 
 ### Click and examine!
-A python plotting code, which reads the clicking position and reflects on the figure in real time.
+![Clicking](https://raw.githubusercontent.com/idchiang/templates/master/clicking/example.png)
 
-<a href="https://github.com/idchiang/templates/blob/master/clicking/clicking.py" target="_blank">[Link to the template code]</a>
+A python plotting template, which reads the clicking position and reflects on the other subplots in real time.
 
-<a href="tools_click">[More description]</a>
+<a href="https://github.com/idchiang/templates/blob/master/clicking/clicking.py" target="_blank">[Link to template]</a>
