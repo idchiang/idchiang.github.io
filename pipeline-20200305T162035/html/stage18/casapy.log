@@ -1,2 +1,0 @@
-2020-03-06 11:03:20	INFO	hifv_plotsummary::pipeline.infrastructure.basetask::	Starting execution for stage 18
-2020-03-06 11:03:20	INFO	hifv_plotsummary::pipeline.infrastructure.basetask::	Equivalent CASA call: hifv_plotsummary(pipelinemode="automatic")
