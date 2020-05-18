@@ -1,7 +1,8 @@
 ### Wavelength unit conversion webtool
-##### Reference code credit: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
 
-![Conversion](convert_tool.png)
+<hr>
+
+![Conversion](fig/convert_tool.png)
 
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fourth decimal.
 
@@ -187,3 +188,6 @@ HI 21 cm line: 1.420405752 GHz
 Ly	&alpha;: 121.567 nm
 
 CO J:1	&rarr;0: 115 GHz
+
+#### Reference
+The webtool made by: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
