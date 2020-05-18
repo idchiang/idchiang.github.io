@@ -4,7 +4,7 @@
 
 ![Conversion](fig/convert_tool.png)
 
-To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fourth decimal.
+To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fourth decimal. This webtool is based on the one developed by <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>.
 
 <form name="conversion">
 <table cellpadding="2" align="center" style="border-width:1px" bordercolor="#CCCCCC">
@@ -190,4 +190,4 @@ Ly	&alpha;: 121.567 nm
 CO J:1	&rarr;0: 115 GHz
 
 #### Reference
-The webtool made by: Lisa V. Brown at <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
+<a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>
