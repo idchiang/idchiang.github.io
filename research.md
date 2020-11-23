@@ -8,18 +8,18 @@ I am interested in the relations between *dust, metal, and neutral gas* in the i
 
 ![DustMaps](fig/fig_dustmaps_r.png)
 
-(The dust maps of my favorite galaxies! Chiang et al. in prep.)
+(The dust maps of my favorite galaxies! Chiang et al. 2020.)
 
 <hr>
 
 ### Projects
 + Dust-to-Metals Ratio in Nearby galaxies
 
-    Dust-to-Metals Ratio (D/M) provides keen insights into dust chemical evolution. I measure how the D/M evolves with the local enviroinment in the ISM from archival and new observations. In the first phase of this project, I built the dust-fitting techniques in one single galaxy with large metallicity gradient, M101 (Chiang et al. 2018). In the second phase, I push the study to more nearby galaxies with "direct" metallicity measurements, and derives an empirical formula for the spatially resolved D/M (Chiang et al. in prep.).
+    Dust-to-Metals Ratio (D/M) provides keen insights into dust chemical evolution. I measure how the D/M evolves with the local enviroinment in the ISM from archival and new observations. In the first phase of this project, I built the dust-fitting techniques in one single galaxy with large metallicity gradient, M101 (Chiang et al. 2018). In the second phase, I push the study to a larger sample size and richer ISM environments. I also tested the resulting D/M with several commonly-used prescriptions of the CO-to-H<sub>2</sub> conversion factor. I found that it is necessary to consider how ISM gas temperature and velocity dispersion affect the CO-to-H<sub>2</sub> conversion factor to get a reasonable D/M, especially in the star-forming regions. I also proposed a novel method to constrain the D/M and the CO-to-H<sub>2</sub> conversion factor simultaneously. I found that the D/M is roughly constant within our region of interest (Chiang et al. 2020).
 
 + A catalog of HI 21 cm emission in nearby galaxies observed with VLA
 
-    I am calibrating and imaing the new HI 21 cm data observed with VLA in the EveryTHINGS project (P.I.: Karin M. Sandstrom; Chiang et al. in prep.). The EveryTHINGS project maps the HI 21 cm line in all galaxies well-resolved by *Herschel* observatory without an HI map after the VLA upgrade in the 1990's. This project has triple sample size of the successful THINGS project (Walter et al. 2008), and will expand the galaxies available for spatial resolved dust-to-gas ratio (D/G) studies. The image cube of NGC4496A has already been used in Sun et al. (2020).
+    I am calibrating and imaing the new HI 21 cm data observed with VLA in the EveryTHINGS project (P.I.: Karin M. Sandstrom; Chiang et al. in prep.). The EveryTHINGS project maps the HI 21 cm line in all galaxies well-resolved by *Herschel* observatory without an HI map after the VLA upgrade in the 1990's. This project has triple sample size of the successful THINGS project (Walter et al. 2008), and will expand the galaxies available for spatial resolved dust-to-gas ratio (D/G) studies. The science-ready cubes have played important roles in studying gas dynamics (Sun et al. 2020) and D/M (Chiang et al. 2020).
 
 + Dust Properties in the Local Group
 
@@ -29,6 +29,8 @@ I am interested in the relations between *dust, metal, and neutral gas* in the i
 
 #### References
 Chiang, I-D., Sandstrom, K. M., Chastenet, J., et al. 2018, ApJ, 865, 117.
+
+Chiang, I-D., Sandstrom, K. M., Chastenet, J., et al. 2020, arXiv:2011.10561, submitted to ApJ.
 
 Koch, E. W., Chiang, I-D., Utomo, D., et al. 2020, MNRAS, 492, 2663.
 
