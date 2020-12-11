@@ -5,7 +5,7 @@
 ### Selected publications
 Here are my selected first- or second-author publications:
 
-+ I-Da Chiang et al., <a href="https://ui.adsabs.harvard.edu/abs/2020arXiv201110561C/abstract" target="_blank">“Resolving the Dust-to-Metals Ratio and CO-to-H<sub>2</sub> Conversion Factor in the Nearby Universe”</a>, 2020, arXiv:2011.10561, *submitted to ApJ*.
++ I-Da Chiang et al., <a href="https://ui.adsabs.harvard.edu/abs/2020arXiv201110561C/abstract" target="_blank">“Resolving the Dust-to-Metals Ratio and CO-to-H<sub>2</sub> Conversion Factor in the Nearby Universe”</a>, 2020, arXiv:2011.10561, *accepted by ApJ*.
 
     I study the resolved dust-to-metals ratio (D/M) and the CO-to-H<sub>2</sub> conversion factor in five nearby galaxies: IC342, M31, M33, M101 and NGC628. I foudn that the D/M is sensitive to the adopted conversion factor. To get a reasonable D/M, one needs a conversion factor parameterized by not only metallicity. I also proposed a novel method to constrain D/M and the CO-to-H<sub>2</sub> conversion factor simultaneously.
 
