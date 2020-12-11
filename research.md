@@ -30,7 +30,7 @@ I am interested in the relations between *dust, metal, and neutral gas* in the i
 #### References
 Chiang, I-D., Sandstrom, K. M., Chastenet, J., et al. 2018, ApJ, 865, 117.
 
-Chiang, I-D., Sandstrom, K. M., Chastenet, J., et al. 2020, arXiv:2011.10561, submitted to ApJ.
+Chiang, I-D., Sandstrom, K. M., Chastenet, J., et al. 2020, arXiv:2011.10561, accepted by ApJ.
 
 Koch, E. W., Chiang, I-D., Utomo, D., et al. 2020, MNRAS, 492, 2663.
 
