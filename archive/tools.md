@@ -3,7 +3,8 @@
 <hr>
 
 ### Wavelength unit conversion webtool
-![Conversion](fig/convert_tool.png)
+
+![Conversion](images/convert_tool.png)
 
 A webtool for quick conversion between wavelength units.
 
@@ -11,7 +12,8 @@ A webtool for quick conversion between wavelength units.
 
 <hr>
 
-### Click and examine!
+### Click and examine
+
 ![Clicking](https://raw.githubusercontent.com/idchiang/templates/master/clicking/example.png)
 
 A python plotting template, which reads the clicking position and reflects on the other subplots in real time.
