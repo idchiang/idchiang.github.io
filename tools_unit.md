@@ -2,7 +2,7 @@
 
 <hr>
 
-![Conversion](fig/convert_tool.png)
+![Conversion](images/convert_tool.png)
 
 To use, simply input the known value to the corresponding cell. The calculated value for all the others will be rounded to the fourth decimal. This webtool is based on the one developed by <a href="http://halas.rice.edu/conversions" target="blank">Halas Nanophotonics Group</a>.
 
